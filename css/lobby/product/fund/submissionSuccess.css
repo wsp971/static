@@ -1,0 +1,34 @@
+@import
+url(
+'/javascript/lib/bootstrap/css/bootstrap.min.css'
+?
+__inline
+);
+@import url('/css/lobby/trade.css?__inline');
+/*@import url('/css/base/main.css?__inline');*/
+/*preorder css*/
+
+.ml30{
+	margin-left:30px;
+}
+.success_tip {
+	width: 230px;
+	height: 50px;
+	line-height: 50px;
+	text-indent: 52px;
+	margin: 60px auto;
+	margin-bottom: 18px;
+	text-align: left;
+	background: url(../../../../img/lobby/step.png) 0 -298px no-repeat;
+}
+.tip-row {
+	text-align: center;
+	color: #333;
+	padding: 7px;
+}
+.tip-row a {
+	color: #0052be;
+}
+.content_bottom {
+	padding-bottom: 180px;
+}

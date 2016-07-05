@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>合同签署</title>
+    <link href="/css/lobby/trade.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="lobby">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="conhead">
+            <h2 class="title">
+                合同列表</h2>
+            <div class="form-control radius searchbox">
+                <input type="text" id="search" placeholder="搜索合同标题" autocomplete="off" maxlength="30" />
+                <span id="btnSearch" class="search"><i class="iconfont arrow">&#xe603;</i></span>
+            </div>
+        </div>
+        <div class="ibox">
+            <div class="choocebar">
+                <dl>
+                    <dt>
+                        <label class="name">
+                            合同状态：</label></dt>
+                    <dd id="tab_btn ct-type-select">
+                        <span class="badge active">全部</span> <span class="badge myStatus" isended="1">签署中</span>
+                        <span class="badge myStatus" data-type="type" isended="0">已结束</span>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="ibox">
+            <div class="row">
+                <table id="table">
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--合同列表js引入 -->
+    <script type="text/javascript" src="/javascript/lib/requirejs/require.js"></script>
+    <script type="text/javascript">
+        require(["lobby/account/contract/contractListIndex.js"]);
+    </script>
+</body>
+</html>

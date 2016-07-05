@@ -1,0 +1,111 @@
+/* 
+* @Author: LISHUAI900
+* @Date:   2016-06-01 18:01:55
+* @Last Modified by:   LISHUAI900
+* @Last Modified time: 2016-06-27 12:20:56
+*/
+.sendSuccess {
+	width: 920px;
+	border: 1px solid blue;
+}
+.step2 {
+	width: 550px;
+	margin: 0 auto;
+	margin-top: 38px;
+	text-align: center;
+}
+.vis_clear {
+	margin-bottom: 11px;
+	text-align: center;
+}
+.step2 .form-group .form-label {
+	width: 200px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0;
+	padding-top: 0;
+	text-indent: 40px;
+	background-position: 0 -298px;
+	font-size: 16px;
+	color: #333;
+}
+.email {
+	min-width: 250px;
+	max-width: 350px;
+	width: auto;
+	height: 45px;
+	line-height: 45px;
+	text-align: left;
+	font-size: 18px;
+	color: #666;
+	white-space: nowrap;
+}
+.warn {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	color: #666;
+	padding-bottom: 48px;
+}
+.tip-div {
+	width: 720px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	font-size: 12px;
+	text-align: left;
+	color: #666;
+}
+.question {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.tip {
+	height: 28px;
+	line-height: 28px;
+	vertical-align: middle;
+	text-align: left;
+}
+.tip-div .tip .resend-email {
+	background-color: #f3f3f3;
+	width: 100px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 12px;
+	color: #666;
+	padding: 0;
+	margin: 0 auto;
+	vertical-align: 1px;
+	border: 1px solid #e1e1e1;
+}
+.tipdiv2 {
+	margin: 0 auto ;
+	margin-top: -34px;
+	text-align: center;
+	height: 34px;
+	visibility: hidden;
+}
+.form-horizontal .visible {
+	visibility: visible;
+}
+.tipdiv2 .tips {
+	margin: 0 auto ;
+	float: none;
+	text-align: center;
+	padding: 0 0 ;
+	height: 34px;
+	line-height: 34px;
+	font-size: 12px;
+	color: #e05328;
+}
+.center {
+	display: inline-block;
+	max-width: 550px;
+	width: auto;
+	height: 45px;
+	margin: 0 auto;
+	text-align: center;
+}

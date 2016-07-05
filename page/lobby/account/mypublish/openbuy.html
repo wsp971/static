@@ -1,0 +1,77 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no" />
+<title>开放购买</title>
+<!--[if lt IE 9]>
+    <script src="../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+<link href="/css/lobby/trade.css" rel="stylesheet" type="text/css" />
+<style>
+ #addTag {
+	position: absolute;
+}
+
+#selectedTags {
+	float: left;
+}
+
+.operate {
+	width: 100%;
+	/*position: relative;*/
+	/*bottom: 25px;*/
+	text-align: center;
+
+}
+
+.operate div{
+    display: inline-block;
+    overflow: hidden;
+}
+</style>
+</head>
+<body style="height: auto;">
+	<div class="lobby">
+		<form id="form" role="application" class="f14" novalidate="novalidate">
+			<!-- purchDeadLine -->
+			<div class="mt20">
+				<div class="form-group pre-info fl" style="width: 100%;">
+					<label class="col-sm-3 tr pt5 control-label"
+						style="padding: 5px 5px 0 0"><span class="red mr5">*</span><span>认购截止日：</span></label>
+					<div class="col-md-8" style="padding-left: 0">
+						<input placeholder="请选择时间" id="purchDeadLine" name="purchDeadLine" required
+							   class="laydate-icon form-control  layer-date data-common endDate"
+							   onclick="laydate({elem: '#purchDeadLine', istime:true, format: 'YYYY-MM-DD',istoday: true, min: laydate.now()})"/>
+					</div>
+				</div>
+				<div id="row2" class="form-group pre-info fl"
+					style="overflow: inherit; width: 100%; display: none;	">
+					<label class="col-sm-3 tr pt15 control-label"
+						style="padding: 15px 5px 0 0">推送指定机构：</label>
+					<div class="col-md-8" style="padding-left: 0;width:310px;">
+						<link rel="import"
+							href="../../../base/autocompleter.html?__inline">
+					</div>
+				</div>
+				<div class="operate">
+					<div>
+						<input id="submit" type="button" class="btn btn-primary mr10" value="确定" /> 
+						<input id="cancle" type="button" class="btn btn-default" value="取消" />
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<link rel="import" href="../../jsrefer.html?__inline">
+	<script src="/javascript/lib/laydate/laydate.js" type="text/javascript"></script>
+	<script src="/javascript/lib/requirejs/require.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		require([ "lobby/account/mypublish/controllers/openbuyController" ]);
+	</script>
+
+</body>
+</html>

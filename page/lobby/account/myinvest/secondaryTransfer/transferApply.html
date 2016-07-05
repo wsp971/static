@@ -1,0 +1,293 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <title>产品转让</title>
+    <!--[if lt IE 9]>
+    <script src="../../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+    <link href="../../../../../css/lobby/trade.css" rel="stylesheet" type="text/css"/>
+</head>
+<body class="lobby">
+<div class="wrapper wrapper-content animated fadeInRight w1400">
+    <div class="conhead">
+        <h2 class="title">
+            产品转让</h2>
+    </div>
+    <div class="row">
+        <div class="fixed-table-container cell">
+            <div class="fixed-table-body">
+                <table class="table table-hover">
+                    <tbody>
+                    <tr>
+                        <td class="col-md-1 bg-gray">
+                            产品名称
+                        </td>
+                        <td class="col-md-4">
+                        </td>
+                        <td class="col-md-1 bg-gray">
+                            产品类型
+                        </td>
+                        <td class="col-md-4">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 bg-gray">
+                            起息日
+                        </td>
+                        <td class="col-md-4">
+                        </td>
+                        <td class="col-md-1 bg-gray">
+                            到期日
+                        </td>
+                        <td class="col-md-4">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 bg-gray">
+                            投资剩余期限
+                        </td>
+                        <td class="col-md-4">
+                        </td>
+                        <td class="col-md-1 bg-gray">
+                            发行金额（元）
+                        </td>
+                        <td class="col-md-4">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-1 bg-gray">
+                            预期收益率
+                        </td>
+                        <td class="col-md-4">
+                        </td>
+                        <td class="col-md-1 bg-gray">
+                            计息基准
+                        </td>
+                        <td class="col-md-4">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row f14">
+        <p class="hr-line-dashed"></p>
+
+        <div class="col-sm-12">
+            <div class="ibox">
+                <form method="get" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">
+                            产品名称</label>
+
+                        <div class="col-md-4 pt5">
+                            <label class="control-label" id="productName">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">
+                            转让份额</label>
+
+                        <div class="col-md-4 pt5">
+                            <label class="control-label" id="transferPrice">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">
+                            已收到利息</label>
+
+                        <div class="col-md-4 pt5">
+                            <label class="control-label" id="transferInterest">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group div-height">
+                        <label class="col-sm-4 control-label">
+                            <span class="red">*</span>转让方式</label>
+
+                        <div class="col-sm-7">
+                            <ul>
+                                <li class="mt5">
+                                    <input type="radio" id="byRate" value="按转让利率" name="transferType" checked="checked">
+                                    <label for="byRate">按转让利率</label>
+                                    <input type="radio" id="byPrice" value="按转让价格" name="transferType" class="ml10">
+                                    <label for="byPrice">按转让价格</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">
+                            <span class="red"></span>
+                        </label>
+
+                        <div class="col-sm-7">
+                            <div class="col-sm-3 form-control pr oh">
+                                <input id="transferValue" min="0" style="padding:2px 5px "
+                                       class="col-sm-10 bn">
+                                <span class="unit" id="unit">%</span>
+                            </div>
+                            <div class="form-error" style="display:none;">
+                                <span class="ml10 mt5 error" style="display: inline-block;"><i class="iconfont red">&#xe60e;</i>请输入转让利率</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="bg-gray pt20 pb10 ml20 mr20">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" id="textCal">计算后转让价格</label>
+
+                            <div class="col-sm-7">
+                                <div class="col-sm-3 form-control pr oh bg-gray">
+                                    <input id="afterCal" min="0" style="padding:2px 5px "
+                                           class="col-sm-10 bn bg-gray" readOnly="true">
+                                    <span class="unit" id="unitCal">元</span>
+                                </div>
+                                <span class="ml10 mt5 grey-font" style="display: inline-block">系统以转让申请当日<span
+                                        class="red sysDate">YYYY-MM-DD</span>为基准计算</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">转让前实际收益率</label>
+
+                            <div class="col-sm-7">
+                                <div class="col-sm-3 form-control pr oh bg-gray">
+                                    <input id="realRate" min="0" style="padding:2px 5px "
+                                           class="col-sm-10 bn bg-gray" readOnly="true">
+
+                                    <span class="unit">%</span>
+                                </div>
+                                <span class="ml10 mt5 grey-font" style="display: inline-block">系统以转让申请当日<span
+                                        class="red sysDate">YYYY-MM-DD</span>为基准计算</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">
+                                <span class="red"></span>
+                            </label>
+
+                            <p class="col-sm-7 grey-font">
+                                计算方法：名义转让利率R%<br/>
+                                转让总价款=本金+本金*R%*实际存续天数/365-转让方已收利息<br/>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="hr-line-dashed"></p>
+
+                    <div class="form-group f14 ibox">
+                        <label class="col-sm-4 control-label">
+                            <span class="red icons">*</span>
+                            <span>转让方账户名称</span>
+                        </label>
+
+                        <div class="col-md-7">
+                            <input type="text" placeholder="请输入收款账户" class="form-control fl col-sm-6"
+                                   id="bankAccountName"/>
+
+                            <div class="form-error" style="display:none;">
+                                <span class="ml10 mt5 error" style="display: inline-block;"><i class="iconfont red">&#xe60e;</i>请输入收款账户</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group f14 ibox">
+                        <label class="col-sm-4 control-label">
+                            <span class="red icons">*</span>
+                            <span>转让方开户银行</span>
+                        </label>
+
+                        <div class="col-md-7">
+                            <select id="depositBank" class="form-control fl col-sm-6">
+                                <option value="">请选择开户银行</option>
+                            </select>
+
+                            <div class="form-error" style="display:none;">
+                                <span class="ml10 mt5 error" style="display: inline-block;"><i class="iconfont red">&#xe60e;</i>请选择开户银行</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group f14 ibox">
+                        <label class="col-sm-4 control-label">
+                            <span class="red icons">*</span>
+                            <span>转让方银行账号</span>
+                        </label>
+
+                        <div class="col-md-7 pb20">
+                            <input type="text" placeholder="请输入银行账号" class="form-control fl col-sm-6"
+                                   id="bankAccountId"/>
+
+                            <div class="form-error" style="display:none;">
+                                <span class="ml10 mt5 error" style="display: inline-block;"><i class="iconfont red">&#xe60e;</i>请输入银行账号</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="hr-line-dashed"></p>
+
+                    <div class="form-group div-height mt10">
+                        <label class="col-sm-4 control-label">
+                            <span class="red">*</span>产品推送设置：</label>
+
+                        <div class="col-sm-7">
+                            <ul>
+                                <li class="mt5">
+                                    <input type="radio" id="publicPush" name="pushType" value="0" checked="checked">
+                                    <label for="publicPush" class="radio-info">公开</label>
+                                    <span class="grey-font">全部机构可见</span></li>
+                                <li class="mt10">
+                                    <input type="radio" id="privatePush" name="pushType" value="1">
+                                    <label for="privatePush" class="radio-info">指定机构</label>
+                                    <span class="grey-font">指定机构可见。为空则全部机构不可见，可通过修改功能重新或者追加指定机构</span>
+                                </li>
+                                <li class="mt10 assignInfo" style="display: none">
+                                    <ul class="autocompleter" style="height: 100px;">
+                                        <li class="mt10">
+                                            <div class="fl" style="width: 300px">
+                                                <div class="input-group">
+                                                    <input type="text" id="autocomplete" class="form-control fl"/>
+
+                                                    <div class="input-group-btn" style="width: 300px;">
+                                                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a id="addTag" class="btn btn-primary ml5">添加</a>
+                                        </li>
+                                        <li id="selectedTags" class="mt10"></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="hr-line-dashed"></p>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label"></label>
+
+                        <div class="col-sm-offset-4 ">
+                            <button id="btnApply" class="btn btn-primary ml15" type="button" style="width: 200px;">
+                                提交
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--交易大厅公共js引入开始 -->
+<link rel="import" href="../../../jsrefer.html?__inline">
+<!--交易大厅公共js引入结束 -->
+<script src="../../../../../javascript/lib/requirejs/require.js" type="text/javascript"></script>
+<script type="text/javascript">
+    require(["../../../../../javascript/modules/lobby/account/myinvest/secondaryTransfer/transferApply.js"]);
+</script>
+</body>
+</html>

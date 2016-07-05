@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <title>Title</title>
+    <!--[if lt IE 9]>
+    <script src="../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+    <link href="/css/lobby/product/product.css" rel="stylesheet" type="text/css"/>
+</head>
+<body class="lobby">
+<div id="apply-success" class="pre-content" style="display: none;">
+    <div class="pre-suc-title pre-suc-content">
+        <h1 class="pre-title">资产转让发布成功！</h1>
+        <h4 class="pre-sec-title">您可以在<a class="mytransfer blue" href="javascript:void(0);">转让产品</a>页面中进行产品管理</h4>
+        <h4 class="pre-sec-title">也可点击<a class="productDetail blue" href="javascript:void(0);">查看产品</a>直接查看</h4>
+    </div>
+</div>
+<div id="buy-suc-online" class="pre-content" style="display: none;">
+    <div class="pre-suc-title pre-suc-content">
+        <h1 class="pre-title">购买申请提交成功!</h1>
+        <h4 class="pre-sec-title">您可以在<a class="contract blue" href="javascript:void(0);">合同管理</a>页面进行合同签署</h4>
+        <h4 class="pre-sec-title">也可以在<a class="myorder blue" href="javascript:void(0);">我的订单</a>页面进行订单管理</h4>
+    </div>
+</div>
+<div id="buy-fail-online" class="pre-content" style="display: none;">
+    <div class="pre-fail-title pre-suc-content">
+        <h1 class="pre-title">购买申请提交失败!</h1>
+        <h4 class="pre-sec-title">该转让产品已被其他用户购买</h4>
+    </div>
+</div>
+
+<link rel="import" href="../../../jsrefer.html?__inline">
+<script type="text/javascript" src="/javascript/lib/requirejs/require.js"></script>
+<script type="text/javascript">
+    require(["../../../../../javascript/modules/lobby/account/myinvest/secondaryTransfer/resultInfo.js"]);
+</script>
+</body>
+</html>

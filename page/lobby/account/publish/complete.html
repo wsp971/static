@@ -1,0 +1,24 @@
+<div id="completeDiv"
+	class="forth-content pull-right ctrl-lg mt15p hidden">
+	<ul class="f14">
+		<li class="ctrl-line"><h1 class="f20">产品发布申请提交成功！</h1></li>
+		<li class="mt10 ctrl-line">已在审核中</li>
+		<li class="mt10 ctrl-line">您可以在<a id="goProduct" class="blue ml5 mr5">我的产品</a>页面中进行产品管理
+		</li>
+<!-- 		<li class="mt10 ctrl-line">也可点击<a id="viewProduct" class="blue ml5 mr5">查看产品</a>直接查看
+		</li> -->
+	</ul>
+</div>
+<div id="failDiv"
+	class="forth-content pull-right ctrl-lg mt15p hidden">
+	<ul class="f14">
+		<li class="ctrl-line"><h1 class="f20">产品发布申请提交失败！</h1></li>
+		<li class="mt10 ctrl-line">错误原因：<span id="failReason"></span></li>
+		<li id="timeoutMsg" class="mt10 ctrl-line hidden">网络延迟可能导致后台处理超时，无需重复提交</li>
+		<li id="otherMsg" class="mt10 ctrl-line hidden">您可以<a id="resubmit" class="blue ml5 mr5">重新提交</a></li>
+	</ul>
+</div>
+<div id="loadingDiv" class="mt15p f14 hidden">
+	<div id="loadTarget" class="row" style="background-color: blue; height: 130px;"></div>
+	<div class="row centerTab">正在提交发布申请，请勿关闭浏览器...</div>
+</div>

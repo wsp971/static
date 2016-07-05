@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<title>人员管理-同业平台</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta name="x5-orientation" content="portrait">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="statics/img/favicon.ico">
+<link rel="bookmark" href="statics/img/favicon.ico">
+<link rel="stylesheet" id="app-css-link"
+	href="statics/css/app.css?v=20160411135205" type="text/css">
+<link rel="stylesheet" type="text/css" href="statics/css/zheng/signatureManager.css?version=2.6.2.3">
+</head>
+<body>
+	<!-- header Start -->
+	<!-- 顶部登录状态 start -->
+	<div class="pro-top">
+		<div class="w1000" id="top-login-box" style="display: none">
+			<span class="fr">同业平台欢迎您!<a class="m-l30 nav-account"
+				href="javascript:;" id="login-username"></a> <a
+				class="m-l50 link-c1" href="javascript:;" id="logout">退出</a></span>
+		</div>
+		<div class="w1000">
+			<span class="fr">同业平台欢迎您!<a class="m-l50 link-c1"
+				href="index.html">登录</a></span>
+		</div>
+	</div>
+	<!-- 顶部登录状态 end -->
+	<div class="pro-header">
+		<div class="pro-nav">
+			<div class="w1000 clearfix">
+				<div class="pro-logo">
+					<a href="index.html"><img src="statics/img/logo.png"></a>
+				</div>
+				<div class="pro-menu">
+					<a href="index.html">首页</a> <a href="productCenter.html"
+						id="productNav" class="loginFilterPoint" style="display: none">产品中心</a>
+					<a href="tradeHub.html" class="loginFilterPoint">交易中心</a> <a
+						href="#" class="loginFilterPoint nav-account current">用户中心</a> <a
+						href="about.html" class="">关于我们</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- header End -->
+	<div class="pro-bg1 p-t20 p-b50">
+		<div class="w1000">
+			<div class="crumbs m-b20">
+				<span class="crumbs-icon"></span><a href="index.html">首页</a> >> <a
+					class="m-l10" href="#">用户中心</a>
+			</div>
+			<div class="user-box clearfix">
+				<div class="user-left user-left-normal">
+					<div class="user-info user-info-normal">
+						<p class="c m-b10">您好，欢迎登陆同业平台！</p>
+						<div class="user-head-box tac m-b10">
+							<p class="header-box">
+								<i><img src="statics/img/user-header-img.png"></i>
+							</p>
+						</div>
+						<p class="f14 tac">
+							<span class="fwb common-userName" id="username"></span>
+						</p>
+						<p class="c2 m-b30">
+							用户权限:<span class="common-userRole"></span>
+						</p>
+						<p class="txt-c up-pass">
+							<a class="link-c1 f14" href="changePwd.html">修改登录密码</a>
+						</p>
+						<p class="txt-c up-pass user-btn f14"
+							id="common-usermanage-box" style="display: none">
+							<a class="link-c1 f14" href="userManager.html">人员管理</a>
+						</p>
+						<p class="txt-c up-pass" id="common-fundOpen-box"
+							style="display: none">
+							<a class="link-c1 f14" href="fundOpenDetails.html">基金开户列表</a>
+						</p>
+						<!--新增：签名管理-->
+						<p class="txt-c up-pass up-pass-active">
+							<a class="link-c1 f14" href="signatureManager.html">签名管理</a>
+						</p>
+					</div>
+
+					<!----------------------------Signature Area---------------------------->
+					<div id="userMessageDiv" class="pro-box-dw">
+						<div class="pro-t"></div>
+						<div class="pro-label pro-label-wi" style="position: relative">
+							<div id="signatureManager">
+
+								<div class="wdqm-list wy-mg-20">
+                                    <div id="mySignature">
+                                        <div class="mysig-title">
+                                            <strong class="wy-text-16">我的签名</strong>
+                                        </div>
+                                        <div class="myop-title">
+                                            <a href="#" id='disable-sig-a'><strong style='color:red'>失效&nbsp;&nbsp;</strong></a>
+                                            <a href="#" id='disable-sig-a-ok' style='display:none'><strong style='color:red'>确定</strong></a>
+                                        </div>
+                                    </div><br>
+                                    <div id="signatureList" >
+    <script id="sig-list" type="text/html">
+        <%
+        for(var i=0;i<sigList.length;i++){
+            var sig=sigList[i];
+			var flag= sig.isActive==1 ? "可用":"<span class='disabled-prompt'>不可用</span>";//if the signature is not default
+        %>
+										<dl class="<%=sig.isDefault==1 ? 'checked-sig-item':'signatureItem'%>">
+											<dt>
+												<div  style="text-align:center; max-width:200px; max-height:200px;padding:10px;" >
+													<img src="<%=sig.imgPath%>" style="vertical-align:middle;">
+													<input class='disable-checkbox' type="checkbox" <%=sig.isActive==1 ? '':'checked'%> name="<%=sig.name%>" style='display:none;float:right;'>
+												</div>
+												
+												
+											</dt>
+											<dd>
+											<p class="nameItem">名称：<span><%=sig.name%></span></p>
+											<p class="nameItem">签名状态：<span><%=sig.isDefault==1 ? "默认": flag %> </span></p>
+											<p class="nameItem">生成时间：<span><%=sig.time%></span></p>
+											<p class="wy-qianm-bg">
+												<a href="person/signatureFileDownload.action?id=2441893">
+													<em class="xiazai">下载</em></a><a class="<%=sig.isDefault==1 ? '':'isDefault-a'%>" href="javascript:void(0);" data-id="2441893">
+													<em class="<%=sig.isDefault==1 ? 'yishezhi':'shezhi'%>"><%=sig.isDefault==1 ? '已为默认':'设置为默认'%></em>
+												</a>											
+											</p>
+											</dd>
+										</dl>
+        
+        <%}%>
+									<div class="sig-add-area">
+										<ul>
+											<li><a href="addSignature.html" id="addNew">更多</a></li>
+										</ul>
+									</div>
+									<div class="row"></div>
+	</script>							
+										
+                                    </div>
+									
+	
+                                </div>
+                                <div class="row"></div>
+							</div>
+						</div>
+						<div class="row"></div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--底部开始-->
+	<div class="foot">
+		<div class="foot-db">
+			<!--
+        <div class="foot-dh">
+                <ul>
+                    <li><a href="#">关于同业平台</a><span class="foot-mg">|</span></li>
+                    <li><a href="#">如何加入</a><span class="foot-mg">|</span></li>
+                    <li><a href="#">成功案例</a><span class="foot-mg">|</span></li>
+                    <li><a href="#">帮助中心</a><span class="foot-mg">|</span></li>
+                    <li><a href="#">网站声明</a><span class="foot-mg">|</span></li>
+                    <li><a href="#">网站地图</a></li>
+                </ul>
+            </div>
+        -->
+			<div class="foot-bq">
+				<p class="foot-cennt">版权所有©深圳平安金融科技咨询有限公司未经允许可不可复制、转载或者摘编，违者必究</p>
+				<p class="foot-cennt">Copyright © PingAn Bank CO.Ltd.All Rights
+					Reserved</p>
+				<p class="foot-cennt">
+					<span class="foot-logo"><img
+						src="statics/img/lianjie/db_logo_64.png" width="16" height="24"></span>备案/许可证编号：粤ICP备11018345号-2
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--底部结束-->
+	<script type="text/javascript" src="lib/require.js?v=20160411135205"></script>
+	<script type="text/javascript"
+		src="lib/require-config.js?v=20160411135205"></script>
+	<script type="text/javascript">
+		var _context = {
+			env : "PRD",
+			ctx : "",
+			version : "0.0.1",
+			ts : "20160411135205",
+			name : "app"
+		};
+		(function() {
+			requirejs.config({
+				baseUrl : ""
+			});
+
+			require([ "modules/signatureManager/index" ]);
+
+		})();
+	</script>
+	
+	<div class="mask"></div>
+	<!-- <div class='mess'></div> -->
+</body>
+</html>

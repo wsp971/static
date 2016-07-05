@@ -1,0 +1,129 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no" />
+<title>信托</title>
+<!-- <!--[if lt IE 9]> 
+       <script src="../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+<link href="../../../../css/lobby/trade.css" rel="stylesheet"
+	type="text/css" />
+</head>
+<body class="lobby">
+	<div class="wrapper wrapper-content animated fadeInRight">
+		<div class="conhead">
+			<h2 class="title">我的报价</h2>
+			<div class="fl mt5 grouptab">
+				<span class="active" dava-value="1">同业存单</span> | <span
+					dava-value="2">同业存款</span> | <span dava-value="3">银行理财</span> | <span
+					dava-value="4">非标资产</span>
+			</div>
+			<div class="form-control radius searchbox">
+				<input type="text" id="search" placeholder="产品名称，编号"
+					autocomplete="off" maxlength="30" /> <span id="btnSearch"
+					class="search"><i class="iconfont arrow">&#xe603;</i></span>
+			</div>
+		</div>
+		<div class="ibox">
+			<div class="choocebar">
+				<div class="row">
+					<select id="prodectType" class="form-control col-sm-2">
+						<option>产品类型</option>
+						<option>选项 2</option>
+						<option>选项 3</option>
+						<option>选项 4</option>
+					</select> 
+					<button id="btnQuery" type="button" class="btn btn-primary">
+						查 询</button>
+				</div>
+			</div>
+		</div>
+		<div class="ibox">
+			<div class="row">
+				<table id="table">
+				</table>
+			</div>
+		</div>
+	</div>
+	<!--合同详情js引入 -->
+	<link rel="import" href="../../jsrefer.html?__inline">
+	<script src="../../../../javascript/lib/laydate/laydate.js"
+		type="text/javascript"></script>
+	<script src="../../../../javascript/lib/bootstrap/table.js"
+		type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function() {
+			var obj = new Object();
+			obj.url = "/product/getProductList";
+			//obj.url = "./test.json";
+			obj.sortable = false;
+			column = [ {
+				field : 'productName',
+				title : '编号',
+			}, {
+				field : 'productNum',
+				title : '方向',
+			}, {
+				field : 'businessType',
+				title : '期限',
+			}, {
+				field : 'businessType',
+				title : '价格',
+			}, {
+				field : 'businessType',
+				title : '额度',
+			}, {
+				field : 'businessType',
+				title : '发行日期',
+			}, {
+				field : 'businessType',
+				title : '提交时间',
+			}, {
+				field : 'businessType',
+				title : '联系方式',
+			}, {
+				field : 'operation',
+				title : '操作',
+				events : operateEvents,
+				formatter : operateFormatter
+			} ]
+			obj.columns = column;
+			$("#table").fictable(obj);
+
+			$("#btn_query").click(function() {
+				var temp = { 
+					productNum : $("#name").val()
+				};
+				obj.queryParams = temp;
+				$("#table").fictable(obj);
+				//$("#table").bootstrapTable('refresh',{queryParams:temp}); 
+			})
+		});
+
+		function operateFormatter(value, row, index) {
+			return [
+					'<a class="edit" href="javascript:void(0)" title="Like">',
+					'修改',
+					'</a>  ',
+					'<a class="remove" href="javascript:void(0)" title="Remove">',
+					'删除', '</a>' ].join('');
+		}
+
+		window.operateEvents = {
+			'click .edit' : function(e, value, row, index) {
+				alert('You click edit action, row: ' + JSON.stringify(row));
+			},
+			'click .remove' : function(e, value, row, index) {
+				$("#table").bootstrapTable('remove', {
+					field : 'id',
+					values : [ row.id ]
+				});
+			}
+		};
+	</script>
+</body>
+</html>

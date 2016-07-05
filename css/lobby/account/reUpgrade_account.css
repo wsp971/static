@@ -1,0 +1,93 @@
+body{
+	background-color:#F9F7F8;
+}
+.upgrade {
+  width: 990px;
+  margin: 5px 15px 20px 15px;
+}
+.upgrade .account-content h1{
+	padding-left:30px;
+}
+.upgrade .account-content .first-content .title2{
+	padding-left:0px;
+}
+.upgrade .account-content .first-content .title2 em{
+	margin-left:80px;
+}
+fieldset{
+	padding-top:15px;
+}
+.upgrade .account-content .first-content form h3{
+	font-size:16px;
+	color:#666;
+}
+.upgrade .account-content .first-content .title3{
+	padding-left:0px;
+}
+.upgrade .account-content .first-content .row{
+	padding-left:50px;
+}
+.upgrade .account-content .first-content .row.third{
+	padding-left:0px;
+}
+.agreement{
+	color:#1777CD;
+}
+.upgrade .account-content .first-content p{
+	text-align:center;
+	margin-top:40px;
+}
+
+#submit_btn{
+	width:190px;
+	height:44px;
+	line-height:44px;
+	text-align:center;
+	background:#1777CD;
+	color:#fff;
+	border:none;
+	border-radius:4px;
+	font-size:14px;
+	margin:20px 20px;
+	cursor:pointer;
+}
+#submit_btn[disabled]{
+	background-color: #ccc;
+	cursor:not-allowed;
+	color:#e7e7e7;
+}
+.upgrade .account-content .first-content .border_list{
+	position:absolute;
+}
+.upgrade .account-content .first-content .border_list li{
+	border:none;
+	border-left:2px solid #ccc;
+	height:275px;
+	width:2px;
+	position:absoulut;
+	top:42px;
+	left:9px;
+}
+.upgrade .account-content .first-content .border_list li.second{
+	height:900px;
+	top:72px;
+}
+
+/* validate的验证样式 */
+label.error{
+	position: absolute;
+	left: 285px;
+	left: 280px\0;
+	+left: 295px;
+  	top: 5px;
+}
+.address{
+	margin-left:0;
+}
+.city{
+	margin-left:0;
+	width:30%;
+}
+.col-sm-2{
+	width: 14.666667%;
+}

@@ -1,0 +1,125 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>成交确认单</title>
+    <!-- <!--[if lt IE 9]> 
+       <script src="../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+    <link href="../../../../css/lobby/trade.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../css/lobby/product/trusts/dealTicket.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="lobby">
+    <div class="wrapper wrapper-content animated fadeInRight">
+    	<div class="print-img">
+    		<img src="../../../../img/lobby/dealTicket_print.png" />
+    		<span>打印</span>
+    	</div>
+    	<div class="wcontent">
+	        <div class="row">
+	        	<div class="ibox-title f14">
+	                <h3 class="tc f18">亿账通金融同业平台交易确认书</h3>
+	            	<div class="mt10 tr">编号：<span id="code"></span></div>
+	            	<div class="mt10">至：产品发行方（机构名称）：<span id="publish" class="underline"></span></div>
+	            	<div class="mt10">至：产品认购方（机构名称）：<span id="invest" class="underline"></span></div>
+	            	<div class="mt30"><span>本交易确认书旨在确认  <span id="publishOne" class="funderline"></span> 和   <span id="investOne" class="funderline"></span> 在成交日期达成的。具体情况如下：</span></div>
+	            </div>
+	        </div>
+	        <div class="ibox">
+	            <div class="row">
+	                <div class="fixed-table-container cell">
+	                    <div class="fixed-table-body">
+	                        <table class="table f14">
+	                            <tbody>
+	                                <tr>
+	                                    <td class="col-md-3 bg-gray">产品发行机构名称：</td>
+	                                    <td id="publishTwo" colspan="3" class="col-md-10"></td>
+	                                </tr>
+	                                <tr>
+	                                    <td class="col-md-3 bg-gray">产品认购机构名称：</td>
+	                                    <td id="investTwo" colspan="3" class="col-md-10"></td>
+	                                </tr>
+	                                <tr>
+	                                    <td class="col-md-3 bg-gray">产品名称：</td>
+	                                    <td id="productName" class="col-md-3"></td>
+	                                    <td class="col-md-3 bg-gray">产品类型：</td>
+	                                    <td id="productType" class="col-md-3"></td>
+	                                </tr>
+	                                <tr>
+	                                    <td class="col-md-3 bg-gray">产品编号：</td>
+	                                    <td id="productCode" class="col-md-3"></td>
+	                                    <td class="col-md-3 bg-gray">成交日期：</td>
+	                                    <td id="tradeDate" class="col-md-3"></td>
+	                                </tr>
+	                                <tr>
+	                                    <td class="col-md-3 bg-gray">预期年化收益率（%）：</td>
+	                                    <td id="expAnnYield" class="col-md-3"></td>
+	                                    <td class="col-md-3 bg-gray">产品期限：</td>
+	                                    <td id="term" class="col-md-3"></td>
+	                                </tr>
+	                                <tr>
+	                                    <td class="col-md-3 bg-gray">起息日：</td>
+	                                    <td id="valueDate" class="col-md-3"></td>
+	                                    <td class="col-md-3 bg-gray">到期日：</td>
+	                                    <td id="expireDate" class="col-md-3"></td>
+	                                </tr>
+	                                <tr>
+	                                    <td class="col-md-3 bg-gray">计息标准（360/365）：</td>
+	                                    <td id="insterstBase" class="col-md-3"></td>
+	                                    <td class="col-md-3 bg-gray">付息频率：</td>
+	                                    <td id="couponFrequency" class="col-md-3"></td>
+	                                </tr>
+	                                <tr>
+	                                	<td rowspan="2" class="col-md-3 bg-gray valign">投资金额（元，人民币）</td>
+	                                	<td id="orderAmount" colspan="3" class="col-md-10"></td>
+	                                </tr>
+	                                <tr>
+	                                	<td id="orderAmountUpper" colspan="3" class="col-md-10 bleft"></td>
+	                                </tr>
+	                                <tr>
+	                                    <td class="col-md-3 bg-gray">认购/申购起息日：</td>
+	                                    <td id="subValueDate" class="col-md-3"></td>
+	                                    <td class="col-md-3 bg-gray">预期成立日期：</td>
+	                                    <td id="" class="col-md-3"></td>
+	                                </tr>
+	                                <tr>
+	                                    <td class="col-md-3 bg-gray">信托专户名称：</td>
+	                                    <td id="trustAccountName" colspan="3" class="col-md-10"></td>
+	                                </tr>
+	                                <tr>
+	                                    <td class="col-md-3 bg-gray">信托专户开户银行：</td>
+	                                    <td id="trustBankAccount" class="col-md-3"></td>
+	                                    <td class="col-md-3 bg-gray">信托专户账号：</td>
+	                                    <td id="trustAccount" class="col-md-3"></td>
+	                                </tr>
+	                                <tr>
+	                                    <td class="col-md-3 bg-gray">投资方收款账户名称：</td>
+	                                    <td id="bankAcct" colspan="3" class="col-md-10"></td>
+	                                </tr>
+	                                <tr>
+	                                    <td class="col-md-3 bg-gray">投资方方开户银行：</td>
+	                                    <td id="bankName" class="col-md-3"></td>
+	                                    <td class="col-md-3 bg-gray">投资方账号：</td>
+	                                    <td id="bankNum" class="col-md-3"></td>
+	                                </tr>
+	                            </tbody>
+	                        </table>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+    	</div>
+    </div>
+    <!--交易大厅公共js引入开始 -->
+    <link rel="import" href="../../jsrefer.html?__inline">
+    <script src="../../../../javascript/base/rmb.js" type="text/javascript"></script>
+    <!--交易大厅公共js引入结束 -->
+    <script src="../../../../javascript/lib/requirejs/require.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        require(["../../../../javascript/modules/lobby/product/trusts/dealTicket.js"]);
+    </script>
+</body>
+</html>

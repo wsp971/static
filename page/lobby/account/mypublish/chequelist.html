@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>兑付</title>
+    <!--[if lt IE 9]> 
+       <script src="../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+    <link href="../../../../css/lobby/trade.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="lobby">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="conhead">
+            <h2 class="title">兑付</h2>
+            <div class="form-control radius searchbox">
+                <input type="text" id="search" placeholder="产品名称，编号" autocomplete="off" maxlength="30" />
+                <span id="btnSearch" class="search"><i class="iconfont arrow">&#xe603;</i></span>
+            </div>
+        </div>
+        <div class="ibox">
+            <div class="choocebar">
+                <div class="row">
+                    <input id="startDate" class="laydate-icon form-control layer-date col-sm-2" placeholder="到期日期" />
+                    <span class="pt5 split">-</span>
+                    <input id="endDate" class="laydate-icon form-control layer-date col-sm-2" placeholder="到期日期" />
+                    <select id="productType" class="form-control col-sm-2">
+                        <option value="">产品类型</option>
+                        <option value="1">银行理财</option>
+                        <option value="2">基金</option>
+                        <option value="3">信托</option>
+                        <option value="4">资管</option>
+                        <option value="5">结构化资产</option>
+                        <option value="6">交易资产</option>
+                    </select>
+                    <button id="btnQuery" type="button" class="btn btn-primary">
+                        查 询</button>
+                </div>
+            </div>
+        </div>
+        <div class="ibox">
+            <div class="row">
+                <table id="table">
+                </table>
+            </div>
+        </div>
+        <input type="hidden" id="orderId"/>
+    </div>
+    <link rel="import" href="../../jsrefer.html?__inline">
+    <script src="../../../../javascript/lib/laydate/laydate.js" type="text/javascript"></script>
+    <script src="../../../../javascript/lib/requirejs/require.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        require(["../../../../javascript/modules/lobby/account/mypublish/chequelist.js"]);
+    </script>
+</body>
+</html>

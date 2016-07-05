@@ -1,0 +1,447 @@
+.upgrade{
+    margin: 0 auto;
+    width:990px;
+}
+.upgrade .account-content{
+    margin: 25px auto;
+}
+.upgrade .account-content h1{
+    font-size: 23px;
+    font-weight: bold;
+    padding-left : 36px;
+    line-height:40px;
+}
+.upgrade .account-content .first-content{
+	background:#fff;
+    padding:20px 36px 72px;
+}
+.steps ul li a .number{
+	display:none;
+}
+.wizard > .steps > ul > li, .wizard > .actions > ul > li{
+	background:
+}
+.wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active{
+  background: transparent;
+  color: #f00;
+  position: absolute;
+  top: 31px;
+  left: -9px;
+  color:#E05328;
+}
+.wizard > .steps .done a, .wizard > .steps .done a:hover, .wizard > .steps .done a:active{
+  background: transparent;
+  color: #f00;
+  position: absolute;
+  top: 31px;
+  left: -9px;
+  color:#E05328;
+}
+
+.wizard > .steps .disabled a, .wizard > .steps .disabled a:hover, .wizard > .steps .disabled a:active{
+	background: transparent;
+    color: #f00;
+    position: absolute;
+    top: 31px;
+    left: 50px;
+    color:#333;
+}
+.wizard > .steps > ul > li, .wizard > .actions > ul > li{
+	position:relative;
+	height:66px;
+}
+.wizard > .steps .disabled a#form-t-2, .wizard > .steps .disabled a#form-t-2:hover, .wizard > .steps .disabled a#form-t-2:active{
+	left:97px;
+}
+.wizard > .steps .disabled a#form-t-3, .wizard > .steps .disabled a#form-t-3:hover, .wizard > .steps .disabled a#form-t-3:active{
+	left:102px;
+}
+.wizard > .steps .done a, .wizard > .steps .done a:hover, .wizard > .steps .done a:active{
+	color:#E05328;
+	background:transparent;
+}
+.upgrade .account-content .first-content .nav{
+	  background: url(../../../img/login/forgot_icons.png) -3px -40px no-repeat;
+	  width: 35px;
+	  height: 35px;
+	  position: absolute;
+	  top: -28px;
+	  left: 38px;
+}
+
+.upgrade .account-content .first-content .nav.nav2{
+	background-positon:-3px -80px;
+}
+.upgrade .account-content .first-content .nav.nav3{
+	background-positon:-3px -120px;
+}
+.wizard > .steps .current a .nav1, .wizard > .steps .current a:hover .nav1, .wizard > .steps .current a:active .nav1{
+	background: url(../../../img/login/forgot_icons.png) -3px -40px no-repeat;
+    color: #f00;
+    position: absolute;
+    top: -29px;
+    left: 37px;
+    color:#333;
+}
+.wizard > .steps .done a .nav1, .wizard > .steps .done a:hover .nav1, .wizard > .steps .done a:active .nav1{
+	background: url(../../../img/login/forgot_icons.png) -3px -40px no-repeat;
+    color: #f00;
+    position: absolute;
+    top: -29px;
+    left: 37px;
+    color:#333;
+}
+.wizard > .steps .current a#form-t-1, .wizard > .steps .current a#form-t-1:hover, .wizard > .steps .current a#form-t-1:active{
+	left:48px;
+}
+.wizard > .steps .disabled a .nav2, .wizard > .steps .disabled a:hover .nav2, .wizard > .steps .disabled a:active .nav2{
+	background: url(../../../img/login/forgot_icons.png) -3px -160px no-repeat;
+	position: absolute;
+    top: -28px;
+    left: 26px;
+}
+.wizard > .steps .current a .nav2, .wizard > .steps .current a:hover .nav2, .wizard > .steps .current a:active .nav2{
+	background: url(../../../img/login/forgot_icons.png) -3px -80px no-repeat;
+	position: absolute;
+    top: -28px;
+    left: 26px;
+}
+.wizard > .steps .done a .nav2, .wizard > .steps .done a:hover .nav2, .wizard > .steps .done a:active .nav2{
+	background: url(../../../img/login/forgot_icons.png) -3px -80px no-repeat;
+	position: absolute;
+    top: -28px;
+    left: 26px;
+}
+.wizard > .steps .current a#form-t-2, .wizard > .steps .current a#form-t-2:hover, .wizard > .steps .current a#form-t-2:active{
+	left:98px;
+}
+.wizard > .steps .disabled a .nav3, .wizard > .steps .disabled a:hover .nav3, .wizard > .steps .disabled a:active .nav3{
+	background: url(../../../img/login/forgot_icons.png) -3px -200px no-repeat;
+	position: absolute;
+    top: -28px;
+    left: 26px;
+}
+.wizard > .steps .current a .nav3, .wizard > .steps .current a:hover .nav3, .wizard > .steps .current a:active .nav3{
+	background: url(../../../img/login/forgot_icons.png) -3px -120px no-repeat;
+	position: absolute;
+    top: -28px;
+    left: 26px;
+}
+.wizard > .steps .done a .nav3, .wizard > .steps .done a:hover .nav3, .wizard > .steps .done a:active .nav3{
+	background: url(../../../img/login/forgot_icons.png) -3px -120px no-repeat;
+	position: absolute;
+    top: -28px;
+    left: 26px;
+}
+.wizard > .steps .done a#form-t-2, .wizard > .steps .done a#form-t-2:hover, .wizard > .steps .done a#form-t-2:active{
+	left:98px;
+}
+.wizard > .steps .done a#form-t-1, .wizard > .steps .done a#form-t-1:hover, .wizard > .steps .done a#form-t-1:active{
+	left:49px;
+}
+.wizard > .steps .disabled a .nav4, .wizard > .steps .disabled a:hover .nav4, .wizard > .steps .disabled a:active .nav4{
+	background: url(../../../img/login/forgot_icons.png) -3px -240px no-repeat;
+	position: absolute;
+    top: -28px;
+    left: 26px;
+}
+
+.border_list li{
+	width:233px;
+	height:3px;
+	border-top:3px solid #CACACA;
+	position:relative;
+	bottom:-29px;
+	+bottom:-59px;
+	left:75px;
+}
+.border_list .first-hover{
+	border-color:#EFA892;
+}
+.border_list li.second{
+    left: 350px;
+    bottom:-26px;
+    +bottom:-40px;
+    width:234px;
+}
+.border_list li.third{
+	left: 628px;
+	bottom:-23px;
+	+bottom:-20px;
+	width:188px;
+}
+.upgrade .account-content .first-content .row{
+	margin-top:24px;
+	padding:0;
+}
+.upgrade .account-content .first-content .title{
+	color:333;
+	font-size:16px;
+}
+.upgrade .account-content .first-content .title2{
+	color:#333;
+	font-size:16px;
+	padding-left:43px;
+}
+.upgrade .account-content .first-content .title3{
+	color:#666;
+	font-size:12px;
+	display: block;
+    line-height: 34px;
+}
+.upgrade .account-content .first-content .first-ul li{
+    height: 69px;
+    border: 1px solid #C6C6C6;
+    margin-bottom: 10px;
+    padding-left: 30px;
+}
+.upgrade .account-content .first-content .first-ul li:hover{
+    background-color: #F0F7FF;
+}
+.upgrade .account-content .first-content .first-ul li input{
+    vertical-align: 1px;
+}
+.upgrade .account-content .first-content .first-ul li .li-content{
+    font-size: 19px;
+    padding-left: 12px;
+}
+.upgrade .account-content .first-content .first-ul li .content-line{
+	margin-left: 50px;
+	color:#DEE0E2;
+}
+.upgrade .account-content .first-content .first-ul li .content-content{
+	margin-left: 20px;
+}
+
+.upgrade .account-content .first-content .first-ul{
+    list-style: none;
+    line-height: 73px;
+    width:99.8%;
+}
+.upgrade .account-content .first-content .attentionTip{
+    color: #999999;
+    margin-top: 38px;
+    margin-bottom:16px;
+}
+
+.upgrade .account-content .first-content .attentionTip span{
+    font-size: 14px;
+    font-weight: bold;
+    line-height:40px;
+}
+.upgrade .content .first-content .attentionTip ul{
+    list-style: none;
+}
+.upgrade .account-content .first-content .attentionTip ul li a{
+    color: #1777CE;
+}
+.attentionTip ul li{
+	line-height:24px;
+}
+.success{
+  	color: #5CCA2E;
+}
+.upgrade .account-content .first-content .cuo{
+    color: #ff0000;
+    vertical-align: -3px;
+}
+
+.upgrade .account-content .first-content form .in-line{
+    display: inline-block;
+}
+.upgrade .account-content .first-content form .radio-style{
+    margin-top: 7px;
+    margin-left: 50px;
+}
+.wizard > .content > .body label.error{
+	position: absolute;
+	left: 285px;
+	left: 280px\0;
+	+left: 295px;
+  	top: 5px;
+  	
+}
+
+.wizard > .content > .body input.error{
+	border: 1px solid #ccc;
+	background:#fff;
+}
+.upgrade .account-content .first-content form .forth-content{
+	width: 300px;
+  	height: 100px;
+  	border: 0px solid red;
+  	margin: 10px auto;
+  	text-align: center;
+  	margin-top:35px;
+}
+.upgrade .account-content .first-content form .forth-content .cont-suc{
+	font-weight: bold;
+  	font-size: 18px;
+  	line-height:40px;
+  	position:relative;
+}
+.upgrade .account-content .first-content form .forth-content .cont-suc:before{
+	content:'';
+	width:40px;
+	height:49px;
+	display:inline-block;
+	position:absolute;
+	top:-8px;
+	left:-65px;
+	background: url(../../../img/lobby/ok.png) no-repeat;
+}
+.upgrade .account-content .first-content form .forth-content .cont-err:before{
+	content:'';
+	width:40px;
+	height:49px;
+	display:inline-block;
+	position:absolute;
+	top:-8px;
+	left:-65px;
+	background: url(../../../img/lobby/error.png) no-repeat;
+}
+.upgrade .account-content .first-content form .forth-content .cont-scs{
+	font-size: 14px;
+	line-height: 50px;
+}
+.upgrade .account-content .first-content form .forth-content .cont-err{
+	font-size: 18px;
+	line-height: 50px;
+	position:relative;
+}
+
+.wizard > .content{
+	background:#fff;
+}
+.wizard .content > .body {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+fieldset{
+	border:0;
+	background:#fff;
+}
+
+
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.fade.in {
+  opacity: 1;
+}
+.modal {
+  z-index: 2050!important;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+  -o-transition: opacity .15s linear;
+  transition: opacity .15s linear;
+}
+#form-p-2 p{
+	text-align: center;
+  	margin: 40px 0px 24px;
+}
+
+
+
+/* 消掉内容的padding */
+.wizard > .content > .body{
+	padding:0;
+}
+fieldset{
+	padding:0;
+}
+/* STEP中的样式 */
+.wizard > .steps{
+	margin-bottom: 38px;
+}
+.wizard > .content > .body label{
+	text-align:right;
+	margin-left:160px;
+	padding-right:5px;
+}
+.wizard > .actions{
+	text-align: center;
+}
+.wizard > .actions a.next, .wizard > .actions a.next:hover, .wizard > .actions a.next:active{
+	background: #1777CD;
+    width: 189px;
+    height: 43px;
+    text-align: center;
+    padding-top: 12px;
+}
+.wizard > .actions a.previous, .wizard > .actions a.previous:hover, .wizard > .actions a.previous:active{
+  background: none;
+  text-align: center;
+  padding-top: 12px;
+  color: #1777CE;
+  margin-left: -500px;
+}
+.wizard > .content > .body input{
+	width:265px;
+}
+.form-control{
+	width: 63%;
+}
+.wizard > .content > .body input[type=checkbox],.wizard > .content > .body input[type=radio]{
+	width:13px;
+}
+.city {
+	width: 13%;
+  margin-right: 6px;
+  white-space: nowrap;
+  display: inline-block;
+  margin-bottom: 18px;
+  margin-left: 2%;
+}
+.address{
+	margin-left: 39%;
+}
+.col-sm-2{
+	width: 19.666667%;
+}
+.not-word{
+  float: right;
+  margin-top: -26px;
+  margin-right: 84px;
+  color: #CCCCCC;
+}
+.not-word-lst{
+   position: absolute;
+  left: 73%;
+}
+#progress{
+	padding-top: 11px;
+}
+.bar {
+    height: 18px;
+    background: green;
+}
+.wizard > .steps > ul > li{
+	+width:24.9%;
+}
+.actions{
+	+margin-left:550px;
+}
+.fixed-table-container tbody tr td:nth-child(3) a{
+	color:#1777CE;
+}
+.wizard, .tabcontrol{
+	overflow: inherit;
+}

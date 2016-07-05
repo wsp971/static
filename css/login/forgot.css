@@ -1,0 +1,70 @@
+.step1 {
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding-bottom: 66px;
+	text-align: center;
+}
+.vis_clear {
+	height: 34px;
+	overflow: visible;
+	clear: both;
+	margin-top: 10px;
+	margin-bottom: 14px;
+	position: relative;
+}
+.form-label {
+	width: 15%;
+	padding-left: 0;
+	padding-right: 0;
+}
+.state {
+	width: 300px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #e05328;
+	position: absolute;
+	left: 85%; 
+	margin-top: 6px;
+	text-align: left;
+	text-indent: 30px;
+	white-space: nowrap;
+}
+.vcodeMsg {
+	width: 50%;
+	display: inline-block;
+ 	float: left; 
+}
+ .code_img {
+	display: inline-block;
+	float: left;
+	height: 35px;
+	line-height: 35px;
+	font-size: 12px;
+	width: 30%;
+	margin-left: 2%;
+} 
+.changeVcode {
+	display: inline-block;
+	width: 16%;
+	white-space: nowrap;
+	float: right;
+	margin-top: 8px;
+	color: #0052be;
+}
+.next {
+	width: 190px;
+	height: 44px;
+	line-height: 44px;
+	font-size: 16px;
+	color: #fff;
+	margin: 20px auto;
+	margin-left: -18%;
+}
+.vis_clear .available {
+	background-color: #1777cd;
+}
+.right {
+	background-position: 0 -357px;
+}

@@ -1,0 +1,30 @@
+/*
+* @Author: EX-ZHANGYUANYONG001
+* @Date:   2016-05-30 18:11:25
+* @Last Modified by:   EX-ZHANGYUANYONG001
+* @Last Modified time: 2016-05-31 18:45:01
+*/
+
+@import url('../css/base/main.css?__inline');
+
+.container{
+	overflow:hidden;
+}
+.failuer_tip {
+	width: 165px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 18px;
+	text-indent: 50px;
+	margin: 50px auto;
+	background: url(../../img/login/forgot_icons.png) 0 -395px no-repeat;
+	color: #333;
+}
+.tips {
+	height: 34px;
+	line-height: 34px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 12px;
+	color: #333;
+}

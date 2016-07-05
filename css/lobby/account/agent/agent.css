@@ -1,0 +1,62 @@
+body {
+	background-color:#f9f7f8;
+}
+.container {
+	width:auto;
+	margin:0 15px;
+}
+.header {
+	margin-bottom: 30px;
+}
+.bgw {
+	background-color: #fff;
+}
+.c9 {
+	color: #999;
+}
+.form-horizontal .control-label {
+	padding-top:2px;
+}
+.lh25 {
+	line-height: 25px;
+}
+.hidden {
+	display: none;
+}
+.text-right {
+	text-align: right;
+}
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.wrong {
+	display:inline-block;
+	height:25px;
+	padding:5px 0 0 20px;
+	background-image: url("/img/common/red_cross.png");
+	background-repeat: no-repeat;
+	background-position:0% 70%;
+	color:red;
+}
+.right {
+	display:inline-block;
+	height:15px;
+	width:15px;
+	background-image: url("/img/common/green_tick.png");
+	background-repeat: no-repeat;
+}
+
+.bgp{
+	height:25px;
+	background-position:0% 70%;
+}
+.row
+{
+    overflow: hidden;
+}
+.vm{
+	padding-top: 6%;
+}

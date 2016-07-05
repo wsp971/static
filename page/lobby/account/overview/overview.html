@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<!--[if lt IE 9]> 
+       <script src="../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+<![endif]-->
+<title>账户概览</title>
+<link rel="stylesheet" href="/css/lobby/trade.css" />
+<link rel="stylesheet" href="/css/lobby/account/agent/agent.css" />
+<link rel="stylesheet" href="/css/lobby/account/overview/overview.css" />
+</head>
+<body class="f14">
+	<div class="container">
+		<div class="row pb10 bgw">
+			<div class="">
+			  	<div class="pull-left pl25 mr20 pt10">
+			    	<img class="" src="img/lobby/account_com_icons011.png" alt="..." width="142" height="92"/>
+			 	</div>
+			 	<div class="pull-right">
+			 		<div id="qkl-close">
+						<img src="/img/lobby/dun.png" width="14px" height="16px"/> 
+						<em class=" btn-link mousehand pr25">区块链安全保障中<span class="ani-dot">...</span></em>
+					</div>
+					<div id="qkl-open" class="hidden qkl lh25">
+						<p id="qklerror" class="pull-right f12 hidden red">网络错误,请重试</p>
+						<h4><strong class="f16">区块链安全保障</strong></h4>
+						<p>截至当前已有<strong id="statis" class="warn"></strong>个文件被区块链保护</p>
+						<p>其中<strong id="userStatis" class="warn"></strong>个与我有关</p>
+						<p id="qkl-toclose" class="text-right btn-link mousehand">收起</p>
+					</div>
+				</div>
+			  	<div class="lh25">
+			  		<div class="username">
+				    	<h1><strong class="f18" id="username"></strong></h1>
+				    	<img alt="image" src="/img/lobby/agent.jpg">
+			  		</div>
+					<p class="c6"><span id="company"></span> <a id="toOrgan" href="organ.html" class="btn-link">查看</a></p>
+					<!--<p class="c6">产品类别：<span id="kind"></span></p>-->
+<!-- 					<p class="c9">上次登录时间：<span id="lastlogin">暂无</span></p> -->
+			 	 </div>
+			</div>
+		</div>
+		<div class="row pt20 bgw pb15" style="min-height: 200px">
+			<div class="col-xs-12 f16">
+				<strong>我的投资</strong>
+			</div>
+			<div class="col-xs-12 hidden f12 tc pl25 fn vm" id="investNone">您还没有投资记录</div>
+			<div id="investData" class="col-xs-12">
+				<div id="investLeft">
+					<div class="col-xs-6 hidden" id="investChart"></div>
+					<div class="col-xs-6 f12 tc pl25 fn vm" id="investLCome">数据加载中<span class="ani-dot">...</span></div>
+					<div class="col-xs-6 hidden f12 tc pl25 fn vm" id="investLNone">您还没有持仓记录</div>
+					<div class="col-xs-6 hidden f12 tc pl25 fn vm" id="investLFail">数据加载失败</div>
+				</div>
+				<div id="investRight">
+					<div class="col-xs-6">
+
+							<p id="investList">投资列表</p>
+		
+							<p id="investMore" class="text-right btn btn-link hidden">更多&gt;</p>
+							<div class="col-xs-6 f12 tc pl25 fn vr" id="investRCome">数据加载中<span class="ani-dot">...</span></div>
+							<div class="col-xs-6 hidden f12 tc pl25 fn vr" id="investRNone">您还没有订单记录</div>
+							<div class="col-xs-6 hidden f12 tc pl25 fn vr" id="investRFail">数据加载失败</div>
+							<table class="table table-bordered text-center  hidden"  id="investTable">
+								<tr id="investlist" class="active">
+									<td>产品</td>
+									<td>起息日</td>
+									<td>投资金额(万元)</td>
+								</tr>
+							</table>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row pt15 bgw pb15" style="min-height: 200px">
+			<div class="col-xs-12 f16">
+				<strong>我的产品</strong>
+			</div>
+			<div class="col-xs-12 hidden f12 tc pl25 fn vm" id="productNone">您还未发布产品</div>
+			<div id="productCome" class="col-xs-12 f12 tc pl25 fn vm">数据加载中<span class="ani-dot">...</span></div>
+			<div id="productData" class="col-xs-12 hidden">
+				<div id="productLeft">
+					<div class="col-xs-6 hidden" id="productChart"></div>
+					<div class="col-xs-6 hidden f12 tc pl25 fn vm" id="productLFail">数据加载失败</div>
+				</div>
+				<div id="productRight">
+					<div class="col-xs-6">
+							<p id="productList">产品列表</p>
+							<p id="productMore" class=" btn btn-link hidden text-right">更多&gt;</p>
+							<div class="col-xs-6 hidden f12 tc pl25 fn vr" id="productRFail">数据加载失败</div>
+							
+							<table class="table table-bordered text-center hidden" id="productTable">
+								<tr id="productlist" class="active">
+									<td>产品</td>
+									<td>产品阶段</td>
+									<td>发行规模(万元)</td>
+								</tr>
+							</table>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+<link rel="import" href="../../jsrefer.html?__inline">
+<script src="/javascript/lib/requirejs/require.js" type="text/javascript"></script>
+<script type="text/javascript">
+        require(["/javascript/modules/lobby/account/overview/overview.js"]);
+</script>
+
+</html>

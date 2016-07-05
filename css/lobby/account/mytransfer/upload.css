@@ -1,0 +1,64 @@
+body{
+    background-color: #fff;
+}
+
+.cl666 {
+    color: #666;
+}
+.cl999 {
+    color: #999;
+}
+
+.span-width {
+    width: 150px;
+}
+.table td {
+    text-indent: 15px;
+}
+.table tr:first-child td {
+    text-indent: 7px;
+}
+.table .td2{
+    width: 72%;
+}
+.btn-div {
+    margin: 0 auto;
+    text-align: center;
+}
+.button {
+    width: 150px;
+    height: 43px;
+    margin-right: 20px;
+}
+.min-wid {
+    min-width: 378px;
+    white-space: nowrap;
+}
+.tab-of {
+    overflow: visible;
+}
+.visible {
+    visibility: visible;
+}
+.bar {
+    margin-bottom: 11px;
+    height: 18px;
+    background: green;
+}
+.table .file-div {
+    margin: 0;
+    margin-left: 15px;
+    padding: 0px;
+    height: 32px;
+    line-height: 32px;
+}
+i.del:hover {
+    cursor:pointer;
+}
+.col-sm-3 {
+    *width: 20%;
+    *padding-right: 0px;
+}
+.col-sm-2 {
+    *padding: 0px;
+}

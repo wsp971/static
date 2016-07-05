@@ -1,0 +1,445 @@
+<p class="hr-line-dashed"></p>
+<!-- release type. releaseType: raisePeriod - establishPeriod -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>发布类型</label>
+	<div class="col-sm-6 error-message">
+		<ul class="first-ul">
+			<li class="ctrl-line"><input type="radio"
+				class="radio-label data-radio" name="productPhase" id="raisePeriod"
+				value="2" checked="checked"><label class="radio-info"
+				for="raisePeriod">募集期</label><span class="content-line"></span><span
+				class="radio-mnc f12">适用于在募集期阶段的产品，提供份额预约等功能。募集期满可正式发行转为成立期</span></li>
+			<li class="ctrl-line"><input type="radio" class="radio-label"
+				name="productPhase" id="establishPeriod" value="3"><label
+				class="radio-info" for="establishPeriod">成立期</label><span
+				class="content-line"></span><span class="radio-mnc f12">适用于在成立期期阶段的产品，提供购买等交易功能</span></li>
+		</ul>
+	</div>
+</div>
+<!-- Product Name. productName-->
+<p class="hr-line-dashed"></p>
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>产品名称</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="productName" name="productName" type="text" maxlength=50
+			class="form-control ctrl-lg data-common noSpecial" required>
+	</div>
+</div>
+<!-- publisher -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">产品推荐方</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="publisher" name="publisher" type="text" maxlength=50
+			class="form-control ctrl-lg data-common" placeholder="非必填">
+	</div>
+</div>
+<!-- publisherOrg -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>发行机构</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="publisherOrg" name="publisherOrg" type="text" maxlength=50
+			class="form-control ctrl-lg data-common" required>
+	</div>
+</div>
+<!-- publisherOrgType -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>发行方机构类型</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="publisherOrgType" name="publisherOrgType" type="text" maxlength=50
+			class="form-control ctrl-lg data-common" required>
+	</div>
+</div>
+<!-- subBeginDate subEndDate -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>预约期间</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="subBeginDate" name="subBeginDate" readonly="readonly"
+			class="laydate-icon form-control ctrl-sm layer-date data-common startDate"
+			placeholder="起始日期" /> <span class="">&nbsp;&nbsp;-&nbsp;&nbsp;</span> <input
+			id="subEndDate" name="subEndDate" readonly="readonly"
+			class="laydate-icon form-control ctrl-sm layer-date data-common endDate"
+			placeholder="结束日期 " />
+	</div>
+</div>
+<!-- aimAmount -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">剩余额度</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="remainAmount" name="remainAmount" maxlength=20
+			class="form-control ctrl-sm data-common amountFloat"><span
+			class="ml15 mt5">元</span>
+	</div>
+</div>
+<p class="hr-line-dashed"></p>
+<!-- estvalueDate -->
+<div id="estValDateDiv" class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>预计起息日</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="estValDate" name="estValDate" required readonly="readonly"
+			class="laydate-icon form-control ctrl-sm layer-date data-common" />
+	</div>
+</div>
+<!-- estmaturityDate -->
+<div id="estMatDateDiv" class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>预计到期日</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="estMatDate" name="estMatDate" required readonly="readonly"
+			class="laydate-icon form-control ctrl-sm layer-date data-common" />
+	</div>
+</div>
+<!-- estEstDate -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>预计成立日期</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="estEstDate" name="estEstDate" required readonly="readonly"
+			class="laydate-icon form-control ctrl-sm layer-date data-common" />
+	</div>
+</div>
+<!-- purchDeadLine -->
+<div id="purchDeadLineDiv" class="form-group div-height div-optional">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5 hidden">*</span>认购截止日期</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="purchDeadLine" name="purchDeadLine" readonly="readonly"
+			class="laydate-icon form-control ctrl-sm layer-date data-common" />
+	</div>
+</div>
+<!-- publishAmount -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">发行规模</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="publishAmount" name="publishAmount" maxlength=20
+			class="form-control ctrl-sm data-common amountFloat"><span
+			class="ml15 mt5">元</span>
+	</div>
+</div>
+<p class="hr-line-dashed"></p>
+<!-- productTerm productTermUnit -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>收益类型</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<select id="profitType" name="profitType"
+			class="form-control ctrl-sm m-b data-common errorAfter" required>
+			<option value="">请选择</option>
+			<option value="c_profit_type_1">类固定收益</option>
+			<option value="c_profit_type_2">权益</option>
+		</select>
+	</div>
+</div>
+<!-- productTerm productTermUnit -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>产品期限</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<select id="productTermType" name="productTermType"
+			class="form-control col-md-5 ctrl-sm m-b data-common" required>
+			<option value="">请选择</option>
+			<option value="c_product_term_type_1">单一期限</option>
+			<option value="c_product_term_type_2">信托份额期限</option>
+		</select> <input id="productTerm" name="productTerm"
+			class="form-control col-md-5 ctrl-sm data-common ml10 intOnly" required /><span
+			class="data-hide ml15 mt5" id="productTermUnit"
+			data-val="c_product_term_unit_2">月</span>
+	</div>
+</div>
+<!-- expRtnRate -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>预期年收益率</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="expRtnRate" name="expRtnRate" maxlength=8
+			class="form-control ctrl-md data-common rateFloat" required><span
+			class="ml15 mt5">%</span>
+	</div>
+</div>
+<!-- interestStandard -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">计息基准</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<select id="interestStandard"
+			class="form-control ctrl-md m-b data-common" name="interestStandard">
+			<option value="">请选择</option>
+			<option value="c_interest_standard_1">360</option>
+			<option value="c_interest_standard_2">365</option>
+		</select>
+	</div>
+</div>
+<!-- interestPayFreq -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>付息频率</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<select id="interestPayFreq"
+			class="form-control ctrl-md m-b data-common" name="interestPayFreq"
+			required>
+			<option value="">请选择</option>
+			<option value="c_interest_pay_freq_1">按季</option>
+			<option value="c_interest_pay_freq_2">按年</option>
+			<option value="c_interest_pay_freq_3">到期付息</option>
+		</select>
+	</div>
+</div>
+<!-- minSubAmount -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>最低投资金额</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="minSubAmount" name="minSubAmount"  maxlength=20
+			class="form-control ctrl-md data-common amountFloat" required><span
+			class="ml15 mt5">元</span><span class="ml15 mnc">填0表示不限制</span>
+	</div>
+</div>
+<!-- canSubRedeem -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>是否申赎</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<ul class="first-ul">
+			<li class="ctrl-line"><input type="radio"
+				class="radio-label data-radio" name="canSubRedeem" id="subRedeem"
+				value="yes"><label class="radio-info mt5 mr20"
+				for="subRedeem">是</label><input type="radio" class="radio-label"
+				name="canSubRedeem" id="noSubRedeem" value="no" checked="checked"><label
+				class="radio-info mt5" for="noSubRedeem">否</label></li>
+		</ul>
+	</div>
+</div>
+<!-- subValueDate -->
+<div id="subValueDateDiv" class="form-group div-height hidden">
+	<span class="col-sm-1"></span> <label class="col-sm-2 ctrl-label"><span
+		class="red mr5">*</span>申购起息日</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<select id="subValueDate" name="subValueDate"
+			class="form-control ctrl-sm m-b errorAfter">
+			<option value="">请选择</option>
+			<option value="T+0">T+0</option>
+			<option value="T+1">T+1</option>
+		</select>
+	</div>
+</div>
+<!-- redeemBookDate -->
+<div id="redeemBookDateDiv" class="form-group div-height hidden">
+	<span class="col-sm-1"></span> <label class="col-sm-2 ctrl-label"><span
+		class="red mr5">*</span>赎回到账日</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<select id="redeemBookDate" name="redeemBookDate"
+			class="form-control ctrl-sm m-b errorAfter">
+			<option value="">请选择</option>
+			<option value="T+0">T+0</option>
+			<option value="T+1">T+1</option>
+			<option value="T+2">T+2</option>
+			<option value="T+3">T+3</option>
+			<option value="T+4">T+4</option>
+			<option value="T+5">T+5</option>
+		</select>
+	</div>
+</div>
+<!-- realTimeRedeem -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">实时赎回</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<ul class="first-ul">
+			<li class="ctrl-line"><input type="radio"
+				class="radio-label data-radio" name="realTimeRedeem" id="realTimeR"
+				value="yes"><label class="radio-info mt5 mr20"
+				for="realTimeR">是</label><input type="radio" class="radio-label"
+				name="realTimeRedeem" id="norealTimeR" value="no" checked="checked"><label
+				class="radio-info mt5" for="norealTimeR">否</label></li>
+		</ul>
+	</div>
+</div>
+<p class="hr-line-dashed"></p>
+<!-- minAppendAmount -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">最低追加金额</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="minAppendAmount" name="minAppendAmount" maxlength=20
+			min="0" class="form-control ctrl-md data-common amountFloat"><span
+			class="ml15 mt5">元</span><span class="ml15 mnc">填0表示不限制</span>
+	</div>
+</div>
+<!-- perMaxAmount -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">单笔最高金额</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="perMaxAmount" name="perMaxAmount" maxlength=20
+			class="form-control ctrl-md data-common amountFloat"><span
+			class="ml15 mt5">元</span><span class="ml15 mnc">填0表示不限制</span>
+	</div>
+</div>
+<!-- canTransfer -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>是否可转让</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<ul class="first-ul">
+			<li class="ctrl-line"><input type="radio"
+				class="radio-label data-radio" name="canTransfer" id="canTransfer"
+				value="yes"><label class="radio-info mt5 mr20"
+				for="canTransfer">是</label><input type="radio" class="radio-label"
+				name="canTransfer" id="cannotTransfer" value="no" checked="checked"><label
+				class="radio-info mt5" for="cannotTransfer">否</label></li>
+		</ul>
+	</div>
+</div>
+<!-- transferFee -->
+<div id="transferFeeDiv" class="form-group div-height hidden">
+	<span class="col-sm-1"></span> <label class="col-sm-2 ctrl-label"><span
+		class="red mr5">*</span>转让手续费率</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="transferFee" name="transferFee" maxlength=8
+			required class="form-control ctrl-sm m-b rateFloat"><span
+			class="ml15 mt5">%</span>
+	</div>
+</div>
+<p class="hr-line-dashed"></p>
+<!-- salesFee -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">销售费率</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="salesFee" name="salesFee" maxlength=8
+			class="form-control ctrl-sm data-common rateFloat"><span
+			class="ml15 mt5">%</span>
+	</div>
+</div>
+<!-- manageFee -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">管理费率</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="manageFee" name="manageFee" maxlength=8
+			class="form-control ctrl-sm data-common rateFloat"><span
+			class="ml15 mt5">%</span>
+	</div>
+</div>
+<!-- depositFee -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">托管费率</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="depositFee" name="depositFee" maxlength=8
+			class="form-control ctrl-sm data-common rateFloat"><span
+			class="ml15 mt5">%</span>
+	</div>
+</div>
+<!-- otherFeeMnc -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">其他费用备注</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="otherFeeMnc" name="otherFeeMnc" type="text" maxlength=20
+			class="form-control ctrl-sm data-common" placeholder="非必填">
+	</div>
+</div>
+<!-- manager -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">受托机构（管理人）</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="manager" name="manager" type="text" maxlength=50
+			class="form-control ctrl-lg data-common" placeholder="非必填">
+	</div>
+</div>
+<!-- trusteeAgency -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">托管机构</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="trusteeAgency" name="trusteeAgency" type="text" maxlength=50
+			class="form-control ctrl-lg data-common" placeholder="非必填">
+	</div>
+</div>
+<!-- regulator -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">监管机构</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="regulator" name="regulator" type="text" maxlength=50
+			class="form-control ctrl-lg data-common" placeholder="非必填">
+	</div>
+</div>
+<p class="hr-line-dashed"></p>
+<!-- productIntro -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>产品简介</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<textarea id="productIntro" name="productIntro"
+			class="form-control ctrl-lg data-common" required></textarea>
+	</div>
+</div>
+<!-- investScope -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>投资范围</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="investScope" name="investScope" type="text" maxlength=50
+			class="form-control ctrl-lg data-common" required>
+	</div>
+</div>
+<!-- investScope -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">投资标的</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="investments" name="investments" type="text" maxlength=50
+			class="form-control ctrl-lg data-common" placeholder="非必填">
+	</div>
+</div>
+<!-- riskLevel -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">风险等级</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="riskLevel" name="riskLevel" type="text" maxlength=50
+			class="form-control ctrl-lg data-common" placeholder="非必填">
+	</div>
+</div>
+<!-- creditMeasure -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">增信措施</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="creditMeasure" name="creditMeasure" type="text" maxlength=50
+			class="form-control ctrl-lg data-common" placeholder="非必填">
+	</div>
+</div>
+<!-- riskControlMeasures -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label">风控措施</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="riskControlMeasures" name="riskControlMeasures" type="text" maxlength=50
+			class="form-control ctrl-lg data-common" placeholder="非必填">
+	</div>
+</div>
+<p class="hr-line-dashed"></p>
+<!-- collectionAccountName -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>信托专户名称</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="collectionAccountName" name="collectionAccountName" type="text" maxlength=50
+			class="form-control ctrl-lg data-common" required>
+	</div>
+</div>
+<!-- openAccountBank -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>信托专户开户银行</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<select id="openAccountBank" name="openAccountBank"
+			class="form-control ctrl-lg m-b data-common errorAfter" required>
+		</select><a id="refreshAccountBank" class="ml15 mnc hidden">重新获取</a>
+	</div>
+</div>
+<!-- bankAccount -->
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>信托专户账号</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<input id="bankAccount" name="bankAccount" type="text" maxlength=50
+			class="form-control ctrl-lg data-common" required>
+	</div>
+</div>
+<p class="hr-line-dashed"></p>
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red mr5">*</span>产品推送设置</label>
+	<div class="col-sm-6 error-message ctrl-inline">
+		<ul class="first-ul">
+			<li class="ctrl-line"><input type="radio"
+				class="radio-label data-radio" name="pushSetting" id="publicPropose"
+				value="c_push_setting_2" checked="checked"><label
+				class="radio-info" for="publicPropose">公开</label><span
+				class="content-line"></span><span class="radio-mnc">全部机构可见</span></li>
+			<li class="ctrl-line"><input type="radio" class="radio-label"
+				name="pushSetting" id="privatePropose" value="c_push_setting_1"><label
+				class="radio-info" for="privatePropose">指定机构</label><span
+				class="content-line"></span><span class="radio-mnc">指定机构可见，
+					为空则全部不可见，可通过修改功能重新或者追加指定机构</span></li>
+		</ul>
+	</div>
+</div>
+<!-- 没时间解释了先这样搞快上车 fis link 导致这个css不好用 -->
+<div id="autoCompDiv" class="form-group div-height hidden" style="margin-left: 32.5%;margin-top: -20px;min-height: 150px;">
+	<link rel="import" href="../../../base/autocompleter.html?__inline">
+</div>
+<p class="hr-line-dashed"></p>

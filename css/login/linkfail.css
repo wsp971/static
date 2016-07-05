@@ -1,0 +1,22 @@
+/* 
+* @Author: LISHUAI900
+* @Date:   2016-06-01 19:24:43
+* @Last Modified by:   LISHUAI900
+* @Last Modified time: 2016-06-02 10:04:21
+*/
+.failuer_tip {
+	width: 372px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 18px;
+	text-align: center;
+	text-indent: 50px;
+	margin: 50px auto;
+	padding-bottom: 260px;
+	background-position: 0 -395px;
+	color: #333;
+}
+
+.failuer_tip a {
+	color: #0052be;
+}

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no" />
+<title>开放购买</title>
+<!--[if lt IE 9]>
+    <script src="../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+    <link href="../../../../../javascript/lib/fileupload/css/jquery.fileupload.css" rel="stylesheet" type="text/css" />
+	<link href="../../../../../css/lobby/account/mypublish/order/shareTransfer.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<form id="form" role="application" class="f14" novalidate="novalidate">
+		<div class="row">
+			<label class="col-sm-4 label-width pt5"><span class="red mr5">*</span>划转份额</label>
+			<div class="col-sm-6">
+				<input id="orderShare" name="orderShare" type="text" class="form-control" placeholder="1,000" disabled="disabled">
+			</div>
+		</div>
+		<!-- maturityDate -->
+		<div class="row">
+			<label class="col-sm-4 label-width pt5"><span class="red mr5">*</span>原份额持有方</label>
+			<div class="col-sm-6">
+				<input id="counterParty" name="counterParty" type="text" class="form-control" placeholder="某某投资机构" disabled="disabled">
+			</div>
+		</div>
+		<!-- publishAmount -->
+		<div class="row">
+			<label class="col-sm-4 label-width pt5"><span class="red mr5">*</span>划转受让方</label>
+			<div class="col-sm-6">
+				<input id="firmAccount" name="firmAccount" type="text" class="form-control" placeholder="某某投资机构" disabled="disabled">
+			</div>
+		</div>
+		<p class="hr-line-dashed line"></p>
+		<div class="row tc">
+	         <label>是否允许受让方<span class="red organization"></span>购买该转让交易？</label>
+	    </div>
+		
+		<div class="row tc">
+			<button id="submitBtn" type="button" class="btn btn-primary">允许</button>
+			<button id="cancelBtn" type="button" class="btn btn-cancle ml10">不允许</button>
+		</div>
+	</form>
+	<link rel="import" href="../../../jsrefer.html?__inline">
+	<script src="../../../../../javascript/lib/requirejs/require.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		require(["../../../../../javascript/modules/lobby/account/mypublish/buyApply.js" ]);
+	</script>
+</body>
+</html>

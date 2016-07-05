@@ -1,0 +1,25 @@
+/*@import url('/css/base/bootstrap.min.css?__inline');*/
+@import url('/css/base/main.css?__inline');
+.ct-send,.ct-receive,.ct-info ul{
+    display: inline;
+}
+li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 20px;
+}
+.btn-right{
+    position: absolute;
+    right: 10px;
+}
+.ct-info{
+    margin-top: 20px;
+}
+.ct-receive{
+    position: absolute;
+    right: 200px;;
+}
+.ct-title{
+   background-color: #f9f7f8;
+    margin: 20px;
+}

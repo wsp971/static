@@ -1,0 +1,59 @@
+/* 
+* @Author: LISHUAI900
+* @Date:   2016-06-01 17:24:07
+* @Last Modified by:   LISHUAI900
+* @Last Modified time: 2016-06-05 21:48:18
+*/
+.step3 {
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding-bottom: 66px;
+	text-align: center;
+}
+.vis_clear {
+	height: 34px;
+	overflow: visible;
+	clear: both;
+	margin-top: 10px;
+	margin-bottom: 14px;
+	position: relative;
+}
+.form-label {
+	width: 15%;
+	padding-left: 0;
+	padding-right: 0;
+}
+.state, .rules{
+	width: 300px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #e05328;
+	position: absolute;
+	left: 85%; 
+	margin-top: 6px;
+	text-align: left;
+	text-indent: 30px;
+	white-space: nowrap;
+}
+.rules {
+	font-size: 11px;
+	color: #999;
+	text-indent: 0px;
+}
+.vis_clear .next {
+	width: 190px;
+	height: 44px;
+	line-height: 44px;
+	font-size: 14px;
+	color: #fff;
+	margin: 20px auto;
+	margin-left: -18%;
+}
+.vis_clear .available {
+	background-color: #1777cd;
+}
+.right {
+	background-position: 0 -357px;
+}

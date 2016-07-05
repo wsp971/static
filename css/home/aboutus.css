@@ -1,0 +1,86 @@
+ @import url('../css/home/home.css?__inline');   
+.main .container dl
+ {
+     overflow: hidden;
+     padding-bottom: 10px;
+ }
+ .main .container dt span, table span
+ {
+     display: inline-block;
+     color: #3c8ccd;
+     line-height: 20px;
+     font-weight: bold;
+ }
+ .main .container dt span {
+     font-size: 12px;
+ }
+ table input
+ {
+     width: 180px;
+     padding: 2px;
+     margin-bottom: 5px;
+ }
+ 
+ .submit
+ {
+     margin-right: 0;
+     display: inline-block;
+     width: 79px;
+     height: 30px;
+     line-height: 30px;
+     background: #3c8ccd;
+     border:0 none;
+     border-radius: 2px;
+     margin-top: 20px;
+     margin-bottom: 110px;
+ }      
+ 
+ .bg-home
+ {
+     background: url(/img/home/banner-contactus.png) 0 0 repeat-x;
+     background-size: 100%;
+     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/home/banner-contactus.png',sizingMethod='scale')\9;
+     *filter:none;    
+     height:150px;
+ }
+ 
+ .main .header
+ {
+     height: 150px;
+ }
+ hr
+ {
+     border: 1px solid #ECEBE9;
+ }
+ .contain p
+ {
+     margin: 0;
+     font-size: 12px;
+     line-height:20px; 
+ }
+ table tr td 
+ {
+     height: 72px;
+     padding: 0px;
+ }
+ .input tr td 
+ {
+     height: 40px;
+ }
+ .icon1, .icon2, .icon3, .icon4, .icon5, .icon6
+ {   
+     width: 50px;
+     height: 50px;
+     background: url(../../img/home/aboutus.png) no-repeat;
+ }
+ .icon2 {background-position: 0px -96px;}
+ .icon3 {background-position: 0px -200px;}
+ .icon4 {background-position: 0px -300px;}
+ .icon5 {background-position: 0px -400px;}
+ .icon6 {background-position: 0px -500px;}
+ .footer .footer_content{
+            width: 990px;
+}
+ .main .container .sub_container2 dt span {
+     font-size: 14px;
+ }

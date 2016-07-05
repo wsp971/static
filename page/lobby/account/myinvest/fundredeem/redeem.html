@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>产品赎回</title>
+    <!--[if lt IE 9]> 
+       <script src="../../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+    <link href="../../../../../css/lobby/trade.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../../javascript/lib/fileupload/css/jquery.fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="../../javascript/lib/layer/2.2/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../../css/lobby/account/myinvest/fundredeem/redeem.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="lobby">
+    
+    <div class="ibox mt15" style="background:#f9f7f8;">
+        <h1 class="f18 fl ml15">
+            产品赎回</h1>
+    </div>
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+        
+        <div class="row">
+            <div class="col-sm-12 pt18">
+                <div class="ibox">
+                    <form method="get" class="form-horizontal">
+                    <div class="col-sm-8 pt18 mg no-fl">
+                    <div class="form-group f14">
+                        <label class="col-sm-3 control-label ta-left cl666">
+                            产品名称</label>
+                        <div class="col-md-6 pt7">
+                            <label class="control-label" id="productName">
+                                </label>
+                            <label style="display:none" id="department"></label>
+                            <!-- <label style="display:none" id="publisherOrgID"></label> -->
+                        </div>
+                    </div>
+                    <div class="form-group f14">
+                        <label class="col-sm-3 control-label ta-left cl666">
+                                基金代码</label>
+                        <div class="col-md-3 pt7">
+                            <label class="control-label" id="productCode">
+                                </label>
+                        </div>
+                    </div>
+                    <div class="form-group f14">
+                        <label class="col-sm-3 control-label ta-left cl666">
+                                7日化年化收益率</label>
+                        <div class="col-md-3 pt7">
+                            <label class="control-label" id="sevenDayYield">
+                                </label>
+                        </div>
+                        <label class="col-sm-3 control-label ta-left cl666">
+                                是否支持T+0赎回</label>
+                        <div class="col-md-3 pt7">
+                            <label class="control-label" id="support">
+                                </label>
+                            <label style="display:none" id="supportRedemption"></label>
+                        </div>
+                    </div>
+                    <div class="form-group f14">
+                        <label class="col-sm-3 control-label ta-left cl666">
+                                每万份单位收益</label>
+                        <div class="col-md-3 pt7">
+                            <label class="control-label" id="unitProfit">
+                                </label>
+                        </div>
+                        <label class="col-sm-3 control-label ta-left cl666">
+                                T+0赎回申请最晚时间</label>
+                        <div class="col-md-3 pt7">
+                            <label class="control-label" id="redemptionDeadline">
+                                </label>
+                        </div>
+                    </div>
+                    <div class="form-group f14">
+                        <label class="col-sm-3 control-label ta-left cl666">
+                                单日赎回上限</label>
+                        <div class="col-md-3 pt7">
+                            <label class="control-label" id="dailyMax">
+                                </label>
+                            <!-- <label style="display:none" id="dailyMaxAmount"></label> -->
+                            <!-- <label style="display:none" id="perMaxAmount"></label> -->
+                        </div>
+                        <label class="col-sm-3 control-label ta-left cl666">
+                                赎回资金到账日</label>
+                        <div class="col-md-3 pt7">
+                            <label class="control-label" id="redeemBookDate">
+                                </label>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="form-group f14 ibox mt50">
+                        <label class="col-sm-2 control-label">
+                        </label>
+                        <div class="col-md-8 pb30">
+                            <div class="cl666 pt7 fl span-width">
+                                <span class="red icons">*</span>
+                                <span>赎回份额</span>
+                            </div>
+                            <input type="text" placeholder="请输入赎回份额" maxlength="18" class="form-control fl col-md-4" id="amount" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"/>
+                            <span class="warn-tip pos" id="tips">赎回份额不可高于单日赎回上限</span>
+                            <label style="display:none" id="orderShare"></label>
+                            <div class="warn-tip tips" id="warn-tips">可赎回份额：<span id="max"></span></div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed">
+                    
+                    </div>
+            <div id="material" style="width:100%;"><!-- 上传材料模块 -->
+
+            <div class="ibox ">
+                <h1 class="f18 fl ">
+                    上传材料</h1>
+            </div>
+            <div class="ibox ">
+                <p class="ibox_p cl999">请上传下列已签署材料（<b class="warn-tip" style="font-weight: 500;">加盖公章</b>）的扫描件，原件线下递送。</p>
+                </div>
+                    <div class="form-group">
+                        <div class="fixed-table-container cell">
+                            <div class="fixed-table-body tab-of">
+                                <table class="table table-hover">
+                                    <tbody>
+                                        <tr class="active">
+                                            <td>
+                                                <div class="th-inner ">
+                                                    <span class="f14">需要下载材料</span><span class="red"> </span></div>
+                                            </td>
+                                            <td class="td2">
+                                                <div class="th-inner ">
+                                                    <span class="red">*</span> 上传以签署盖章的材料
+                                                </div>
+                                            </td>
+                                            <td class="tc">
+                                                <div class="th-inner ">
+                                                    操作</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a id="sheet" class="download" href="#">赎回申请单.doc</a>
+                                            </td>
+                                            <td class="td2" id="file">
+
+                                            </td>
+                                            <td class="tc">
+                                            <input type="hidden" name="fileOrder" id="fileOrder" value=0>
+                                            <input type="hidden" name="fileNum" id="fileNum" value=0>
+                                            <span class="btn btn-primary btn-sm fileinput-button"><span id="upbtn" style="text-indent: 0px;width:50px">&nbsp;上&nbsp;&nbsp;传&nbsp;</span>
+                                                <input id="fileupload" type="file" name="files[]" multiple="" >
+                                            </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    </div><!-- 上传材料模块 -->
+                    <br />
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">
+                        </label>
+                        <div class="col-sm-4 min-wid">
+                            <button type="button" class="btn btn-w-m btn-white" style="width: 146px; height:40px" id="btncancel">取消</button>
+                            <button class="btn btn-primary" style=" margin-left:50px; width: 146px;height:40px" id="btnredeem" type="button">
+                                赎回</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--交易大厅公共js引入开始 -->
+    <link rel="import" href="../../../jsrefer.html?__inline">
+    <script src="../../../../../javascript/lib/requirejs/require.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        require(["../../../../../javascript/modules/lobby/account/myinvest/redeem/redeem.js"]);
+        //消除上传文件
+        function deleteFile(e) {
+            $(e).parent('div').remove();
+            var num = $('#fileNum').val();
+            num--;
+            $('#fileNum').val(num);
+        }
+    </script>
+
+    <!--交易大厅公共js引入结束 -->
+</body>
+</html>

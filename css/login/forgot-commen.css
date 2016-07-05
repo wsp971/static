@@ -1,0 +1,229 @@
+/* 
+* @Author: LISHUAI900
+* @Date:   2016-06-01 15:54:28
+* @Last Modified by:   LISHUAI900
+* @Last Modified time: 2016-06-05 23:09:31
+*/
+@import url('../css/base/reset.css?__inline');
+/* 
+headeræ ·å¼
+ */
+.header {
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	background-color: #fff;
+}
+.head-top {
+	height: 100%;
+	margin: 0 50px;
+	font-size: 18px;
+}
+.head_info, .login-info{
+    height: 34px;
+    line-height: 34px;
+    font-size: 18px;
+	position: relative;
+	top: 23px;
+    float: left;
+}
+.head_info a, .head_info span, .login-info a, .login-info span {
+	width: 3px;
+	font-size: 18px;
+	font-weight: normal;
+	display: block;
+	float: left;
+	color: #333;
+}
+.head_info span {
+	color: #dbdbdb;
+}
+.head_info .logo {
+	width: 120px;
+}
+.head_info .logo h2{
+	font-size: 30px;
+    font-weight: normal;
+    color: #3363a5;
+}
+.head_info .module h4{
+	font-size: 18px;
+    font-weight: normal;
+    color: #666;
+}
+.head_info .module {
+	width: 105px;
+	text-align: right;
+}
+
+.login-info {
+	float: right;
+	margin-right: -20px;
+}
+.login-info a, .login-info span {
+	font-size: 12px;
+}
+.login-info a {
+	width: 64px;
+	margin: auto auto;
+	text-align: center;
+}
+.login-info a:last-child {
+	margin-right: 0;
+}
+/* 
+footeræ ·å¼
+ */
+.main .footer {
+	background-color: #f4f4f4;
+	height: 75px;
+	width: 100%;
+	text-align: center;
+/*	position:absolute;
+	bottom:0px;
+	left:0px;*/
+}
+
+.footer_content {
+	width: 990px;
+	margin: 0 auto;
+}
+.copyright {
+	font-size: 12px;
+	color: #888;
+	width: 990px;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+/* 
+å†…å®¹æ ·å¼  
+ */
+.main {
+	background-color: #f4f4f4;
+	min-height:100%;
+     height: auto !important;
+     height: 100%; 
+     position: relative;
+     background-size: cover;
+}
+
+.main .container {
+	color: #333;
+	width: 990px;
+	margin: 50px auto 0 auto;
+	border: 1px solid #fff;
+	background-color: #fff;
+	padding-bottom: 100px;
+}
+.container .content {
+
+	width: 920px;
+	margin: 0 auto;
+	text-align: center;
+}
+.form-group .input_div {
+	*width: 60%;
+	*padding: 0;
+}
+.padnone {
+	*padding: 0;
+	*text-indent: 20px;
+}
+.step1 .form-group label, .step2 .form-group label, .step3 .form-group label {
+	font-size: 14px;
+	white-space: nowrap;
+	color: #666;
+}
+
+/*
+æ­¥éª¤æ¡æ ·å¼„1¤7
+*/
+
+.step_top, .step {
+	height: 40px;
+	width: 790px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+.step_top {	
+	margin-top: 20px;
+}
+.step_top li, .step li {
+	display: inline-block;
+	float: left;
+	font-size: 14px;
+	line-height: 40px;
+}
+.step_top li:first-child {
+	margin-left: 16px;
+}
+.item2, .item3, .item4, .item1_active, .item2_active, .item3_active, .item_done, .state, .alert, .success_tip, .failuer_tip {
+	background: url(../../img/login/forgot_icons.png) 0 0 no-repeat;	
+}
+.item2, .item3, .item4, .item1_active, .item2_active, .item3_active, .item_done {
+	width: 38px;
+	height: 40px;
+}
+.item_done {background-position: 0px 0px;}
+.item1_active {background-position: 0px -40px;}
+.item2_active {background-position: 0px -80px;}
+.item3_active {background-position: 0px -120px;}
+.item2 {background-position: 0px -160px;}
+.item3 {background-position: 0px -200px;}
+.item4 {background-position: 0px -240px;}
+.step_line {
+	width: 200px;
+	height: 18px;
+	margin-bottom: 18px;
+	border-bottom: 3px solid #cacaca;
+}
+.item {
+	float: left;
+	width: 75px;
+	text-align: center;
+	margin-left: 163px;
+}
+.item:first-child {
+	margin-left: 0;	
+}
+.light {
+	border-bottom: 3px solid #e89278;
+}
+.active {
+	color: #e05328;
+}
+
+/*
+æç¤ºè¯­å¥æ ·å¼
+*/
+.state, .alert, .success_tip, .failuer_tip{
+	background-position: 0 -377px;
+}
+
+.hidden {
+	display: none;
+}
+.tipdiv, .form-horizontal .tipdiv {
+	visibility: hidden;
+	margin-top: -48px;
+}
+.visible, .form-horizontal .visible {
+	visibility: visible;
+}
+.tipdiv .tips {
+	height: 34px;
+	line-height: 34px;
+	font-size: 12px;
+	color: #e05328;
+}
+/*
+è¾“å…¥æ¡†ç›´è§„1¤7
+*/
+.inputbd {
+	border-radius: 0;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no" />
+<title>信托</title>
+<!--[if lt IE 9]> 
+       <script src="/javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+<link href="/css/lobby/trade.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet"
+	href="/css/lobby/account/contract/contractSign.css" type="text/css">
+</head>
+<body class="account" id="asdasd">
+	<div class="wrapper wrapper-content animated fadeInRight">
+		<div class="ibox">
+			<link rel="import" href="contractHeader.html?__inline">
+			<div class="col-sm-4">
+				<button type="button"
+					class="btn btn-primary btn-bg pull-right hidden" id="goSign">签署合同</button>
+			</div>
+		</div>
+
+		<div class="ibox">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h5 id="panel-title" class="panel-title">
+						<link rel="import" href="contractTitle.html?__inline">
+					</h5>
+				</div>
+				<div class="panel-body">
+					<link rel="import" href="contractContent.html?__inline">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<!-- <script src="/javascript/lib/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="/javascript/base/menutabs.js" type="text/javascript"></script> -->
+<script type="text/javascript" src="/javascript/lib/requirejs/require.js"></script>
+<script type="text/javascript">
+	require([ "lobby/account/contract/contractDetailIndex" ]);
+</script>
+</html>

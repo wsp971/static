@@ -1,0 +1,32 @@
+
+@import url('/css/lobby/trade.css?__inline');
+
+small{
+	margin-left:20px;
+	cursor: pointer;
+}
+.badge.active
+{
+	background-color: #999;
+	color: #fff;
+}
+.badge
+{
+	background-color: #f9f7f8;
+	color: #000;
+	padding: 4px 5px;
+	border-radius: 3px;
+	font-weight: normal;
+}
+.sign,.ct-remind,.ct-cancel,.ct-contract,.ct-sign,.ct-null{
+	padding-left: 5px;
+	padding-right: 5px;
+	color: deepskyblue;
+}
+.ibox{
+	padding: 15px;
+	background: #f9f7f8;
+}
+.f18{
+	font-weight: bold;
+}

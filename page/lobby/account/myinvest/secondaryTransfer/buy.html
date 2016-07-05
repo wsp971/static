@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <title>产品购买</title>
+    <!--[if lt IE 9]>
+    <script src="../../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+    <link href="../../../../../css/lobby/trade.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../../../javascript/lib/fileupload/css/jquery.fileupload.css" rel="stylesheet" type="text/css"/>
+</head>
+<body class="lobby">
+<div class="wrapper wrapper-content animated fadeInRight w1400">
+    <div class="conhead">
+        <h2 class="title">
+            购买</h2>
+    </div>
+    <div class="row f14">
+        <p class="hr-line-dashed"></p>
+
+        <div class="col-sm-12">
+            <div class="ibox">
+                <form method="get" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">产品名称</label>
+                        <div class="col-md-4 pt5">
+                            <label class="control-label" id="productName"></label>
+                            <span class="ml10 tansfer-icon">转让</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">产品ID</label>
+                        <div class="col-md-4 pt5">
+                            <label class="control-label" id="productNum"> </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label"><span class="red">*</span>投资剩余期限</label>
+
+                        <div class="col-md-7 pt5">
+                            <div class="col-sm-3 form-control pr oh bg-gray">
+                                <input id="remainingDays" min="0" style="padding:2px 5px "
+                                       class="col-sm-10 bn bg-gray" readOnly="true">
+                                <span class="unit">天</span>
+                            </div>
+                            <span class="ml10 mt5 grey-font" style="display: inline-block">注：系统以购买申请当日<span
+                                    class="red sysDate">YYYY-MM-DD</span>为基准计算</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" id="transferType"></label>
+
+                        <div class="col-md-7 pt5">
+                            <div class="col-sm-3 form-control pr oh bg-gray">
+                                <input id="transferValue" min="0" style="padding:2px 5px "
+                                       class="col-sm-10 bn bg-gray" readOnly="true">
+                                <span class="unit" id="unit"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray pt20 pb10 ml20 mr20">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" id="transferType2"></label>
+
+                            <div class="col-md-7 pt5">
+                                <div class="col-sm-2 form-control pr oh bg-gray">
+                                    <input id="transferValue2" min="0" style="padding:2px 5px "
+                                           class="col-sm-10 bn bg-gray" readOnly="true">
+                                    <span class="unit" id="unit2"></span>
+                                </div>
+                            <span class="ml10 mt5 grey-font" style="display: inline-block">注：系统以购买申请当日<span
+                                    class="red sysDate">YYYY-MM-DD</span>为基准计算</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="hr-line-dashed"></p>
+
+                    <div class="form-group f14 ibox">
+                        <label class="col-sm-4 control-label">
+                            <span class="red icons">*</span>
+                            <span>投资方账户名称</span>
+                        </label>
+
+                        <div class="col-md-7">
+                            <input type="text" placeholder="请输入付款账户" class="form-control fl col-sm-6"
+                                   id="bankAccountName"/>
+
+                            <div class="form-error" style="display:none;">
+                                <span class="ml10 mt5 error" style="display: inline-block;"><i class="iconfont red">&#xe60e;</i>请输入付款账户</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group f14 ibox">
+                        <label class="col-sm-4 control-label">
+                            <span class="red icons">*</span>
+                            <span>投资方开户银行</span>
+                        </label>
+
+                        <div class="col-md-7">
+                            <select id="depositBank" class="form-control fl col-sm-6">
+                                <option value="">请选择开户银行</option>
+                            </select>
+
+                            <div class="form-error" style="display:none;">
+                                <span class="ml10 mt5 error" style="display: inline-block;"><i class="iconfont red">&#xe60e;</i>请选择开户银行</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group f14 ibox">
+                        <label class="col-sm-4 control-label">
+                            <span class="red icons">*</span>
+                            <span>投资方银行账号</span>
+                        </label>
+
+                        <div class="col-md-7 pb20">
+                            <input type="text" placeholder="请输入银行账号" class="form-control fl col-sm-6"
+                                   id="bankAccountId"/>
+
+                            <div class="form-error" style="display:none;">
+                                <span class="ml10 mt5 error" style="display: inline-block;"><i class="iconfont red">&#xe60e;</i>请输入银行账号</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="hr-line-dashed"></p>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"></label>
+                        <span class="ml15" style="font-size:18px">上传资料</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"></label>
+                        <span class="ml15 grey-font" style="padding-left: 2px">请下载并填写“在线签署”所需的材料，完成后上传</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"></label>
+
+                        <div class="col-md-8">
+                            <div class="fixed-table-container">
+                                <div class="fixed-table-body">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                        <tr class="active">
+                                            <td class="col-xs-3">
+                                                <div class="th-inner ">
+                                                    <span class="f14">需双方签署材料</span>
+                                                    <span class="grey-font">请下载模板，并转为PDF文件进行上传</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="th-inner ">
+                                                    <span class="red">*</span> 上传材料
+                                                </div>
+                                            </td>
+                                            <td class="tc">
+                                                <div class="th-inner ">
+                                                    操作
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a id="down_contract" class="download ml10" href=""></a>
+                                            </td>
+                                            <td class="materials1"></td>
+                                            <td class="tc">
+                                                <input type="hidden" name="fileNum1" class="fileNum" value=0>
+                                                <span class="btn btn-primary btn-sm fileinput-button">
+                                                    <span class="upbtn" style="text-indent: 0px;width:50px">&nbsp;上&nbsp;&nbsp;传&nbsp;</span>
+                                                    <input class="fileupload" type="file" name="files[]" multiple="">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr class="active">
+                                            <td>
+                                                <div class="th-inner ">
+                                                    <span class="f14">需投资方签署材料</span><span
+                                                        class="grey-font">请下载模板，并转为PDF文件进行上传</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="th-inner ">
+                                                    <span class="red">*</span> 上传材料
+                                                </div>
+                                            </td>
+                                            <td class="tc">
+                                                <div class="th-inner">
+                                                    操作
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a id="down_agreement" class="download ml10" href=""></a>
+                                            </td>
+                                            <td class="materials2"></td>
+                                            <td class="tc">
+                                                <input type="hidden" name="fileNum2" class="fileNum" value=0>
+                                                <span class="btn btn-primary btn-sm fileinput-button">
+                                                    <span class="upbtn" style="text-indent: 0px;width:50px">&nbsp;上&nbsp;&nbsp;传&nbsp;</span>
+                                                    <input class="fileupload" type="file" name="files[]" multiple="">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="hr-line-dashed"></p>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label"></label>
+
+                        <div class="col-sm-offset-4 ">
+                            <button id="btnBuy" class="btn btn-primary" type="button" style="width: 200px;margin-left: 110px;">
+                                买入
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--交易大厅公共js引入开始 -->
+<link rel="import" href="../../../jsrefer.html?__inline">
+<script src="../../../../../javascript/lib/requirejs/require.js" type="text/javascript"></script>
+<!--交易大厅公共js引入结束 -->
+<script type="text/javascript">
+    require(["../../../../../javascript/modules/lobby/account/myinvest/secondaryTransfer/buy.js"]);
+    //消除上传文件
+    function deleteFile(e) {
+        var $uploadNums = $(e).parents('tr').find('.fileNum');
+        var num = $uploadNums.val();
+        num--;
+        $uploadNums.val(num);
+        $(e).parent('div').remove();
+    }
+</script>
+</body>
+</html>

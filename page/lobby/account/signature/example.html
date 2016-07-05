@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta
+            content="initial-scale=1.0,user-scalable=no, minimum-scale=1,maximum-scale=1,width=device-width"
+            name="viewport">
+
+    <title>上传图片</title>
+
+</head>
+<body>
+
+<div id="uploadFileIOS">
+<span class="btn btn-success fileinput-button"> <span>文件上传</span> <input
+        id="fileupload" type="file" multiple> </span>
+    <div style="height: 30px;"></div>
+    <div id="files"></div>
+</div>
+
+<script src="javascript/jquery-1.9.1.min.js">
+</script>
+<script src="javascript/vendor/jquery.ui.widget.js">
+</script>
+<script src="javascript/load-image.min.js">
+</script>
+<script src="javascript/jquery.iframe-transport.js">
+</script>
+<script src="javascript/jquery.fileupload.js">
+</script>
+<script src="javascript/jquery.fileupload-process.js">
+</script>
+<script src="javascript/jquery.fileupload-image.js">
+</script>
+<script src="javascript/jquery.fileupload-validate.js">
+</script>
+<script>
+    /*global window, $ */
+    $(function() {
+        'use strict';
+        var url = window.location.hostname == 'blueimp.github.io' ? '//jquery-file-upload.appspot.com/'
+                : 'user.action?methods=editimg';
+        var uploadButton = $('<button/>')
+                .addClass('btn btn-primary').prop('disabled', true).text(
+                        'Processing...').on('click', function() {
+                    var $this = $(this);
+                    var data = $this.data();
+                    $this.off('click').text('正在上传').on('click', function() {
+                        $this.remove();
+                        data.abort();
+                    });
+                    data.submit().always(function() {
+                        $this.remove();
+                    });
+                });
+        $('#fileupload').fileupload({
+            url : "test.json",
+            dataType : 'json',
+            autoUpload : false,
+            acceptFileTypes : /(\.|\/)(gif|jpe?g|png)$/i,
+            maxFileSize : 5000000, // 5 MB
+            disableImageResize : /Android(?!.*Chrome)|Opera/
+                    .test(window.navigator.userAgent),
+            previewMaxWidth : 100,
+            previewMaxHeight : 100,
+            previewCrop : true
+        }).on(
+                'fileuploadadd',
+                function(e, data) {
+                    data.context = $('<div/>').appendTo('#files');
+                    $.each(data.files, function(index, file) {
+                        var node = $('<p/>').append(
+                                $('<span/>').text(file.name));
+                        if (!index) {
+                            node.append('<br>').append(uploadButton.clone(true).data(data));
+                        }
+                        node.appendTo(data.context);
+                    });
+                }).on('fileuploadprocessalways',function(e, data) {
+            var index = data.index, file = data.files[index], node = $(data.context.children()[index]);
+            if (file.preview) {
+                node.prepend('<br>').prepend(file.preview);
+            }
+            if (file.error) {
+                node.append('<br>').append(
+                        $('<span/>').text(
+                                file.error));
+            }
+            if (index + 1 === data.files.length) {
+                data.context.find('button').text('上传').prop(
+                        'disabled', !!data.files.error);
+            }
+        }).on('fileuploadprogressall', function(e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css('width', progress + '%');
+        }).on('fileuploaddone',function(e, data) {
+            var result = data.result.code;
+            if(result=='1'){
+                globe.lvToast(false, "图像上传成功!", LT_LOADING_CLOSE);
+                setTimeout(function() {
+//window.location.href = "index.action";
+                }, 2000);
+            }else{
+                globe.lvToast(false, data.msg, LT_LOADING_CLOSE);
+            }
+        }).on('fileuploadfail',
+                function(e, data) {
+                    globe.lvToast(false, '头像上传失败', LT_LOADING_CLOSE);
+                }).prop('disabled', !$.support.fileInput).parent().addClass($.support.fileInput ? undefined : 'disabled');
+        $('#fileupload')
+                .bind('fileuploadprocessstart', function (e) {console.log("fileuploadprocessstart")})
+                .bind('fileuploadprocess', function (e, data) {console.log("fileuploadprocess")})
+                .bind('fileuploadprocessdone', function (e, data) {console.log("fileuploadprocessdone")})
+                .bind('fileuploadprocessfail', function (e, data) {console.log("fileuploadprocessfail")})
+                .bind('fileuploadprocessalways', function (e, data) {console.log("fileuploadprocessalways")})
+                .bind('fileuploadprocessstop', function (e) {console.log("fileuploadprocessstop")});
+    });
+
+</script>
+</body>
+</html>

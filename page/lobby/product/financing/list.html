@@ -1,0 +1,75 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>同业理财</title>
+    <!--[if lt IE 9]> 
+       <script src="../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+    <link href="../../../../css/lobby/trade.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="lobby">
+    <div id="loading" class="loading">
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="conhead">
+            <h2 class="title">
+                同业理财</h2>
+            <div class="form-control radius searchbox">
+                <input type="text" id="btnSearch" placeholder="产品名称，编号" autocomplete="off" maxlength="30" />
+                <span class="search"><i class="iconfont arrow">&#xe603;</i></span>
+            </div>
+        </div>
+        <div class="ibox">
+            <div class="choocebar">
+                <a id="btnmore" class="more">高级筛选<i class="iconfont">&#xe608;</i></a>
+                <dl>
+                    <dt>
+                        <label class="name">
+                            产品期限：</label>
+                    </dt>
+                    <dd id="tab_btn">
+                        <span data-type="productTerm" class="badge active" data-value="">全部</span> <span
+                            class="badge" data-type="productTerm" data-from="0" data-to="30">1月</span> <span
+                                class="badge" data-type="productTerm" data-from="30" data-to="90">1月-3月</span>
+                        <span class="badge" data-type="productTerm" data-from="90" data-to="180">3月-6月</span>
+                        <span class="badge" data-type="productTerm" data-from="180" data-to="365">6月-1年</span>
+                        <span class="badge" data-type="productTerm" data-from="365" data-to="">1年以上</span>
+                    </dd>
+                </dl>
+                <div id="morebox" class="morebox" style="display: none;">
+                    <dl>
+                        <dt>
+                            <label class="name">
+                                产品分类：</label>
+                        </dt>
+                        <dd>
+                            <span data-type="productTypeLV2" data-value="" class="badge active">全部</span> 
+                            <span data-type="productTypeLV2" data-value="1001" class="badge">单期型</span> 
+                            <span data-type="productTypeLV2" data-value="1002" class="badge">开放型</span>
+                            <span data-type="productTypeLV2" data-value="1003" class="badge">净值型</span> 
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="ibox">
+            <div class="row">
+                <table id="table">
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--交易大厅公共js引入开始 -->
+    <link rel="import" href="../../../lobby/jsrefer.html?__inline">
+    <script src="../../../../javascript/lib/laydate/laydate.js" type="text/javascript"></script>
+    <script src="../../../../javascript/lib/requirejs/require.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        require(["../../../../javascript/modules/lobby/product/financing/list.js"]);
+    </script>
+    <!--交易大厅公共js引入结束 -->
+</body>
+</html>

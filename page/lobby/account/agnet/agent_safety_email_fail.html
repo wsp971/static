@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<!--[if lt IE 9]> 
+       <script src="../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+<![endif]-->
+<title>邮箱变更链接失效</title>
+<link rel="stylesheet" href="/css/lobby/account/agent/emailRtn.css" />
+<style type="text/css">
+/* 	.header *{ */
+/* 		vertical-align:middle; */
+/* 	} */
+/* 	h1,h3 { */
+/* 		display: inline-block; */
+/* 		margin-left: 10px; */
+/* 	} */
+</style>
+</head>
+<body>
+	<div>
+		<div style="margin-top:30px;margin-left:30px;">
+			<div class="logo">
+				    <h1>亿账通</h1>
+			</div>
+			<div class="header">
+				<h2>邮箱变更</h2>
+			</div>
+		</div>
+		<div class="middle wt35">
+			<h3>！链接已失效，您可以重新</h3>
+			<input id="turn" type="button" class="btn" value="变更邮箱"/>
+		</div>
+	</div>
+	<link rel="import" href="../../trade-footer.html?__inline">
+	<link rel="import" href="../../jsrefer.html?__inline">
+</body>
+<script type="text/javascript">
+	$(function(){
+		$('#turn').click(function(){
+			location.href=utils.getHost()+'/page/lobby/main.html?tabmodule=myaccount&pageurl=account/agnet/agent_safety.html'
+		})
+	})
+</script>
+</html>

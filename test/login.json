@@ -1,0 +1,8 @@
+﻿{   
+"rtnCode": "000",  
+"rtnMsg": "ok",
+"data": {
+    " firstLogin ": "Y",
+    "userType":"1"
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<!--[if lt IE 9]> 
+       <script src="../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+<![endif]-->
+<title>机构资料</title>
+<link rel="stylesheet" href="/css/lobby/trade.css" />
+<link rel="stylesheet" href="/css/lobby/account/agent/agent.css" />
+<link rel="stylesheet" href="/css/lobby/account/overview/organ.css" />
+</head>
+<body>
+	<div class="container">
+		<h3 class="conhead f20"><strong>机构资料</strong></h3>
+		<div class="row bgw">
+			<div class="mt20">
+				<h4 class="secHeader f16">账户信息</h4>
+				<hr/>
+				<table class="organtable col-xs-offset-1 mt20">
+					<tr>
+						<td class="text-right cg">登录名：</td>
+						<td id="username" class="pl15"></td>
+					</tr>
+					<tr>
+						<td class="text-right cg">账户级别：</td>
+						<td id="userType" class="pl15"></td>
+					</tr>
+					<tr>
+						<td class="text-right cg">邮箱：</td>
+						<td class="pl15"><span id="email"></span> <span id="changeEmail" class="mousehand btn-link">更改</span></td>
+					</tr>
+					<tr>
+						<td class="text-right cg">手机号：</td>
+						<td class="pl15"><span id="mobile"></span></td>
+					</tr>
+				</table>
+			</div>
+			<div class="mt20">
+				<h4 class="secHeader f16">机构基本信息</h4>
+				<hr/>
+				<table class="organtable col-xs-offset-1 mt20">
+					<tr>
+						<td class="text-right cg">机构名称：</td>
+						<td id="instName" class="pl15"></td>
+					</tr>
+					<tr>
+						<td class="text-right cg">机构类型：</td>
+						<td id="institutionType" class="pl15"></td>
+					</tr>
+					<tr>
+						<td class="text-right cg">机构证件类型：</td>
+						<td id="orgCertType" class="pl15"></td>
+					</tr>
+					<tr>
+						<td class="text-right cg">营业执照：</td>
+						<td id="busiLicence" class="pl15"></td>
+					</tr>
+
+					<tr id="orgNo1" class="hidden">
+						<td class="text-right cg">组织机构代码：</td>
+						<td id="orgNo" class="pl15"></td>
+					</tr>
+					<tr id="taxCertNo1" class="hidden">
+						<td class="text-right cg">税务登记证：</td>
+						<td id="taxCertNo" class="pl15"></td>
+					</tr>
+
+					<tr>
+						<td class="text-right cg">通讯地址：</td>
+						<td id="orgAddress" class="pl15"></td>
+					</tr>
+					<tr>
+						<td class="text-right cg">法人姓名：</td>
+						<td id="legalName" class="pl15"></td>
+					</tr>
+					<tr>
+						<td class="text-right cg">法人证件类型：</td>
+						<td id="legalCertType" class="pl15"></td>
+					</tr>
+					<tr>
+						<td class="text-right cg">法人证件号码：</td>
+						<td id="legalCertNo" class="pl15"></td>
+					</tr>
+				</table>
+			</div>
+			<div class="mt20">
+				<h4 class="secHeader f16">机构材料</h4>
+				<hr/>
+				<div  class="ml30 mb30" id="oragnfile1">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<link rel="import" href="../../jsrefer.html?__inline">
+<script src="/javascript/lib/requirejs/require.js" type="text/javascript"></script>
+<script type="text/javascript">
+	require(["/javascript/modules/lobby/account/overview/organ.js"]);
+</script>
+</html>

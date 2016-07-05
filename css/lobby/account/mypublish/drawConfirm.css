@@ -1,0 +1,76 @@
+body{
+	height:88%;	
+}
+.draw-content{
+	margin:45px 20px;
+}
+.draw-mycol{
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
+.draw-body{
+	width:100%;
+}
+.draw-text{
+	width:26%;
+	padding-right: 15px;
+}
+.draw-radio{
+  	overflow: hidden;
+	margin-bottom:15px;
+	padding-left:20px;
+}
+.pay{
+	display:none;
+  	overflow: hidden;
+	padding:15px 0 15px 20px;
+}
+.voucher{
+  	overflow: hidden;
+	padding:15px 0 15px 20px;
+}
+.fp{
+  width: 30%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  margin-top:6px;
+  font-size:14px;
+}
+.draw-group{
+  	overflow: hidden;
+	margin-bottom:15px;
+}
+.draw-bgroup{
+  	overflow: hidden;
+}
+.draw-button{
+  	overflow: hidden;
+	margin-top:20px;
+}
+.fixed-table-container{
+	width:97%;
+}
+
+.tboder{
+	width:75%;
+}
+.table>tbody>tr>td{
+	vertical-align:middle;
+	padding-left:15px;
+}
+.mc{
+	margin:13px 0;
+}
+.bg-white{
+	background-color: #FFF;
+}
+.table>tbody>tr:first-child{
+	height:36px;
+}
+.btn-gray {
+    color: inherit;
+    background: #F4F4F4;
+    border: 1px solid #e7eaec
+}

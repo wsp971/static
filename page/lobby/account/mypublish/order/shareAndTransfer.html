@@ -1,0 +1,49 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no" />
+<title>开放购买</title>
+<!--[if lt IE 9]>
+    <script src="../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+	<link href="../../../../../css/lobby/account/mypublish/order/shareTransfer.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<form id="form" role="application" class="f14" novalidate="novalidate">
+		<div class="fixed-table-container cell table-file">
+              <div class="fixed-table-body">
+                  <table class="table">
+		       			<tr class="active">
+		       				<td class="first-td">文件名</td>
+		       				<td>操作</td>
+		       			</tr>
+		       			<tr>
+		       				<td class="first-td">划款凭证</td>
+		       				<td>
+		       					<a href="javascript:void(0)" id="credentials" class="btn btn-white btn-sm"  id="downloadFile">下载</a>
+		      				</td>
+		       			</tr>
+		       			<tr>
+		       				<td class="first-td">转让合同</td>
+		       				<td>
+		                        <a href="javascript:void(0)" id="contract" class="btn btn-white btn-sm"  id="downloadFile">下载</a>
+		      				</td>
+		       			</tr>
+                  </table>
+              </div>
+         </div>
+		<div class="row tc">
+			<button id="submitBtn" type="button" class="btn btn-primary">完成</button>
+		</div>
+	</form>
+	<link rel="import" href="../../../jsrefer.html?__inline">
+	<script src="../../../../../javascript/lib/requirejs/require.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		require(["../../../../../javascript/modules/lobby/account/mypublish/shareAndTransfer.js" ]);
+	</script>
+</body>
+</html>

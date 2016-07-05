@@ -1,0 +1,139 @@
+#my-sig-name, #my-sig-stamp {
+	background-color: #ffffff;
+}
+
+#my-sig-name-list .my-sig-item {
+	width: 201px;
+	height: 100px;
+}
+.hidden{display:none}
+#my-sig-name-list .my-sig-add-item {
+	width: 201px;
+	height: 100px;
+}
+.mt15{margin-top:15px;}
+
+#my-sig-stamp-list .my-sig-item {
+	width: 201px;
+	height: 200px;
+}
+
+#my-sig-stamp-list .my-sig-add-item {
+	width: 201px;
+	height: 200px;
+}
+
+.verticalAlign {
+	vertical-align: middle;
+}
+
+.hideSelf {
+	display: none;
+}
+
+.verticalAlignSpan {
+	vertical-align: middle;
+	height: 100%;
+	display: inline-block;
+}
+
+.imgMiddle {
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+.clsb {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	right: 0px;
+	top: 0px;
+	cursor: pointer;
+	background-image: url(/img/common/icon-close.png);
+	background-repeat: no-repeat;
+}
+
+.my-sig-item:hover {
+	padding-left: 20px;
+}
+
+.my-sig-del {
+	
+}
+
+#signatureList {
+	
+}
+
+.row {
+	clear: both;
+}
+
+.textCenter {
+	text-align: center;
+}
+
+.grayBorder {
+	border: 1px solid #c0c0c0
+}
+
+.mb5 {
+	margin-bottom: 5px;
+}
+
+.mb10 {
+	margin-bottom: 10px;
+}
+
+.mb15 {
+	margin-bottom: 15px;
+}
+
+.mb20 {
+	margin-bottom: 20px;
+}
+
+.margin5 {
+	margin: 5px;
+}
+
+.margin10 {
+	margin: 10px;
+}
+
+.margin15 {
+	margin: 15px;
+}
+
+.margin20 {
+	margin: 20px;
+}
+
+#my-sig-name-list .my-sig-add-item a.add-sig-a {
+	width: 72px;
+	height: 71px;
+	display: block;
+	text-indent: -99999px;
+	margin: 15px auto 0;
+	background: url("../../../../img/test/signet/icon-all.png") no-repeat
+		-203px -330px;
+}
+
+#my-sig-name-list .my-sig-add-item a.add-sig-a:hover {
+	background-position: -276px -330px;
+}
+
+#my-sig-stamp-list .my-sig-add-item a.add-sig-a {
+	width: 72px;
+	height: 71px;
+	display: block;
+	text-indent: -99999px;
+	margin: 65px auto 0;
+	background: url("../../../../img/test/signet/icon-all.png") no-repeat
+		-203px -330px;
+}
+
+#my-sig-stamp-list .my-sig-add-item a.add-sig-a:hover {
+	background-position: -276px -330px;
+}

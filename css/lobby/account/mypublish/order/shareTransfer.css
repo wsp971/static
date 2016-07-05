@@ -1,0 +1,19 @@
+@import url('../../../trade.css?__inline');
+.label-width{
+	width:130px;
+}
+.line{
+	width: 482px;
+    margin: 15px auto;
+}
+.table-file{
+	width: 90%;
+    margin: 10px auto;
+}
+.first-td{
+	width: 70%;
+}
+.confirm-attention{
+  padding-top: 86px;
+  font-size: 32px;
+}

@@ -1,0 +1,471 @@
+﻿﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>升级账户</title>
+    <style>
+    	body .upgrade .account-content .first-content .nav{
+    		background:none;
+    	}
+    </style>
+    <!-- <!--[if lt IE 9]>
+    <script src="../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+    <link href="../../../../css/lobby/trade.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../javascript/lib/steps/css/jquery.steps.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../css/lobby/account/upgrade_account.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../css/lobby/account/reUpgrade_account.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../javascript/lib/fileupload/css/jquery.fileupload.css" rel="stylesheet" type="text/css" >
+	<link href="../../../../javascript/lib/layer/2.2/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="upgrade">
+    <div class="account-content">
+        <h1>升级高级账户</h1>
+        <div class="first-content">
+        	<ul class="border_list">
+        		<li class="first"></li>
+        		<li class="second"></li>
+        	</ul>
+            <form onsubmit="return false;" method="post" id="form" action="/user/upgrade" class="wizard-big wizard clearfix" role="application" novalidate="novalidate">
+            	<h3><span class="nav nav1"></span></h3>
+    			<fieldset>
+    				<span class="title">① 请选择业务类型</span>
+                         <div class="row">
+	            			<ul class="first-ul">
+				                <li><input type="checkbox" name="businessType1" id="businessType1" value="" /><span class="li-content">投资业务</span><span class="content-line">|</span><span class="content-content">可以投资购买平台上的金融产品和资产</span></li>
+				                <li><input type="checkbox" name="businessType2" id="businessType2" value="" /><span class="li-content">融资业务</span><span class="content-line">|</span><span class="content-content">可以在平台上发布产品，挂牌交易资产</span></li>
+				                <li><input type="checkbox" name="businessType3" id="businessType3" value="" /><span class="li-content">经纪业务</span><span class="content-line">|</span><span class="content-content">可以在平台上发布产品和资产报价</span></li>
+	            			</ul>	
+	            		</div>
+    		</fieldset>
+    <h3><span class="nav nav2"></span></h3>
+    <fieldset>
+        <span class="title2">② 填写资料<em>填写机构基础信息及机构被授权人信息</em></span>
+        <div class="row second">
+        <div class="form-group div-height">
+                        <label class="col-sm-2 control-label"><span class="cuo">*</span>机构名称：</label>
+                        <div class="col-sm-6 error-message">
+                            <input id="instName" name="instName"  type="text" class="form-control" required >
+                        </div>
+                    </div>
+                    <div class="form-group div-height">
+                        <label class="col-sm-2 control-label"><span class="cuo">*</span>机构类型</label>
+                        <div class="col-sm-6 error-message">
+                            <select id="institutionType" class="form-control m-b" name="institutionType">
+                            	<option value="">请选择</option>
+                                <option value="GY">国有银行</option>
+                                <option value="GF">股份制银行</option>
+                                <option value="NSH">农商行</option>
+                                <option value="CSH">城商行</option>
+                                <option value="XYS">信用合作社</option>
+                                <option value="ZQ">证券公司</option>
+                                <option value="JJ1">基金公司</option>
+                                <option value="JJ2">经纪公司</option>
+                                <option value="XT">信托公司</option>
+                                <option value="QT">其他</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group div-height">
+                        <label class="col-sm-2 control-label"><span class="cuo">*</span>证件类型：</label>
+                        <div class="col-sm-6 error-message">
+                                <input type="radio" class="radio in-line" name="orgCertType" value="0" checked="checked"/>企业三证
+                                <input type="radio" class="radio in-line radio-style" name="orgCertType" value="1" />三证合一
+                        </div>
+                    </div>
+                    <div class="form-group div-height">
+                        <label class="col-sm-2 control-label"><span class="cuo">*</span>营业执照：</label>
+                        <div class="col-sm-6 error-message">
+                            <input id="busiLicence" name="busiLicence"  type="text" class="form-control" required >
+                        </div>
+                    </div>
+                    <div id="dis">
+	                    <div class="form-group div-height">
+	                        <label class="col-sm-2 control-label"><span class="cuo">*</span>组织机构代码：</label>
+	                        <div class="col-sm-6 error-message">
+	                            <input id="orgNo" name="orgNo"  type="text" class="form-control" required >
+	                        </div>
+	                    </div>
+	                    <div class="form-group div-height">
+	                        <label class="col-sm-2 control-label"><span class="cuo">*</span>税务登记证：</label>
+	                        <div class="col-sm-6 error-message">
+	                            <input id="taxCertNo" name="taxCertNo"  type="text" class="form-control" required >
+	                        </div>
+	                    </div>
+                    </div>
+                    <div class="form-group div-height">
+                        <label class="col-sm-2 control-label">金融许可证：</label>
+                        <div class="col-sm-6 error-message">
+                            <input id="financialLicence" name="financialLicence" type="text" class="form-control" >
+                            <span class="not-word">非必填</span>
+                        </div>
+                    </div>
+                    <div class="form-group div-height">
+                        <label class="col-sm-2 control-label">机构信用代码证：</label>
+                        <div class="col-sm-6 error-message">
+                            <input id="orgCreditNo" name="orgCreditNo" type="text" class="form-control" >
+                            <span class="not-word">非必填</span>
+                        </div>
+                    </div>
+                    <div class="form-group div-height">
+                        <label class="col-sm-2 control-label">机构所在地：</label>
+                         <div class="col-sm-6 error-message">
+                            <span id="orgAddress-error" class="help-block m-b-none"></span>
+                        	<select onchange="selectc(this)" class="uoj_listbox_city form-control m-b city" id="pro" name="province">
+                			</select>
+                			<select id="city" class="uoj_listbox_classify form-control m-b city" name="city">
+                			</select>
+                            <input id="orgAddress" name="orgAddress"  type="text" class="form-control address" > <span class="not-word">非必填</span>
+                        </div>
+                    </div>
+                    <p class="hr-line-dashed"></p>
+                    <div class="form-group div-height">
+                        <label class="col-sm-2 control-label"><span class="cuo">*</span>法人代表姓名：</label>
+                        <div class="col-sm-6 error-message">
+                            <input id="legalName" name="legalName"  type="text" class="form-control" required >
+                        </div>
+                    </div>
+                    <div class="form-group div-height">
+                        <label class="col-sm-2 control-label">
+                            <span class="cuo">*</span>证件类型：</label>
+                        <div class="col-sm-6 error-message">
+                            <select class="form-control m-b" name="legalCertType">
+                                <option value="">请选择</option>
+                                <option value="1">身份证</option>
+                                <option value="2">护照</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group div-height">
+                        <label class="col-sm-2 control-label"><span class="cuo">*</span>证件号码：</label>
+                        <div class="col-sm-6 error-message">
+                            <input id="legalCertNo" name="legalCertNo"  type="text" class="form-control" required >
+                        </div>
+                    </div>
+                    <p class="hr-line-dashed"></p>
+                    <div class="form-group div-height">
+                        <label class="col-sm-2 control-label"><span class="cuo">*</span>被授权人姓名：</label>
+                        <div class="col-sm-6 error-message">
+                            <input id="authPersonName" name="authPersonName"  type="text" class="form-control" required >
+                        </div>
+                    </div>
+                    <div class="form-group div-height">
+                        <label class="col-sm-2 control-label">
+                            <span class="cuo">*</span>证件类型：</label>
+                        <div class="col-sm-6 error-message">
+                            <select class="form-control m-b" name="authPersonCertType">
+                                <option value="">请选择</option>
+                                <option value="1">身份证</option>
+                                <option value="2">护照</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group div-height">
+                        <label class="col-sm-2 control-label"><span class="cuo">*</span>证件号码：</label>
+                        <div class="col-sm-6 error-message">
+                            <input id="authPersonCertNo" name="authPersonCertNo"  type="text" class="form-control" required >
+                        </div>
+                    </div>
+                    <div class="form-group div-height">
+                        <label class="col-sm-2 control-label"><span class="cuo">*</span>邮箱：</label>
+                        <div class="col-sm-6 error-message">
+                            <input id="authPersonEmail" name="authPersonEmail"  type="email" class="form-control" required >
+                        </div>
+                    </div>
+                    
+                    <div class="form-group div-height">
+                        <label class="col-sm-2 control-label"><span class="cuo">*</span>手机号：</label>
+                        <div class="col-sm-6 error-message">
+                            <input id="authPersonCellPhone" name="authPersonCellPhone"  type="text" class="form-control" required >
+                        </div>
+                    </div>
+                   
+              </div>
+    </fieldset>
+    <h3><span class="nav nav3"></span>③ 上传文件</h3>
+    <fieldset>
+                    <span class="title3">请上传以下材料的扫描件<em>（需加盖公章）</em>，支持jpg，png，bmp，pdf格式，单张大小不超过5M。
+                    </span>
+                    <div class="row third">
+                        <div class="fixed-table-container">
+                            <div class="fixed-table-body">
+                                <div class="fixed-table-loading" style="top: 37px; display: none;">
+                                    正在努力地加载数据中，请稍候……</div>
+                                <table id="exampleTableToolbar" data-mobile-responsive="true" class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th style="" data-field="id" tabindex="0">
+                                                <div class="th-inner">
+                                                </div>
+                                                <div class="fht-cell">
+                                                </div>
+                                            </th>
+                                            <th style="" data-field="recordName" tabindex="0">
+                                                <div class="th-inner">
+                                                    档案名称</div>
+                                                <div class="fht-cell">
+                                                </div>
+                                            </th>
+                                            <th style="" data-field="template" tabindex="0">
+                                                <div class="th-inner ">
+                                                    模板</div>
+                                                <div class="fht-cell">
+                                                </div>
+                                            </th>
+                                            <th style="" data-field="fileName" tabindex="0">
+                                                <div class="th-inner ">
+                                                    文件名称</div>
+                                                <div class="fht-cell">
+                                                </div>
+                                            </th>
+                                            <th style="" data-field="status" tabindex="0">
+                                                <div class="th-inner ">
+                                                    状态</div>
+                                                <div class="fht-cell">
+                                                </div>
+                                            </th>
+                                            <th style="" data-field="operation" tabindex="0">
+                                                <div class="th-inner ">
+                                                    操作</div>
+                                                <div class="fht-cell">
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-index="0">
+                                            <td style="">
+                                                1
+                                            </td>
+                                            <td style="">
+                                                营业执照<span class="cuo">*</span>
+                                            </td>
+                                            <td id="downloadFile1">
+                                                <a href="javascript:;" id="lookPicture">查看示例</a>
+                                            </td>
+                                            <td id="fileNames1">
+                                            </td>
+                                            <td id="fileStatus1">
+                                                未上传
+                                            </td>
+                                            <td style="">
+                                                <input type="hidden" name="fileDetails1" id="file1" value="">
+                                                <input type="hidden" name="fileName1" id="fileName1" value="">
+                                                <input type="hidden" name="fileType1" id="fileType1" value="1">
+                                                <input type="hidden" name="fileUuid1" id="fileUuid1" value="">
+                                                <span class="btn btn-primary btn-sm fileinput-button"><span id="upbtn1">上传</span>
+                                                    <input id="fileupload" type="file" name="files[]" multiple="">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="1">
+                                            <td style="">
+                                                2
+                                            </td>
+                                            <td style="">
+                                                组织机构代码证
+                                            </td>
+                                            <td id="downloadFile2">
+                                                <a href="#" id="lookPicture">查看示例</a>
+                                            </td>
+                                            <td id="fileNames2">
+                                            </td>
+                                            <td id="fileStatus2">
+                                                未上传
+                                            </td>
+                                            <td style="">
+                                                <input type="hidden" name="fileDetails2" id="file2" value="">
+                                                <input type="hidden" name="fileName2" id="fileName2" value="">
+                                                <input type="hidden" name="fileType2" id="fileType2" value="1">
+                                                <input type="hidden" name="fileUuid2" id="fileUuid2" value="">
+                                                <span class="btn btn-primary btn-sm fileinput-button"><span id="upbtn2">上传</span>
+                                                    <input id="fileupload" type="file" name="files[]" multiple="" >
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="2">
+                                            <td style="">
+                                                3
+                                            </td>
+                                            <td style="">
+                                                税务登记证
+                                            </td>
+                                            <td id="downloadFile3">
+                                                <a href="#" id="lookPicture">查看示例</a>
+                                            </td>
+                                            <td id="fileNames3">
+                                            </td>
+                                            <td id="fileStatus3">
+                                                未上传
+                                            </td>
+                                            <td style="">
+                                                <input type="hidden" name="fileDetails3" id="file3" value="">
+                                                <input type="hidden" name="fileName3" id="fileName3" value="">
+                                                <input type="hidden" name="fileType3" id="fileType3" value="1">
+                                                <input type="hidden" name="fileUuid3" id="fileUuid3" value="">
+                                                <span class="btn btn-primary btn-sm fileinput-button"><span id="upbtn3">上传</span>
+                                                    <input id="fileupload" type="file" name="files[]" multiple="" >
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="3">
+                                            <td style="">
+                                                4
+                                            </td>
+                                            <td style="">
+                                                法定代表身份证<span class="cuo">*</span>
+                                            </td>
+                                            <td id="downloadFile4">
+                                                <a href="#" id="lookPicture">查看示例</a>
+                                            </td>
+                                            <td id="fileNames4">
+                                            </td>
+                                            <td id="fileStatus4">
+                                                未上传
+                                            </td>
+                                            <td style="">
+                                                <input type="hidden" name="fileDetails4" id="file4" value="">
+                                                <input type="hidden" name="fileName4" id="fileName4" value="">
+                                                <input type="hidden" name="fileType4" id="fileType4" value="1">
+                                                <input type="hidden" name="fileUuid4" id="fileUuid4" value="">
+                                                <span class="btn btn-primary btn-sm fileinput-button"><span id="upbtn4">上传</span>
+                                                    <input id="fileupload" type="file" name="files[]" multiple="" >
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="4">
+                                            <td style="">
+                                                5
+                                            </td>
+                                            <td style="">
+                                                法人代表授权委托书<span class="cuo">*</span>
+                <span class="red">(PDF文件)</span>
+                                            </td>
+                                            <td id="downloadFile5">
+                                                <a href="#" id="lookPicture">查看示例</a>
+                                            </td>
+                                            <td id="fileNames5">
+                                            </td>
+                                            <td id="fileStatus5">
+                                                未上传
+                                            </td>
+                                            <td style="">
+                                                <input type="hidden" name="fileDetails5" id="file5" value="">
+                                                <input type="hidden" name="fileName5" id="fileName5" value="">
+                                                <input type="hidden" name="fileType5" id="fileType5" value="1">
+                                                <input type="hidden" name="fileUuid5" id="fileUuid5" value="">
+                                                <span class="btn btn-primary btn-sm fileinput-button"><span id="upbtn5">上传</span>
+                                                    <input id="fileupload" type="file" name="files[]" multiple="" >
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="5">
+                                            <td style="">
+                                                6
+                                            </td>
+                                            <td>
+                                                被授权人身份证<span class="cuo">*</span>
+                                            </td>
+                                            <td id="downloadFile6">
+                                                <a href="#" id="lookPicture">查看示例</a>
+                                            </td>
+                                            <td id="fileNames6">
+                                            </td>
+                                            <td id="fileStatus6">
+                                                未上传
+                                            </td>
+                                            <td style="">
+                                                <input type="hidden" name="fileDetails6" id="file6" value="">
+                                                <input type="hidden" name="fileName6" id="fileName6" value="">
+                                                <input type="hidden" name="fileType6" id="fileType6" value="1">
+                                                <input type="hidden" name="fileUuid6" id="fileUuid6" value="">
+                                                <span class="btn btn-primary btn-sm fileinput-button"><span id="upbtn6">上传</span>
+                                                    <input id="fileupload" type="file" name="files[]" multiple="" >
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="6">
+                                            <td style="">
+                                                7
+                                            </td>
+                                            <td style="">
+                                                金融许可证
+                                            </td>
+                                            <td id="downloadFile7">
+                                                <a href="#" id="lookPicture">查看示例</a>
+                                            </td>
+                                            <td id="fileNames7">
+                                            	
+                                            </td>
+                                            <td id="fileStatus7">
+                                                未上传
+                                            </td>
+                                            <td style="">
+                                                <input type="hidden" name="fileDetails7" id="file7" value="">
+                                                <input type="hidden" name="fileName7" id="fileName7" value="">
+                                                <input type="hidden" name="fileType7" id="fileType7" value="1">
+                                                <input type="hidden" name="fileUuid7" id="fileUuid7" value="">
+                                                <span class="btn btn-primary btn-sm fileinput-button"><span id="upbtn7">上传</span>
+                                                    <input id="fileupload" type="file" name="files[]" multiple="" >
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr data-index="7">
+                                            <td style="">
+                                                8
+                                            </td>
+                                            <td style="">
+                                                机构信用代码证
+                                            </td>
+                                            <td id="downloadFile8">
+                                                <a href="#" id="lookPicture">查看示例</a>
+                                            </td>
+                                            <td id="fileNames8">
+                                            </td>
+                                            <td id="fileStatus8">
+                                                未上传
+                                            </td>
+                                            <td style="">
+                                                <input type="hidden" name="fileDetails8" id="file8" value="">
+                                                <input type="hidden" name="fileName8" id="fileName8" value="">
+                                                <input type="hidden" name="fileType8" id="fileType8" value="1">
+                                                <input type="hidden" name="fileUuid8" id="fileUuid8" value="">
+                                                <span class="btn btn-primary btn-sm fileinput-button"><span id="upbtn8">上传</span>
+                                                    <input id="fileupload" type="file" name="files[]" multiple="" >
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="userId" id="userId" value="">
+                    <input type="hidden" name="instId" id="instId" value="">
+                    <input type="hidden" name="username" id="username" value="">
+                </fieldset>
+                
+                
+    <p>
+    	<input id="confirm" type="checkbox"/> 我已阅读并确认<a class="agreement" onclick="tab.open('flatServiceagreement','平台服务协议','account/actmanage/flatServiceagreement.html',event);" href="javascript:;">《平台服务协议》</a>
+	</p>
+	<p>
+		<input id="submit_btn" type="button" value="提交申请"/>
+                </form>
+        </div>
+    </div>
+	
+</div>
+<link rel="import" href="../../jsrefer.html?__inline">
+    <script type="text/javascript" src="../../../../javascript/base/city.js"></script>
+    <script src="../../../../javascript/lib/requirejs/require.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        require(["../../../../javascript/modules/lobby/account/actmanage/reUpgrade_account.js"]);
+    </script>
+</body>
+</html>

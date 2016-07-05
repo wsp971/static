@@ -1,0 +1,10 @@
+{
+	"rtnCode":"000",
+	"rtnMsg":"成功",
+	"user":{
+		"name":"admin",
+		"phone":"12388882312",
+		"password":"123456",
+		"email":"222@163.com"
+	}
+}

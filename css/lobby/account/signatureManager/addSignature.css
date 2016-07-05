@@ -1,0 +1,44 @@
+
+.img-pre{border:1px solid #a8a8a8;float:left;background:#ebebeb;}
+#add-custom-sig-pre{width: 204px;height:79px;}
+#add-custom-net-pre{width: 208px;height:205px;}
+#signature-upload-selector-div{
+	float:left;width: 160px;height:79px;
+	position:relative;
+	margin-left:12px;
+}
+.shade{background:#dddddd;}
+.fileNameSpan{position:absolute;
+	bottom:0px;right:0px;
+}
+#signet-upload-selector-div{
+	float:left;width: 160px;height:205px;
+	position:relative;
+	margin-left:12px;
+}
+.hidden{display:none}
+
+.sig-upload-left-td{
+	vertical-align:top;
+	text-align:right;
+	width:93px;
+}
+#triggerDiv{
+	position:absolute;
+	bottom:0px;
+}
+.pi20{padding:20px;}
+
+table tr td{padding:10px;}
+.inlineBlock{display:inline-block;}
+.textCenter{text-align:center;}
+.verticalAlign{
+	vertical-align:middle;
+}
+.verticalAlignSpan{
+	vertical-align:middle;
+	height:100%;
+	display:inline-block;
+}
+
+.lightBlackColor{color:#bcbcbc;}

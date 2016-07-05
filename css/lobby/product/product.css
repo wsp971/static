@@ -1,0 +1,98 @@
+@import url('/css/lobby/trade.css?__inline');
+
+.layer-date {
+	cursor: pointer;
+	background-color: white !important;
+}
+
+.pre-title {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/* zhengguanlong */
+.hidden {
+	display: none !important
+}
+/* zhengguanlong */
+.pre-suc-content {
+	position: absolute;
+	left: 40%;
+	top: 30%;
+}
+
+.pre-content .pre-money .pre-totle {
+	color: red;
+}
+
+.pre-suc-title .pre-sec-title {
+	margin-top: 20px;
+}
+
+.pt5 {
+	padding: 7px;
+}
+
+.mt15p{
+	margin-top: 15%;
+}
+
+.publish-content {
+	margin: 0px auto;
+	width: 1300px;
+	height: 87%;
+	background-color: white;
+}
+
+.publish {
+	margin: 0px auto;
+}
+
+.ctrl-label {
+	margin-top: 5px;
+}
+
+.ctrl-split {
+	float: left;
+	padding-right: 12px;
+	padding-left: 12px;
+}
+
+.ctrl-line {
+	list-style-type: none;
+}
+
+.radio-label {
+	text-align: left;
+	display: inline-block !important;
+}
+
+.radio-info {
+	padding-left: 12px;
+	margin-left: 0 !important;
+}
+
+.radio-mnc {
+	padding-left: 12px;
+	color: rgb(153, 153, 153);
+	font-size: 12px;
+}
+
+.mnc {
+	color: rgb(153, 153, 153);
+	font-size: 12px;
+	margin-top: 7px;
+}
+
+
+.fast-publish>.steps {
+	margin-left: 13% !important;
+}
+
+.fast-publish>.steps>ul>li {
+	width: 22.5%;
+}
+
+.sub-form-group {
+	margin-left: 10.8%;
+}

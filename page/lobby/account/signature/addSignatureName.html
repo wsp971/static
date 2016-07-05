@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-cache">
+<title>人员管理-同业平台</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta name="x5-orientation" content="portrait">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<!--[if lt IE 9]> 
+       <script src="/javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+<link rel="stylesheet" type="text/css" href="/css/base/main.css">
+<link rel="stylesheet" type="text/css"
+	href="/css/lobby/account/signatureManager/addSignature.css">
+<link href="../../../../javascript/lib/fileupload/css/jquery.fileupload.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+	<input type="text" value="name" id="typeFlag" hidden class="hidden">
+	<div id="sig-upload" class="pi20">
+
+		<div id="sig-upload-body">
+			<form id="addSignatureForm" action="javascript:;">
+				<table>
+					<tr>
+						<td class="sig-upload-left-td f14"><span>自定义签名</span></td>
+						<td>
+							<div id="add-custom-sig-pre" class="img-pre textCenter">
+								<!-- <span class="verticalAlignSpan"></span> -->
+								<div style="display: inline-block;"></div>
+							</div>
+
+							<div id="signature-upload-selector-div">
+								<!-- <input hidden type="file" name="imgOne" id="imgOne" class="hidden"/>
+								<div id="triggerDiv">
+									<input class='btn btn-info inlineBlock' type="button"
+										value='选择文件' id='triggerInput' /> <span id="fileName"
+										class="inlineBlock">&nbsp;</span>
+								</div> -->
+								
+								<span id="triggerDiv" class="btn btn-info btn-sm fileinput-button">
+									<span class="upbtn" style="text-indent: 0px;width:50px">&nbsp;上&nbsp;&nbsp;传&nbsp;</span>
+                                    <input class="fileupload" type="file" name="imgOne" id="imgOne" multiple="">
+								</span>
+								
+								
+								<!-- <span class="btn btn-primary btn-sm fileinput-button">
+                                    <span class="upbtn" style="text-indent: 0px;width:50px">&nbsp;上&nbsp;&nbsp;传&nbsp;</span>
+                                    <input class="fileupload" type="file" name="files[]" multiple="">
+                                </span> -->
+							</div>
+
+							<div class="row"></div>
+						</td>
+					</tr>
+					<tr>
+						<td class="sig-upload-left-td f14"><span>文件格式</span></td>
+						<td class="lightBlackColor f14"><span>支持jpg,png,gif,jpeg图片格式,最大尺寸200*75</span></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td id="subAndCancel"><input class="btn btn-info" disabled
+							id="submitInput" type="submit" value="提交"> <input
+							class="btn btn-danger col-md-offset-1" id="cancelInput"
+							type="button" value="取消"></td>
+					</tr>
+				</table>
+			</form>
+
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript" src="/javascript/lib/requirejs/require.js"></script>
+<script type="text/javascript">
+	require([ "lobby/account/signatureManager/addSignature" ]);
+</script>
+</html>

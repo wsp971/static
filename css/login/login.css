@@ -1,0 +1,110 @@
+/*
+* @Author: EX-ZHANGYUANYONG001
+* @Date:   2016-05-30 18:11:25
+* @Last Modified by:   EX-ZHANGYUANYONG001
+* @Last Modified time: 2016-05-31 18:45:01
+*/
+
+@import url('../css/base/main.css?__inline');
+.longinbox
+{
+   width:430px;
+   height:300px;
+    }
+.container.login
+{
+   margin-left:37px;
+   overflow:hidden;
+}
+.container h2{
+	font-weight:500;
+}
+.form-horizontal h2{
+	font-size:17px;
+}
+.keyboard_tgt{
+	width:16px;
+	height:16px;
+	position: absolute;
+	right: 20px;
+  	top: 1px;
+}
+.keyboard_tgt i
+{
+    font-size:28px;
+    color:#959595;
+    }
+.sky{
+	width:16px;
+	height:16px;
+	position: absolute;
+	right: 10px;
+  	top: 8px;
+  	color:#959595;
+}
+.mr10 {
+	margin-right: 10px;
+}
+.vcode {
+	height:39px;
+}
+.login a {
+	margin-left: 10px;
+}
+.login .input-group-addon{display:inline-block;width:34px;height:34px;float:left;background-color:#d5d6d8;  text-align: center;
+  line-height: 34px;}
+.login .form-control{width:284px;float:left; border-radius:0; height:40px;}
+.login .vcode{max-width:86px; cursor:pointer;}
+.input_user{ width:324px;height:27px; border:1px solid #EDD57B; line-height:27px;padding-left:5px;}
+.col-sm-10{padding-left:0;padding-right:0;}
+.container .icon1, .container .icon2, .container .icon3 {
+	width:40px; height:40px; line-height:40px; 
+	background: url(../../img/login/login_icons.png) 0 0 no-repeat;
+}
+.container .icon2 { background-position: 0 -50px;}
+.container .icon3 { background-position: 0 -100px;}
+.forget{
+	width:326px;
+	text-align:right;
+	margin-top: 12px;
+}
+.forget a {
+	display: block;
+	float: right;
+	text-align:right;
+	color: #0052be;
+}
+.btn_subment{
+	width: 324px;height:40px;margin-top:13px;
+	font-size: 18px;
+}
+.liyzmbox{
+	padding-bottom:10px;
+}
+.login .padnone {
+    z-index:0;
+}
+#softkeyboard table
+{
+  border-spacing:1px;
+  padding-left:2px;
+  padding-bottom:2px;
+  }
+  
+#softkeyboard #useKey,
+#softkeyboard #backspace,
+#softkeyboard #capslock
+ {
+     width:75px;
+     }
+     #softkeyboard #backspace
+ {
+   height: 39px;
+  margin-top: 2px;
+     }
+#softkeyboard #accept
+{
+  width: 94px;
+  height: 39px;
+  margin-top: 2px;
+}

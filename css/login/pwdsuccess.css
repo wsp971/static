@@ -1,0 +1,34 @@
+/* 
+* @Author: LISHUAI900
+* @Date:   2016-06-01 17:39:29
+* @Last Modified by:   LISHUAI900
+* @Last Modified time: 2016-06-02 10:05:45
+*/
+.success-content {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 165px;
+}
+.success_tip {
+	width: 165px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 18px;
+	text-align: center;
+	text-indent: 50px;
+	margin: 50px auto;
+	background-position: 0 -298px;
+	font-size: #333;
+}
+.goback {
+	width: 100px;
+	height: 45px;
+	line-height: 45px;
+	margin: 0 auto;
+
+}
+.goback a {
+	font-size: 13px;
+	color: #0052be;
+	margin-left: 23%;
+}

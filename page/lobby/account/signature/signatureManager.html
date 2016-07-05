@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <title>人员管理-同业平台</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!--[if lt IE 9]> 
+       <script src="/javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+    <link href="../../../../css/lobby/trade.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/css/lobby/account/signatureManager/signatureManager.css" />
+</head>
+<body class="lobby">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="conhead">
+            <h2 class="title">
+                签名管理</h2>
+        </div>
+        <div id="signatureList" class="mt20">
+            <div id="my-sig-name" class="grayBorder">
+                <div id="my-sig-name-title" class='pl10 pt10 pb8 f18'>
+                    我的签名</div>
+                <div id="my-sig-name-list" class='pb10'>
+                </div>
+            </div>
+            <div id="my-sig-stamp" class="grayBorder mt15">
+                <div id="my-sig-stamp-title" class='pl10 pt10 pb8 f18'>
+                    我的签章</div>
+                <div id="my-sig-stamp-list" class='pb10'>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="javascript/lib/requirejs/require.js"></script>
+<script type="text/javascript">
+    require(["lobby/account/signatureManager/signatureManager.js"]);
+</script>
+</html>
+<script id="sig-name-list" type="text/html">
+        <%
+        for(var i=0;i<sigList.length;i++){
+            var sig=sigList[i];
+			if(sig.category==0){
+        %>
+				<div id="<%=sig.signatureCode%>" class="my-sig-item fl grayBorder mt10 ml10">
+					<div class="my-sig-img textCenter" style="cursor: default;">
+						<a data-signid="<%=sig.signatureCode%>" href="javascript:;" class='hideSelf fr' data-type="<%=sig.category%>"></a>
+						<img src="data:image/png;base64,<%=sig.imageStream%>" style="width:150px" class="verticalAlign mt20">
+						<span class="verticalAlignSpan"></span>
+						
+					</div>
+					
+					<div class="row"></div>
+				</div>
+        
+        <%}}%>
+				<div class="my-sig-add-item fl grayBorder mt10 ml10">
+					<a class='add-sig-a' href="javascript:void(0);"  type="0"><span>添加</span></a>
+					
+				</div>
+				<div class="row"></div>
+</script>
+<script id="sig-stamp-list" type="text/html">
+        <%
+        for(var i=0;i<sigList.length;i++){
+            var sig=sigList[i];
+			if(sig.category==1){
+        %>
+				<div id="<%=sig.signatureCode%>" class="my-sig-item fl grayBorder mt10 ml10">
+					<div class="my-sig-img textCenter" style="cursor: default;">
+						<a data-signid="<%=sig.signatureCode%>" href="javascript:;" class='hideSelf fr' data-type="<%=sig.category%>"></a>
+						<img src="data:image/png;base64,<%=sig.imageStream%>" style="width:150px" class="verticalAlign mt20">
+						<span class="verticalAlignSpan"></span>				
+					</div>
+					<div class="row"></div>
+				</div>
+        <%}}%>
+				<div class="my-sig-add-item fl grayBorder mt10 ml10">
+					<a class='add-sig-a' href="javascript:;"  type="1"><span>添加</span></a>
+				</div>
+				<div class="row"></div>
+</script>

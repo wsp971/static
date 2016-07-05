@@ -1,0 +1,19 @@
+.form-group {
+	margin-bottom: 20px;
+}
+label {
+	font-weight: 100;
+}
+.whiteFree {
+	height: 300px;
+}
+.pt60 {
+	padding-top: 60px;
+}
+.tip {
+	padding-top: 5px;
+	display: inline-block;
+}
+.ml20 {
+	margin-left: 20px;
+}

@@ -1,0 +1,95 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no" />
+<title>开放购买</title>
+<!--[if lt IE 9]>
+    <script src="../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+<link href="/css/lobby/trade.css" rel="stylesheet" type="text/css" />
+	<style>
+		.ctrl-label{
+			width: 125px;
+			text-align: center;
+			padding-top: 7px;
+		}
+		#row3>div{
+			position: relative;
+			width: 250px;
+			margin-left: -6px;
+		}
+		#row3>div span{
+			position: absolute;
+			right: 23px;
+			bottom: 6px;
+			color: #b3b3b3;
+		}
+		#publishAmount{
+			padding-right: 22px;
+		}
+		.operate {
+			width: 100%;
+			/*position: relative;*/
+			/*bottom: 25px;*/
+			text-align: center;
+
+		}
+		.operate div{
+			display: inline-block;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body style="height: auto;">
+	<form id="form" role="application" class="f14" novalidate="novalidate">
+		<div class="row mt20">
+			<label class="col-sm-3 ctrl-label"><span class="red mr5">*</span>起息日</label>
+			<div class="col-sm-6 error-message ctrl-inline">
+				<input placeholder="请选择时间" id="valueDate" name="valueDate" required
+					   class="laydate-icon form-control  layer-date data-common startDate"
+					   onclick="laydate({elem: '#valueDate', istime:
+				    true, format: 'YYYY-MM-DD',istoday: true,min: laydate.now()})"/>
+			</div>
+		</div>
+		<!-- maturityDate -->
+		<div class="row">
+			<label class="col-sm-3 ctrl-label"><span class="red mr5">*</span>到期日</label>
+			<div class="col-sm-6 error-message ctrl-inline">
+				<input placeholder="请选择时间" id="maturityDate" name="maturityDate" required
+					   class="laydate-icon form-control  layer-date data-common endDate"
+					   onclick="laydate({elem: '#maturityDate', istime:
+				     true, format: 'YYYY-MM-DD',istoday: true,min: laydate.now()})"/>
+			</div>
+		</div>
+		<!-- publishAmount -->
+		<div id="row3" class="row ml5">
+			<label class="col-sm-3 ctrl-label"><span class="red mr5">*</span>发行规模</label>
+			<div class="col-sm-6 error-message ctrl-inline">
+				<input  id="publishAmount" name="publishAmount"
+						class="form-control data-common" required><span
+					class="ml15 mt5">元</span>
+			</div>
+		</div>
+		<!--<p class="hr-line-dashed"></p>-->
+		<div class="operate">
+			<div>
+				<button id="submit" type="button" class="btn btn-primary mr10">正式成立</button>
+				<button id="cancle" type="button" class="btn btn-default">取消</button>
+			</div>
+		</div>
+
+	</form>
+
+
+	<link rel="import" href="../../jsrefer.html?__inline">
+	<script src="/javascript/lib/laydate/laydate.js" type="text/javascript"></script>
+	<script src="/javascript/lib/requirejs/require.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		require([ "lobby/account/mypublish/controllers/establishController" ]);
+	</script>
+</body>
+</html>

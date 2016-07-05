@@ -1,0 +1,167 @@
+<div class="form-group div-height">
+	<label class="col-sm-2 ctrl-label"><span class="red">*</span>合同签署：</label>
+	<div class="col-sm-6 error-message">
+		<ul class="first-ul">
+			<li class="ctrl-line"><input type="radio"
+				class="radio-label data-radio" name="contractSignMode" id="online"
+				value="c_contract_sign_mode_1" checked="checked"><label
+				class="radio-info" for="online">在线签署</label><span
+				class="content-line"></span></li>
+			<li class="ctrl-line ml20"><input type="checkbox"
+				class="radio-label" name="readAnno" id="readAnno"><label
+				class="radio-info" for="readAnno">我已阅读并同意：</label><a id="openAnno"
+				class="link">《在线签署合同声明》</a><span class="content-line"></span></li>
+			<li class="ctrl-line"><input type="radio" class="radio-label"
+				name="contractSignMode" id="offline" value="c_contract_sign_mode_2"><label
+				class="radio-info" for="offline">线下签署</label></li>
+		</ul>
+	</div>
+</div>
+
+<p class="hr-line-dashed"></p>
+<div class="form-group">
+	<label class="col-sm-1 control-label"></label>
+	<div class="col-md-8">
+		<span class="red">*</span><span class="f14">材料</span>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-sm-1 control-label"></label>
+	<div class="col-md-8">
+		<span class="f14">请按照提示，上传以下格式的文件材料，单个文件大小不超过5M。</span>
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-sm-1 control-label"></label>
+	<div class="col-md-8">
+		<div class="fixed-table-container cell">
+			<div class="fixed-table-body">
+				<table class="table table-hover">
+					<tbody>
+						<tr class="active">
+							<td>
+								<div class="th-inner ">
+									<span class="red">*</span><span class="f14">合同</span><span
+										class="red"> （交易过程中需要双方签署）</span><span class="f12 ml5 mnc">仅支持doc,docx格式上传</span>
+								</div>
+							</td>
+							<td class="tc">
+								<div class="th-inner ">操作</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<ul id="contractFiles">
+								</ul>
+							</td>
+							<td class="tc"><input type="hidden" name="fileNum1"
+								class="fileNum" value=0> <span
+								class="btn btn-primary btn-sm fileinput-button"> <span
+									class="upbtn" style="text-indent: 0px; width: 50px">&nbsp;上&nbsp;&nbsp;传&nbsp;</span>
+									<input id="fileupload1" class="fileupload" type="file"
+									name="files[]" multiple="">
+							</span></td>
+						</tr>
+						<tr class="active">
+							<td>
+								<div class="th-inner ">
+									<span class="red">*</span><span class="f14">协议</span><span
+										class="red"> （产品交易过程中，需要投资方单方面签署）</span><span
+										class="f12 ml5 mnc">仅支持doc,docx格式上传</span>
+								</div>
+							</td>
+							<td class="tc">
+								<div class="th-inner">操作</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<ul id="protocolFiles">
+								</ul>
+							</td>
+							<td class="tc"><input type="hidden" name="fileNum1"
+								class="fileNum" value=0> <span
+								class="btn btn-primary btn-sm fileinput-button"> <span
+									class="upbtn" style="text-indent: 0px; width: 50px">&nbsp;上&nbsp;&nbsp;传&nbsp;</span>
+									<input id="fileupload2" class="fileupload" type="file"
+									name="files[]" multiple="">
+							</span></td>
+						</tr>
+						<tr class="active">
+							<td>
+								<div class="th-inner ">
+									<span class="f14">其他相关材料</span><span class="f12 ml5 mnc">仅支持doc,docx格式上传</span>
+								</div>
+							</td>
+							<td class="tc">
+								<div class="th-inner ">操作</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<ul id="otherFiles">
+								</ul>
+							</td>
+							<td class="tc"><input type="hidden" name="fileNum1"
+								class="fileNum" value=0> <span
+								class="btn btn-primary btn-sm fileinput-button"> <span
+									class="upbtn" style="text-indent: 0px; width: 50px">&nbsp;上&nbsp;&nbsp;传&nbsp;</span>
+									<input id="fileupload3" class="fileupload" type="file"
+									name="files[]" multiple="">
+							</span></td>
+						</tr>
+						<tr id="transferHeadTr" class="active hidden">
+							<td>
+								<div class="th-inner ">
+									<span class="red">*</span><span class="f14">转让合同</span><span
+										class="red"> （产品交易过程中，需要双方签署）</span><span class="f12 ml5 mnc">仅支持doc,docx格式上传</span>
+								</div>
+							</td>
+							<td class="tc">
+								<div class="th-inner">操作</div>
+							</td>
+						</tr>
+						<tr id="transferFileTr" class="hidden">
+							<td>
+								<ul id="transferContractFiles">
+								</ul>
+							</td>
+							<td class="tc"><input type="hidden" name="fileNum1"
+								class="fileNum" value=0> <span
+								class="btn btn-primary btn-sm fileinput-button"> <span
+									class="upbtn" style="text-indent: 0px; width: 50px">&nbsp;上&nbsp;&nbsp;传&nbsp;</span>
+									<input id="fileupload4" class="fileupload" type="file"
+									name="files[]" multiple="">
+							</span></td>
+						</tr>
+						<tr class="active">
+							<td>
+								<div class="th-inner ">
+									<span class="red">*</span><span class="f14">产品说明书</span><span
+										class="f12 ml5 mnc">仅支持pdf格式上传</span>
+								</div>
+							</td>
+							<td class="tc">
+								<div class="th-inner">操作</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<ul id="specification">
+								</ul>
+							</td>
+							<td class="tc"><input type="hidden" name="fileNum1"
+								class="fileNum" value=0> <span
+								class="btn btn-primary btn-sm fileinput-button"> <span
+									class="upbtn" style="text-indent: 0px; width: 50px">&nbsp;上&nbsp;&nbsp;传&nbsp;</span>
+									<input id="fileupload5" class="fileupload" type="file"
+									name="files[]" multiple="">
+							</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<p class="hr-line-dashed"></p>

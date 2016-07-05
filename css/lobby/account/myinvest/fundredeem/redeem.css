@@ -1,0 +1,113 @@
+.content_top{
+	padding-top:21px;
+	font-size:14px;
+}
+.mg {
+	margin: 0 auto;
+}
+.form-horizontal .ta-left {
+	text-align: left;
+}
+.no-fl {
+	float: none;
+}
+.mt50 {
+	margin-top: 50px;
+}
+.pt7 {
+	padding-top: 7px;
+}
+.pt18 {
+	padding-top: 18px;
+}
+.cl666 {
+	color: #666;
+}
+.cl999 {
+	color: #999;
+}
+.warn-tip {
+	color: #d46741;
+	font-size: 12px;
+}
+.pb30 {
+	padding-bottom: 30px;
+}
+.pos {
+	display: none;
+	position: relative;
+	top: 7px;
+	left: 10px;
+}
+.tips {
+	/*visibility: hidden;*/
+	position: absolute;
+	top: 45px;
+	left: 150px;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 58%;
+}
+.icons {
+	position: relative;
+	left: -5px;
+}
+.span-width {
+	width: 150px;
+}
+.table td {
+	text-indent: 15px;
+}
+.table tr:first-child td {
+	text-indent: 7px;
+}
+.table .td2{
+	width: 46%;
+}
+.btn-div {
+	margin: 0 auto;
+	text-align: center;
+}
+.button {
+	width: 150px; 
+	height: 43px;
+	margin-right: 20px;
+}
+.min-wid {
+	min-width: 378px;
+	white-space: nowrap;
+}
+.tab-of {
+	overflow: visible;
+}
+.visible {
+	visibility: visible;
+}
+.bar {
+	margin-bottom: 11px;
+    height: 18px;
+    background: green;
+}
+.table .file-div {
+	margin: 0;
+	margin-left: 15px;
+	padding: 0px;
+	height: 32px;
+	line-height: 32px;
+}
+i.del:hover {
+	cursor:pointer;
+}
+.col-sm-3 {
+	*width: 20%;
+	*padding-right: 0px;
+}
+.col-sm-2 {
+	*padding: 0px;
+}
+.layui-layer-btn .layui-layer-btn0 {
+	float: left;
+}
+.layui-layer-dialog .layui-layer-content {
+	text-align: center;
+}

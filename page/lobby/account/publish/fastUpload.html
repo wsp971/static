@@ -1,0 +1,45 @@
+<div class="form-group">
+	<label class="col-sm-1 control-label"></label>
+	<div class="col-md-8">
+		<div class="fixed-table-container cell">
+			<div class="fixed-table-body">
+				<table class="table table-hover">
+					<tbody>
+						<tr class="active">
+							<td>
+								<div class="th-inner ">
+									<span class="f14">下载空白表格</span>
+								</div>
+							</td>
+							<td class="tc">
+								<div class="th-inner ">上传完成表格</div>
+							</td>
+							<td class="tc">
+								<div class="th-inner ">操作</div>
+							</td>
+						</tr>
+						<tr id="templateInfo">
+							<td><span class="ml15">请先选择发布类型</span></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr id="trustsTemplate" class="hidden">
+							<td><span><a class="download link trust-downUrl"
+									href="/doc/trusts/trustsTemplate.xlsx">信托产品发布模板.xslx</a>请点击下载</span></td>
+							<td>
+								<ul id="contractFiles-fast" class="contractFiles"></ul>
+							</td>
+							<td class="tc">
+							<input type="hidden" name="fileNum1" class="fileNum" value=0>
+                            <span class="btn btn-primary btn-sm fileinput-button">
+                                  <span class="upbtn" style="text-indent: 0px;width:50px">&nbsp;上&nbsp;&nbsp;传&nbsp;</span>
+                                  <input id = "fastUploadFile" class="fileupload" type="file" name="files[]" multiple="">
+                             </span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

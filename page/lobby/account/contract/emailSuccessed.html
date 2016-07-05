@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no" />
+<title>信托</title>
+<!--[if lt IE 9]> 
+       <script src="/javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+<link rel="stylesheet" type="text/css" href="/css/base/main.css">
+<style type="text/css">
+	div{text-align:center;}
+	#promptTitle{margin:30px; font-size:20px}
+	#promptContent{margin:20px;font-size:15px}
+	#promptConfirm{margin-top:20px;font-size:15px}
+</style>
+<script type="text/javascript">
+ function hidePrompt(){
+	 var index=parent.layer.getFrameIndex(window.name);
+	 parent.layer.close(index);	
+ }
+</script>
+</head>
+<body>
+	<div id="promptTitle">提醒成功</div>
+	<div id="promptContent">已发送提醒邮件至对方邮箱</div>
+	<div id="promptConfirm"><input type="button" class="btn btn-info" onclick="hidePrompt()" value="确认"></div>	
+</body>
+</html>

@@ -1,0 +1,94 @@
+﻿﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>划款确认</title>
+    <style>
+    	body .upgrade .account-content .first-content .nav{
+    		background:none;
+    	}
+    </style>
+    <!-- <!--[if lt IE 9]>
+    <script src="../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+    <link href="../../../../css/lobby/trade.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../javascript/lib/steps/css/jquery.steps.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../css/lobby/account/mypublish/drawConfirm.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../javascript/lib/fileupload/css/jquery.fileupload.css" rel="stylesheet" type="text/css" >
+</head>
+<body>
+    <div class="draw-content">
+        <div class="draw-mycol draw-body">
+            <form method="get" class="form-horizontal">
+            	<div class="draw-radio">
+            		<label class="draw-mycol draw-text f14"><span class="mr5 red">*</span>划款信息反馈</label>
+            		<div class="draw-mycol draw-text f14">
+		            	<input class="mr10" type="radio" name="drawMsg" checked="true" value="00"/>划款凭证
+	            	</div>
+	            	<div class="draw-mycol draw-text f14">
+	            		<input class="mr10" type="radio" name="drawMsg" value="01"/>大额支付号
+	            	</div>
+            	</div>
+            	<div class="pay bg-gray">
+            		<div class="fp"><span class="mr5 red">*</span>请输入大额支付号</div>
+           			<div class="col-md-8">
+            			<input id=payNo type="text" class="form-control fl"/>
+            		</div>
+            	</div>
+            	<div class="voucher bg-gray">
+	            	<div class="draw-group">
+	            		<div class="fp"><span class="mr5 red">*</span>请输入划款凭证号</div>
+            			<div class="col-md-8">
+	            			<input id="voucherNo" type="text" class="form-control fl"/>
+	            		</div>
+	            	</div>
+	            	<div class="draw-group">
+	            		<label class="col-md-5 f14">请上传划款凭证</label>
+	            	</div>
+	                <div class="fixed-table-container cell">
+	                    <div class="fixed-table-body">
+	                        <table class="table">
+		            			<tr>
+		            				<td class="tboder f14">文件名</td>
+		            				<td class="ulboder f14">操作</td>
+		            			</tr>
+		            			<tr class="bg-white">
+		            				<td id="fileName"></td>
+		            				<td>
+		            					<span class="btn btn-gray btn-sm fileinput-button mc">
+		            						<span id="fileText">上传</span>
+		            						<input id="upload" type="file" multiple="multiple"/>
+		            						<input id="docName" type="hidden" />
+		            						<input id="docPath" type="hidden" />
+		            						<input id="docType" type="hidden" />
+		            					</span>
+	            					</td>
+		            			</tr>
+	                        </table>
+                        </div>
+                    </div>
+            	</div>
+            	<div class="draw-button">
+            		<div class="col-md-5">
+            			<button type="button" class="btn btn-primary finish col-md-offset-7">提交划款信息</button>
+            		</div>
+            		<div class="col-md-5">
+            			<button type="button" class="btn btn-default fr cancel">取消</button>
+            		</div>
+            	</div>
+            </form>
+        </div>
+	</div>
+    <link rel="import" href="../../jsrefer.html?__inline">
+    <script src="../../../../javascript/lib/layer/2.2/layer/layer.js" type="text/javascript"></script>
+    <script src="../../../../javascript/lib/laydate/laydate.js" type="text/javascript"></script>
+    <script src="../../../../javascript/lib/requirejs/require.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        require(["../../../../javascript/modules/lobby/account/mypublish/drawConfirm.js"]);
+    </script>
+</body>
+</html>

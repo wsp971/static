@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>验证邮箱</title>
+</head>
+<body>
+</body>
+<script src="/javascript/lib/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="/javascript/base/common.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        var username = utils.getParameter('username');
+        var userId = utils.getParameter('userId');
+        var oldEmail = utils.getParameter('oldEmail');
+        var email = utils.getParameter('email');
+        var data = 'username=' + username + '&oldEmail=' + oldEmail + '&email=' + email + '&userId=' + userId;
+        validateEmail(data)
+    })
+    function validateEmail(data) {
+        loadAjax({
+            async: false,
+            url: "/email/sendEmailByLinkCheck",
+            data: data,
+            type: "post",
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded",
+            success: function (msg) {
+                if (msg && msg.rtnCode == 000) {
+                    window.location.href = 'agent_safety_email_success.html';
+                } else {
+                    window.location.href = 'agent_safety_email_fail.html';
+                }
+            },
+            error: function () {
+                window.location.href = 'agent_safety_email_fail.html';
+            }
+        })
+    }
+</script>
+</html>

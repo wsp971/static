@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<!--[if lt IE 9]> 
+       <script src="../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+<![endif]-->
+<title>密码变更成功</title>
+</head>
+<body>
+	<div style="margin:0 auto;width: 100px;height: 75px;padding-top: 15px;">
+		<span>密码变更成功</span><br/>
+		<input id="goback" type="button" value="3s返回账户安全"/>
+	</div>
+	<link rel="import" href="../../jsrefer.html?__inline">
+</body>
+<script type="text/javascript">
+	var time=3;
+	function goback(){
+		time--;
+		if(time>0){
+			$('#goback').val(time+'s返回账户安全');
+		}else{
+			
+		}
+	}
+	setInterval(goback,1000);
+</script>
+</html>

@@ -1,0 +1,47 @@
+body{
+	height:88%;	
+}
+.draw-content{
+	margin:45px 20px;
+}
+.draw-mycol{
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
+.draw-body{
+	width:100%;
+}
+.draw-textl{
+	width:25%;
+	padding-right: 15px;
+}
+.draw-texts{
+	width:20%;
+	padding-right: 15px;
+}
+.draw-textd{
+	width:36%;
+	padding-right: 15px;
+}
+.draw-radio{
+  	overflow: hidden;
+	margin-bottom:15px;
+	padding-left:20px;
+}
+.voucher{
+	display:none;
+  	overflow: hidden;
+	padding:15px 0 15px 20px;
+}
+.draw-group{
+  	overflow: hidden;
+	margin-bottom:15px;
+	display:none;
+}
+img{
+	max-width:255px;
+	max-height:255px;
+	display:block;
+	margin:0 auto;
+}

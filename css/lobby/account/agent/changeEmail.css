@@ -1,0 +1,40 @@
+.form-group{
+		margin-bottom: 20px;
+	}
+	form {
+		margin-top: 50px;
+	}
+	.image1 {
+		height:40px;
+		background-image: url("/img/lobby/step.png");
+		background-repeat: no-repeat;
+		background-position: 30px -40px;
+	}
+	.image2 {
+		height:40px;
+		background-image: url("/img/lobby/step.png");
+		background-repeat: no-repeat;
+		background-position: 20px -160px;
+	}
+	.image3 {
+		height:40px;
+		background-image: url("/img/lobby/step.png");
+		background-repeat: no-repeat;
+		background-position: 10px -200px;
+	}
+	hr {
+		border:none;
+		border-top:3px solid #ccc;"
+	}
+	.wrongMsg {
+		color:red;
+	}
+	.rightMsg {
+		color: green;
+	}
+	.whiteFree {
+		height: 300px;
+	}
+	.pt60 {
+		padding-top: 60px;
+	}

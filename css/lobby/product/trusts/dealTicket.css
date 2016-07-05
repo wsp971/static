@@ -1,0 +1,68 @@
+.wrapper-content {
+	padding:10px 0 40px 0;
+	width:820px;
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+}
+table,th,td{
+	font-size:14px;
+	font-family:'宋体';
+}
+.print-img{
+	position:relative;
+	left: 720px;
+		
+}
+body.lobby{
+	background-color:#fff;
+	font-family:'宋体';
+}
+.fixed-table-container tbody td:first-child.bleft{
+  border-left:1px solid #ddd	
+}
+.wcontent{
+	width:816px;
+	border:2px solid #93B0ED;
+	margin-top: 10px;
+	padding:14px;
+}
+.funderline{
+  border-bottom: 1px solid #c8c8c8;
+  display: inline-block;
+}
+.underline{
+  min-width: 278px;
+  border-bottom: 1px solid #c8c8c8;
+  display: inline-block;
+  padding: 0 5px 3px;
+  height: 22px;
+  margin-left:3px;
+}
+.f-gray{
+	color:#8c8c8c;
+}
+.u1{
+  min-width: 205px;
+}
+.u2{
+  min-width: 193px;
+}
+.u3{
+  min-width: 218px;
+}
+.u4{
+  min-width: 40px;
+  margin-right:6px;
+}
+.u5{
+  min-width: 35px;
+  margin-right:6px;
+}
+.space{
+  min-width: 30px;
+  display: inline-block;
+}
+.table>tbody>tr>td.valign{
+	vertical-align:middle;
+}

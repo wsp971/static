@@ -1,0 +1,39 @@
+.container {
+		margin-bottom: 15px;
+	}
+	.organtable {
+		line-height: 40px;
+	}
+	.pl15 {
+		padding-left: 15px;
+	}
+	.cg {
+		width:100px;
+		color: #666;
+	}
+	.mousehand {
+		cursor: pointer;
+	}
+	.imgs {
+		display:inline-block;
+		margin: 0px 25px;
+ 		margin-top: 30px;	
+	}
+	hr {
+		border:1px solid #e3e3e3;
+	}
+	.row {
+		padding: 0 20px;
+	}
+	.secHeader {
+		padding-left: 30px;
+	}
+	td {
+		font-size: 14px;
+	}
+	.mtb30 {
+		margin: 30px 0;
+	}
+	.ml30{
+		margin-left: 30px;
+	}

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no" />
+<title>申请开户</title>
+	<!--[if lt IE 9]> 
+       <script src="../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+     <link href="../../../../../javascript/lib/layer/2.2/layer/skin/layer.css" rel="stylesheet" type="text/css" />
+     <link href="../../../../../javascript/lib/fileupload/css/jquery.fileupload.css" rel="stylesheet" type="text/css" />
+	<link href="../../../../../css/lobby/account/myinvest/openaccount/open_account_detail.css" rel="stylesheet" type="text/css" >
+</head>
+<body class="lobby">
+	<div class="wrapper wrapper-content animated fadeInRight">
+		<div class="conhead">
+			<h2 class="title">编辑开户资料</h2>
+			<div class="form-control attention exis">
+                	您的开户申请未通过，原因是：<span id="reason"></span>
+            </div>
+		</div>
+		<div class="ibox">
+			<div class="row" id="loadForm">
+				
+			</div>
+		</div>
+	</div>
+	<!--合同详情js引入 -->
+	<link rel="import" href="../../../jsrefer.html?__inline">
+	<script src="../../../../../javascript/lib/laydate/laydate.js" type="text/javascript"></script>
+    <script src="../../../../../javascript/lib/requirejs/require.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        require(["../../../../../javascript/modules/lobby/account/myinvest/openaccount/openAccount.js"]);
+    </script>
+</body>
+</html>

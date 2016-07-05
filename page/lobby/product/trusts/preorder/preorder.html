@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no" />
+<title>Title</title>
+<!--[if lt IE 9]>
+    <script src="../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+<link href="/css/lobby/product/product.css" rel="stylesheet"
+	type="text/css" />
+</head>
+<body class="lobby">
+	<div id="preorderDiv" class="wrapper wrapper-content animated fadeInRight">
+		<div class="row">
+			<div class="ibox mt15">
+				<h1 class="f18 fl ml15">份额预约</h1>
+			</div>
+		</div>
+		<div class="row">
+			<form class="form-horizontal pre-form" role="form">
+				<div class="form-group pre-info">
+					<label class="col-sm-4 control-label">产品名称 :</label>
+					<div class="col-md-4 pt5">
+						<label class="control-label product-name"></label>
+					</div>
+				</div>
+				<div class="form-group pre-info">
+					<label class="col-sm-4 control-label">产品ID :</label>
+					<div class="col-md-4 pt5">
+						<label class="control-label product-ID"></label>
+					</div>
+				</div>
+				<div class="form-group pre-info">
+					<label class="col-sm-4 control-label">预期年收益率 :</label>
+					<div class="col-md-4 pt5">
+						<label class="control-label product-rate"></label>
+					</div>
+				</div>
+				<div class="form-group pre-info pre-time">
+					<label class="col-sm-4 control-label">产品期限 :</label>
+					<div class="col-md-4 pt5">
+						<label class="control-label"><span class = "product-term"></span><span class = "product-term-unit"></span></label>
+					</div>
+				</div>
+				<div class="hr-line-dashed"></div>
+				
+				<div class="form-group">
+					<label for="inputMoneyNum" class="col-md-4 control-label"><span
+						class="red">*</span>预约金额 :</label>
+					<div class="col-md-4">
+						<input id="inputMoneyNum" name="inputMoneyNum" type="text"
+							placeholder="请输入金额" maxlength="18" class="form-control fl amountFloat"
+							style="width: 200px"> <span
+							class="help-block m-b-none fl pl20 pt5 procut-buy-money">元</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="money-limit" class="col-md-4 control-label"></label>
+					<div class="col-md-4">
+						<label id = "aimAmountLabel" class="control-label">（总额度：<span class = "red" id = "aimAmount"></span>元）</label>
+					</div>
+				</div>
+				<div class="hr-line-dashed"></div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label"> </label>
+					<div class="col-sm-4 col-sm-offset-2">
+						<button class="btn btn-white pre-cancelbtn">取消</button>
+						<button class="btn btn-primary pre-surebtn"
+							style="margin-left: 50px;">确定</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<link rel="import" href="../complete/preorderComplete.html?__inline">
+
+	<script type="text/javascript" src="/javascript/lib/requirejs/require.js"></script>
+	<script type="text/javascript">
+		require([ "lobby/product/trusts/preorder/preorderIndex" ]);
+	</script>
+</body>
+</html>

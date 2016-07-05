@@ -1,0 +1,579 @@
+@import url('/css/base/main.css?__inline');
+body.lobby
+{
+    background-color: #f9f7f8;
+}
+.main
+{
+    height: 100%;
+    overflow: hidden;
+    min-width: 500px;
+}
+
+.header
+{
+    height: 90px;
+    background-color: #131a35;
+    color: #151c38;
+}
+
+.header .head-top
+{
+    padding: 0 20px;
+    overflow: hidden;
+}
+.header .head-top .logo
+{
+    float: left;
+    height:45px;
+    line-height:45px;
+    color:#fff;
+}
+.header .head-top .logo a
+{
+    color:#fff;
+    font-size: 24px;
+    font-weight:normal;
+}
+.header .head-top .logo span
+{
+    font-size: 18px;
+    font-weight:normal;
+    margin-left:5px;
+}
+.header .login-info
+{
+    float: right;
+    padding-top: 15px;
+}
+.header .login-info span
+{
+    margin: 0 10px;
+    color:#fff;
+}
+.header .login-info a
+{
+    color: #fff;
+}
+.header .login-info a.sinout:hover
+{
+    color:#ff0000;
+}
+.main .tab
+{
+    height: 45px;
+    background-color: #293150;
+    padding: 0 20px;
+    position: relative;
+}
+.main .tab .tab-item
+{
+    overflow: hidden;
+    padding-top: 7px;
+}
+.main .tab .tab_head
+{
+    position: relative;
+    overflow: hidden;
+    width: 100000px;
+}
+.main .tab_head ul
+{
+    float: left;
+}
+.main .tab ul li a
+{
+    line-height: 38px;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    font-size:14px;
+    -webkit-transition: all .3s ease-out 0s;
+    transition: all .2s ease-out 0s;
+}
+.main .tab .tab_head ul li
+{
+    text-align: center;
+    height: 38px;
+    line-height: 38px;
+    width: 125px;
+    float: left;
+    cursor: pointer;
+    position: relative;
+    background: url('../../img/lobby/trade-tabs.png') scroll no-repeat 0px -40px;
+}
+.main .tab li.active
+{
+    border:none 0;
+}
+.main .tab .tab_head ul li.active
+{
+    background-position: 0px 2px;
+    color: #000;
+}
+.main .tab .tab_head ul li.active a
+{
+    color: #000;
+}
+.main .tab .tab-refresh, .main .tab .tab-close
+{
+    color: #fff;
+    display: none;
+    position: absolute;
+    top: -2px;
+}
+.main .tab .tab-refresh
+{
+    left: -5px;
+}
+.main .tab .tab-close
+{
+    right: -5px;
+}
+.main .tab .iconfont
+{
+    font-size: 12px;
+}
+.main .tab .tab_head ul li.active:hover a, .main .tab .tab_head ul li:hover a.tab-close
+{
+    display: inline-block;
+}
+
+.main .tab .tab_head ul li a.tab-refresh:hover, .main .tab .tab_head ul li a.tab-close:hover
+{
+    color: #FF6666;
+}
+.main .tab .tool-box
+{
+    color:#fff;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    padding-left: 20px;
+    background-color: #293150;
+    height: 45px;
+    line-height: 42px;
+}
+.main .tab .tool-box .red
+{
+    color:#fc4235;
+    }
+.main .tab .tool-box .btn-danger
+{ 
+    background-color:#fc4235;
+    }
+.main .iconfont.timer
+{
+    font-size: 12px;
+    color: #717171;
+}
+
+.main .iconfont.setting
+{
+    font-size: 16px;
+    color: #bbb;
+}
+
+.container
+{
+    overflow: hidden;
+    position: relative;
+}
+.content
+{
+    height: calc(100% - 140px);
+    overflow: hidden;
+}
+
+.footer
+{
+    background-color: #f9f7f8;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.navbar-default
+{
+    background-color: #fff;
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.navbar-default .slimScrollDiv
+{
+    position: relative;
+    width: auto;
+    height: 100%;
+    overflow-y:auto;
+}
+.navbar-default .slimScrollDiv .sidebar-collapse
+{
+    width: auto;
+    height: 100%;
+}
+
+.nav
+{
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav li
+{
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #e7eaec;
+}
+.nav li a:hover
+{
+    color: #1578cd;
+    border: solid 2px #afccda;
+    background-color: #f4f4f4;
+}
+.nav li.active a
+{
+    border: solid 2px #afccda;
+    color: #1578cd;
+    background-color: #f4f4f4;
+}
+.nav li a
+{
+    position: relative;
+    display: block;
+    font-weight: 600;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    border: solid 2px #fff;
+}
+.nav li a.sub
+{
+    padding-left: 35px;
+}
+.nav li a i.arrow
+{
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
+
+ .sidebar-collapse .nav
+ {
+    padding-bottom:60px;
+ }
+
+.page-wrapper
+{
+    padding: 15px 0 15px;
+    margin: 0 0 0 165px;
+    height: 100%;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.searchbox
+{
+    position: relative;
+    float: right;
+    padding: 2px 12px;
+    min-width: 210px;
+    width:18%;
+    background-color: #ddd;
+}
+.searchbox.active,
+.searchbox.active input
+{
+    background-color: #fff;
+}
+ 
+.searchbox input
+{
+    height: 30px;
+    line-height: 30px;
+    margin-left: 25px;
+    border: none;
+    min-width: 160px;
+    width:80%;
+    background-color: #ddd;
+}
+
+.searchbox i
+{
+    position: absolute;
+    top: 4px;
+    left: 11px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.row
+{
+    padding: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.choocebar
+{
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+.choocebar input,
+.choocebar select,
+.choocebar button
+{
+  vertical-align:middle;
+  float:left;
+  margin-right:10px;
+  cursor:pointer;   
+}
+ .choocebar input
+{ 
+  *height:22px;
+  *line-height:22px;
+}
+ .choocebar button
+{ 
+  *height:32px;
+  *line-height:32px;
+}
+
+.choocebar .split
+{
+   float:left; 
+   padding-right:10px; 
+}
+
+.choocebar dl
+{
+    width: 100%;
+    overflow: hidden;
+}
+.choocebar dt
+{
+    width: 100px;
+    padding-left: 15px;
+    background-color: #fcfcfc;
+    float: left;
+    height: 45px;
+    line-height: 45px;
+}
+.choocebar dd
+{
+    float: left;
+    margin-left: 15px;
+    line-height: 45px;
+}
+.choocebar dd span
+{
+    margin-right: 15px;
+}
+
+.choocebar .badge.active
+{
+    background-color: #999;
+    color: #fff;
+}
+
+.choocebar .badge
+{
+    background-color: #fff;
+    color: #000;
+    padding: 4px 5px;
+    border-radius: 3px;
+    font-weight: normal;
+    cursor: pointer;
+}
+.choocebar .more
+{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    color: #1578cd;
+}
+.choocebar .more i
+{
+    font-size: 20px;
+    vertical-align: middle;
+}
+.fixed-table-body table th td, .fixed-table-body table tr td
+{
+    line-height: 40px;
+    height: 40px;
+}
+.J_mainContent
+{
+    height: calc(100% - 130px);
+    height: 100%\9;
+    overflow: hidden;
+    min-width:900px;
+}
+.cell thead th, .cell tbody td
+{
+    border-left: 1px solid #e4eaec;
+}
+.link, .download
+{
+    color: #337ab7;
+}
+.link:hover, .download:hover
+{
+    text-decoration: underline;
+    color: blue;
+}
+.conhead
+{
+    padding: 0 15px;
+    margin-bottom:15px;
+    overflow: hidden;
+}
+.conhead .title
+{
+    font-weight:bold;
+    font-size: 18px;
+    float: left;
+}
+.grouptab
+{
+    overflow:hidden;
+    margin-left:30px;
+}
+.grouptab span
+{
+    display:inline-block;
+    padding-bottom:2px;
+    margin:0 15px;
+    font-weight:bold;
+    font-size:14px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    cursor:pointer;
+}
+
+.grouptab span.active
+{
+    color:#337ab7;
+    border-bottom:solid 3px #337ab7;
+}
+.unit{
+    position: absolute;
+    right: 10px;
+    top: 7px;
+}
+.w1200{
+    width:1200px;
+    margin: 0 auto;
+}
+.w1400{
+    width:1400px;
+    margin: 0 auto;
+}
+.mzlable
+{
+   margin-right:10px;  
+   margin-bottom: 10px;
+   display: inline-block;     
+}
+.mzlable .close
+{
+    display:inline-block;
+    font-size:12px;
+    margin-left:3px;
+    color:#666;
+    padding:2px 3px;
+}
+.mzlable label
+{ 
+     padding: 3px 6px;
+     color:#292929;
+     background-color:#c2c2c2;
+     border-radius:2px;
+}
+.mzlable:hover label
+{ 
+    background-color: #bababa;
+} 
+  
+.mzlable:hover .close
+{
+    color:#ff0000;
+    cursor:pointer;
+}
+.list01 {
+	background:#f0f0f0; 
+	padding:10px;
+	border:1px solid #D6D6D6;
+	
+}
+.list01 em{
+	color: #B22F13;
+}
+.bg01{
+	background:none;
+	border-top:none;
+}
+.bg01 a{
+	margin-right:10px;
+}    
+ 
+.grey-font {
+    padding-left: 12px;
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+}
+#progress{
+	padding-top: 11px;
+}
+.bar {
+    height: 18px;
+    background: green;
+}
+.error {
+    color:#8a1f11;
+}
+i.del  {
+    margin-left: 5px;
+}
+i.del:hover {
+    cursor: pointer;
+}
+
+.tansfer-icon{
+    background-color: #FA4F1C;
+    color: #ffffff;
+    padding: 2px 6px;
+    text-align: center;
+}
+.tansfer-icon:hover {
+    cursor: default;
+}
+
+.ani-dot{font-family:simsun}
+.ani-dot{display:inline-block;width:1.5em; height:20px;;vertical-align:middle;overflow:hidden}
+/**/@-webkit-keyframes dot{
+    0%{width:0;margin-right:1.5em}
+    33%{width:.5em;margin-right:1em}
+    66%{width:1em;margin-right:.5em}
+    100%{width:1.5em;margin-right:0}
+}
+.ani-dot{-webkit-animation:dot 3s infinite step-start}
+@keyframes dot{
+    0%{width:0;margin-right:1.5em}
+    33%{width:.5em;margin-right:1em}
+    66%{width:1em;margin-right:.5em}
+    100%{width:1.5em;margin-right:0}
+}
+.ani-dot{animation:dot 3s infinite step-start} 
+
+.lobby .bootstrap-table tr td
+{
+   line-height:20px;
+}

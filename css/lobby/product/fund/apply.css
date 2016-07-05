@@ -1,0 +1,53 @@
+@import
+url(
+'/javascript/lib/bootstrap/css/bootstrap.min.css'
+?
+__inline
+);
+@import url('/css/lobby/trade.css?__inline');
+/*@import url('/css/base/main.css?__inline');*/
+/*preorder css*/
+.content{
+	width: 300px;
+	height:40px;
+	line-height:40px;
+  	margin-left: 50%;
+  	position: relative;
+  	left: -114px;
+  	padding-left: 45px;
+  	background:url("../../../../img/lobby/caution.jpg")  no-repeat 4px;
+}
+.ml30{
+	margin-left:30px;
+}
+.content_top{
+	padding-top:21px;
+	font-size:14px;
+}
+.content_bottom{
+	padding-bottom:20px;
+}
+.boxin{
+	border: 1px solid #ccc;
+	padding:30px 20px;
+	margin:0 30px;
+}
+.boxin a{
+	float:left;
+	margin-right:20px;
+	white-space: nowrap;
+}
+.boxtop{
+	padding-bottom:20px;
+}
+.btn_center{
+  width: 146px;
+  height: 40px;
+  margin-left: 50%;
+  margin-top: 60px;
+  position: relative;
+  left: -72px;
+}
+.cl666 {
+	color: #666;
+}

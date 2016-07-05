@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow: hidden;">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no" />
+<title>信托</title>
+<!--[if lt IE 9]> 
+       <script src="/javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+<link rel="stylesheet" type="text/css" href="/css/base/main.css">
+<style type="text/css">
+	#pwdConfirmedDiv{
+		padding-left:20px;
+		padding-top:10px;
+		padding-bottom:20px;	
+	}
+	.f16{font-size:14px;}
+	tr{height:60px;}
+	#logpwd{width:200px;height:30px;}
+	.lightcolor{color:#a5a5a5;}
+	.redcolor{color:red;}
+</style>
+</head>
+<body>
+<div id="pwdConfirmedDiv">
+	<table>
+		<tr>
+			<td colspan="2" class="f16">为保障签署安全，需校验签署人身份
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:top" class="f16">签署密码：
+			</td>
+			<td id="msgTd">
+				<input id="logpwd" type="password" value="" autocomplete="off"><br>
+				<span class="f16 lightcolor">签署密码即您的登录密码</span><br>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<input id="submitPwd" type="button" class="btn btn-primary" value="确定">
+				<input id="cancelBtn" type="button" class="btn btn-danger col-md-offset-1" value="取消"> 
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="pwdLoadingDiv" style="display: none;">
+	<div id="loadTarget" class="row" style="height: 130px;"></div>
+	<div class="row centerTab">正在验证密码，请稍后...</div>
+</div>
+	
+</body>
+<script type="text/javascript" src="/javascript/lib/requirejs/require.js"></script>
+<script type="text/javascript">
+	require([ "lobby/account/contract/pwdConfirm" ]);
+</script>
+</html>

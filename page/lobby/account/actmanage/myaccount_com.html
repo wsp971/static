@@ -1,0 +1,113 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no" />
+<title>交易大厅详情页</title>
+<meta name="keywords" content="交易，详情" />
+<meta name="description" content="网站描述，字数尽量空制在80个汉字，160个字符以内！" />
+<link rel="Bookmark" href="favicon.ico" />
+<link rel="Shortcut Icon" href="favicon.ico" />
+<!-- <!--[if lt IE 9]>
+    <script src="../../../../javascript/lib/compatible/supportIE678.js" type="text/javascript"></script>
+    <![endif]-->
+    
+<link href="../../../../css/base/reset.css" rel="stylesheet"
+	type="text/css" />
+<link href="../../../../css/lobby/account/myaccount_com.css" rel="stylesheet"
+	type="text/css" />   
+     
+</head>
+<body>
+	<!-- <div id="loading" class="loading"></div>
+		 -->	
+	<div class="main">
+		<!-- 内容 -->
+		<div class="container">
+			<div class="content">
+
+				<!-- 上部内容 -->
+				<div class="content_info">
+					<div class="info_title clearfix">
+						<div class="head_portrait">
+							<img src="../../../../img/lobby/account_com_icons011.png" height="82" width="142" alt="">
+							<!-- <label class="ui-btn ui-btn-light c-upload-wrap" name="upload-file-btn">
+				                <span class="ui-btn c-upload-btn" id="noteFile">更换头像</span> 
+				    			<input class="c-upload" type="file">
+				            </label> -->
+						</div>
+						<h4 id="instName"></h4>
+						<p class="uesr_info">
+							<span>账户级别：</span>
+							<em id="account_state">--</em>
+						</p>
+						<p class="uesr_info">
+							<span>用户名：</span>
+							<em id="username">--</em>
+						</p>
+					</div>
+				</div>
+				<!-- 上部内容 -->
+
+				<!-- 下部内容 -->
+				<div class="content_body clearfix">
+					<div class="fail_reason"> 您的高级账户申请未通过，原因是：
+					</div>
+					<dl class="progress clearfix">
+						<dd>
+							<img src="../../../../img/lobby/account_com_icons01.jpg"/>
+							<p>普通账户</p>
+						</dd>
+						<dt class="space">产品浏览</dt>
+						<dt>服务咨询</dt>
+						<dt class="space">理财讯息</dt>
+						<dt>发布报价</dt>
+					</dl>
+					
+					<dl class="progress progress_icon">
+						<dd>
+							<img src="../../../../img/lobby/account_com_icons03.jpg"/>
+						</dd>
+					</dl>
+
+					<dl class="progress progress_advanced clearfix">
+						<dd>
+							<img src="../../../../img/lobby/account_com_icons02.jpg"/>
+							<p>高级账户</p>
+						</dd>
+						<dt class="space">账户管理</dt>
+						<dt class="space">机构管理</dt>
+						<dt>权限控制</dt>
+						<dt class="space">报价交流</dt>
+						<dt class="space">产品发布</dt>
+						<dt>资产交易</dt>
+						<dt class="space">经纪业务</dt>
+						<dt class="space">交易提醒</dt>
+						<dt>交易记录</dt>
+						<dt class="space">统计分析</dt>
+						<dt class="lastbtn"><button id="but" class="btn" href="javascript:;">立即升级</button></dt>
+					</dl>
+				</div>
+				<!-- 下部内容 -->
+			</div>
+		</div>
+	</div>
+  <!-- <input type="button" id="but" value="立即升级"/> -->
+    <link rel="import" href="../../jsrefer.html?__inline">
+    <script src="../../../../javascript/lib/requirejs/require.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        require(["../../../../javascript/modules/lobby/account/actmanage/myaccountCom.js"]);
+    </script>
+    <!-- <script type="text/javascript">
+    $(function(){
+        cookies.set('userId','122','300000','/');
+        cookies.set('username','user789','300000','/');
+     })
+
+    </script> -->
+</body>
+</html>
+
