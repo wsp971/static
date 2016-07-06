@@ -8,7 +8,7 @@ function($, _) {
     var $body = $('body');
     var views = function(options) {
         this.options = options;
-        this.init();
+        // this.init();
     }
     views.prototype = {
         _init: function() {
@@ -18,6 +18,7 @@ function($, _) {
             this._setAttr();
             this._bindEvents();
             this._delegateLink();
+            this._router();/*加上hash路由处理*/
             // 特殊处理
             ! $.loadAjax && ($.loadAjax = !parent.$.loadAjax ? parent.parent.$.loadAjax: parent.$.loadAjax);
             parent && (layer = parent.layer?parent.layer:parent.parent.layer);
@@ -141,7 +142,16 @@ function($, _) {
                 }
             }
             return html;
+        },
+        _router:function(){
+            this.router=new Router(this.actions,this);
         }
+        // _actions:function(){
+        //     var actions=this.actions;
+        //     _.each(actions,function(action,i){
+
+        //     })
+        // }
         // ,
         // super: function(method, args) {
         // var func = this.constructor.prototype[method];
@@ -152,6 +162,7 @@ function($, _) {
         // throw new Error('Arguments error in [super].')
         // }
         // }
+        
     }
     // 扩展
     views.extend = function(props) {
@@ -261,6 +272,57 @@ function($, _) {
         ($(midDate).length > 0) && (laydate(mid)); 
         ($(endDate).length > 0) && (laydate(end));
     }
-
+    /*为view添加hash路由变化所做的响应*/
+    function Router(actions,view){
+        this.actions=_.extend({},actions);
+        this.hash=window.location.hash;
+        this.view=view;
+        this.initFlag=false;/*是否初始化*/
+        if(!this.initFlag){
+            this.go(this.hash.slice(1));
+            this.initflag=true;
+        }
+        this._listenHash();
+    }
+     Router.prototype.test=function(){
+        alert("test");
+     }
+     // var actions={
+     //    'router1':"action1",
+     //    'router2':"action2",
+     //     "test":"test"
+     // }
+     Router.prototype.go=function(router){
+        if(!!this.actions[router]){
+            var self=this;
+            eval(self.view[self.actions[router]])();
+            this.hash=["#",router].join("");
+        }
+     }
+     Router.prototype._listenHash=function(){
+        if( ("onhashchange" in window) && ((typeof document.documentMode==="undefined") || document.documentMode==8)) {  
+        // 浏览器支持onhashchange事件  ie8开始支持documentmode，其他浏览器都不支持
+         window.onhashchange = this.hashChangeHandle.call(this);  // TODO，对应新的hash执行的操作函数  
+        }else{  
+        // 不支持则用定时器检测的办法  
+            setInterval(function() {  
+                var ischanged = this.isHashChanged();  // TODO，检测hash值或其中某一段是否更改的函数  
+                if(ischanged) {  
+                    this.hashChangeHandle();  // TODO，对应新的hash执行的操作函数  
+                }  
+            }, 150);  
+        }  
+    };
+    Router.prototype.isHashChanged=function(){
+        var newhash=location.hash;
+        if(newhash!==this.hash) return true;
+        return false;
+    };
+    Router.prototype.hashChangeHandle=function(){
+        var newHash=window.location.hash.slice(1);
+        if(!!this.actions[newHash]){
+            this.go(newHash);
+        }
+    }
     return views;
 });

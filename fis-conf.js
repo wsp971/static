@@ -100,7 +100,7 @@ fis.match('*.{js,css,png}', {
 //发布到本地server
  fis.match('*', {
      deploy: fis.plugin('local-deliver', {
-         to: '../output'
+         to: './output'
      })
  })
 

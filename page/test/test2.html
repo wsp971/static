@@ -1,0 +1,70 @@
+  <link rel="import"  href="../base/header.html?__inline">
+  <div>测试</div>
+  <script src="../../javascript/lib/underscore/underscore.js"></script>
+  <script src="../../javascript/test/extend.js"></script>
+  <script>  
+         function Router(actions){
+            this.actions=_.extend({},actions);
+            this.flag=true;
+            this.hash=window.location.hash;
+            this._listenHash();
+         };
+         Router.prototype.test=function(){
+            alert("test");
+         };
+         var actions={
+            'router1':"action1",
+            'router2':"action2",
+             "test":"test"
+         };
+         Router.prototype.go=function(router){
+            if(!!this.actions[router]){
+                var self=this;
+                eval(self[self.actions[router]])();
+            }
+         };
+         Router.prototype._listenHash=function(){
+            if( ("onhashchange" in window) && ((typeof document.documentMode==="undefined") || document.documentMode==8)) {  
+            // 浏览器支持onhashchange事件  ie8开始支持documentmode，其他浏览器都不支持
+             window.onhashchange = this.hashChangeHandle.call(this);  // TODO，对应新的hash执行的操作函数  
+            }else{  
+            // 不支持则用定时器检测的办法  
+                setInterval(function() {  
+                    var ischanged = this.isHashChanged();  // TODO，检测hash值或其中某一段是否更改的函数  
+                    if(ischanged) {  
+                        this.hashChangeHandle();  // TODO，对应新的hash执行的操作函数  
+                    }  
+                }, 150);  
+            }  
+        };
+        Router.prototype.isHashChanged=function(){
+            var newhash=location.hash;
+            if(newhash!==this.hash) return true;
+            return false;
+        };
+        Router.prototype.hashChangeHandle=function(){
+            var newHash=window.location.hash.slice(1);
+            if(!!this.actions[newHash]){
+                this.go(newHash);
+            }
+        };
+        // var router=new Router(actions);
+
+     
+
+         // Router.extend=function(options){
+         //    var child=new Router(options.actions);
+         //    var newchild=function(){};
+         //    newchild.prototype=Router.prototype;
+         //    child.prototype=new newchild();
+         //    child.prototype.constructor=Router;
+         //    _.extend(child.prototype,options);
+         //    return child;
+         // }
+
+
+
+
+
+
+  </script>

@@ -2,10 +2,10 @@
 @import url('/fonts/iconfont/iconfont.css?__inline');
 @import url('../javascript/lib/bootstrap/css/bootstrap-table.min.css?__inline');
 
-* {
+/** {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box
-}
+}*/
 
 .loading {
 	width: 100%;
