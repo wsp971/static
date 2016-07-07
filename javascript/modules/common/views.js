@@ -8,7 +8,7 @@ function($, _) {
     var $body = $('body');
     var views = function(options) {
         this.options = options;
-        // this.init();
+        this.init();
     }
     views.prototype = {
         _init: function() {

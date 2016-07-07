@@ -1,8 +1,11 @@
-define(function(){
-    return new views.extend({
+define(["jquery","common/views"],function($,view){
+    return new view.extend({
         actions:{
             "test1":"test1",
             "test2":"test2"
+        },
+        init:function(){
+            debugger;
         },
         events:{},
         handles:{
