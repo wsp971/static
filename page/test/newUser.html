@@ -1,0 +1,89 @@
+ <!DOCTYPE HTML>
+<html>
+<head>
+   <link rel="import"  href="../base/header.html?__inline">
+   <link  rel="stylesheet"  href="../../css/test/style.css">
+   <link  rel="stylesheet"  href="../../css/test/sidebar.css">
+</head>
+<body>
+  <div id="loading" class="loading"></div>
+  <link rel="import"  href="../base/nav.html?__inline">
+  <div class="container-fluid"> 
+      <div class="row">
+         <link rel="import"  href="../base/sidebar.html?__inline"> 
+          <div class="col-sm-9 col-sm-offset-2 main">
+           <div class="page-header">
+              <h3>用户管理--> <small>新增用户</small></h3>
+           </div>
+           <form class="form-horizontal">
+              <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
+                  <div class="col-sm-4">
+                      <input type="text" class="form-control" id="userName" placeholder="请输入数字或者字母">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">姓名</label>
+                  <div class="col-sm-4">
+                      <input type="text" class="form-control" id="userName" placeholder="请输入姓名">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">修改密码</label>
+                  <div class="col-sm-4">
+                       <label class="checkbox-inline">
+                          <input type="radio" name="optionsRadiosinline" id="optionsRadios3" 
+                             value="option1" checked> 否
+                       </label>
+                       <label class="checkbox-inline">
+                          <input type="radio" name="optionsRadiosinline" id="optionsRadios4" 
+                             value="option2"> 是
+                       </label>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="password" class="col-sm-2 control-label">密码</label>
+                  <div class="col-sm-4">
+                      <input type="password" class="form-control" id="password" >
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="password" class="col-sm-2 control-label">确认密码</label>
+                  <div class="col-sm-4">
+                      <input type="password" class="form-control" id="password" >
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="password" class="col-sm-2 control-label">角色</label>
+                  <div class="col-sm-4">
+                      <select class="form-control">
+                          <option value="">经纪人</option>
+                          <option value="">清算员</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="password" class="col-sm-2 control-label">状态</label>
+                  <div class="col-sm-4">
+                      <select class="form-control">
+                          <option value="">启用</option>
+                          <option value="">禁用</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="form-group">
+                 <div class="col-sm-offset-2 col-sm-4">
+                    <button class="btn btn-default">确定</button> <button class="col-sm-offset-1 btn btn-default">取消</button>
+                 </div> 
+              </div>
+           </form>
+          </div>
+      </div>
+  </div>
+  <div class="footer">
+      <link rel="import" href="../base/footer.html?__inline">
+  </div>
+  <link rel="import" href="../lobby/jsrefer.html?__inline">
+  <script type="text/javascript" src="../../javascript/modules/home/index.js"></script>
+</body>
+</html> 
