@@ -1,0 +1,7 @@
+@import url('../css/base/style.css?__inline');
+@import url('../css/base/sidebar.css?__inline');
+.form-signin{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}

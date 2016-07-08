@@ -19,9 +19,6 @@
 	text-align: center;
 	background: url(../../img/loadding-hr.gif) center center no-repeat;
 }
-
-body {min-width:1000px;}
-
 .header{
     width: 1200px;
    /* height: 50px;*/
