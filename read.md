@@ -9,6 +9,9 @@
  
 ##问题
 1、每个html要闭合标签，如果闭合不了，加载require.js 将会出问题
+2、在每个html中加载业务逻辑时，注意require的写法：
+     ```require(["../../javascript/modules/login/login.js"]);```
+require 中的内容是数组，要加上中括号，不然业务逻辑js就加载不进来
 
 ##小tips
 
