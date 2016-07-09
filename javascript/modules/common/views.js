@@ -17,8 +17,8 @@ function($, _) {
             this.container = this.container || $body;
             this._setAttr();
             this._bindEvents();
-            this._delegateLink();
-            this._router();/*加上hash路由处理*/
+            // this._delegateLink();
+            // this._router();/*加上hash路由处理*/
             // 特殊处理
             ! $.loadAjax && ($.loadAjax = !parent.$.loadAjax ? parent.parent.$.loadAjax: parent.$.loadAjax);
             parent && (layer = parent.layer?parent.layer:parent.parent.layer);
@@ -27,9 +27,14 @@ function($, _) {
             parent && parent.prefixUrl ? parent.prefixUrl():parent.parent.prefixUrl();
             
         },
+        /*设置this.query,页面内serach部分属性*/
         _setAttr: function() {
             this.query = this.getQSObject(true);
         },
+        _setRegions:function(){
+
+        },
+        /*在页面container中绑定定义事件*/
         _bindEvents: function() {
             var self = this;
             _.each(this.events,
@@ -61,23 +66,25 @@ function($, _) {
                 });
             }
         },
-        _delegateLink: function() {
-            $body.on('click', 'a',
-            function(e) {
-                var $target = $(this),
-                url = $(this).data('url') || '',
-                title = $(this).data('title') || '',
-                type = $(this).data('type') || 'local';
+        /*这个。。。。好像没用*/
+        // _delegateLink: function() {
+        //     $body.on('click', 'a',
+        //     function(e) {
+        //         var $target = $(this),
+        //         url = $(this).data('url') || '',
+        //         title = $(this).data('title') || '',
+        //         type = $(this).data('type') || 'local';
 
-                if (url) {
-                    Hyperion.actions.forward({
-                        url: url,
-                        title: title,
-                        type: type
-                    });
-                }
-            });
-        },
+        //         if (url) {
+        //             Hyperion.actions.forward({
+        //                 url: url,
+        //                 title: title,
+        //                 type: type
+        //             });
+        //         }
+        //     });
+        // },
+        /*获取页面？之后的内容并转化为key，value 形式的map*/
         getQSObject: function(str, decode) {
             if (typeof str === 'boolean') {
                 decode = str;
@@ -95,6 +102,7 @@ function($, _) {
             }
             return ret;
         },
+        /*页面内请求，建议用这个方法*/
         request: function(options) {
             var url = options.url,
             oldSuccess = options.success,
@@ -104,7 +112,8 @@ function($, _) {
                 // options.url = C.Api.prefix + url;
             }
             options.success = function(res) {
-                oldSuccess.call(self, res);
+                oldSuccess&&oldSuccess.call(self, res);
+                /*增加健壮性*/
             };
             options.error = options.error ||
             function() {
@@ -142,10 +151,10 @@ function($, _) {
                 }
             }
             return html;
-        },
-        _router:function(){
-            this.router=new Router(this.actions,this);
         }
+        // _router:function(){
+        //     this.router=new Router(this.actions,this);
+        // }
         // _actions:function(){
         //     var actions=this.actions;
         //     _.each(actions,function(action,i){
@@ -272,57 +281,75 @@ function($, _) {
         ($(midDate).length > 0) && (laydate(mid)); 
         ($(endDate).length > 0) && (laydate(end));
     }
-    /*为view添加hash路由变化所做的响应*/
-    function Router(actions,view){
-        this.actions=_.extend({},actions);
-        this.hash=window.location.hash;
-        this.view=view;
-        this.initFlag=false;/*是否初始化*/
-        if(!this.initFlag){
-            this.go(this.hash.slice(1));
-            this.initflag=true;
-        }
-        this._listenHash();
-    }
-     Router.prototype.test=function(){
-        alert("test");
-     }
-     // var actions={
-     //    'router1':"action1",
-     //    'router2':"action2",
-     //     "test":"test"
-     // }
-     Router.prototype.go=function(router){
-        if(!!this.actions[router]){
-            var self=this;
-            eval(self.view[self.actions[router]])();
-            this.hash=["#",router].join("");
-        }
-     }
-     Router.prototype._listenHash=function(){
-        if( ("onhashchange" in window) && ((typeof document.documentMode==="undefined") || document.documentMode==8)) {  
-        // 浏览器支持onhashchange事件  ie8开始支持documentmode，其他浏览器都不支持
-         window.onhashchange = this.hashChangeHandle.call(this);  // TODO，对应新的hash执行的操作函数  
-        }else{  
-        // 不支持则用定时器检测的办法  
-            setInterval(function() {  
-                var ischanged = this.isHashChanged();  // TODO，检测hash值或其中某一段是否更改的函数  
-                if(ischanged) {  
-                    this.hashChangeHandle();  // TODO，对应新的hash执行的操作函数  
-                }  
-            }, 150);  
-        }  
-    };
-    Router.prototype.isHashChanged=function(){
-        var newhash=location.hash;
-        if(newhash!==this.hash) return true;
-        return false;
-    };
-    Router.prototype.hashChangeHandle=function(){
-        var newHash=window.location.hash.slice(1);
-        if(!!this.actions[newHash]){
-            this.go(newHash);
-        }
-    }
+    // var testRegion={
+    //     "body":"#body"
+    // }
+    // var regions=function(view,region){
+    //     this.view=view;
+    //     this.region=region;
+    //     var self=this;
+    //     _.each(region,function(value,key){
+    //         self.kye=$(value);
+    //         self.key.show=function(view){
+    //             self.view.render(value);
+    //         }
+    //     });
+    // }
+    // regions.prototype.show(){
+    //     this.view.render();
+    //     id, data, container, isAppend, difColor
+    // }
+    // /*为view添加hash路由变化所做的响应*/
+    // function Router(actions,view){
+    //     this.actions=_.extend({},actions);
+    //     this.hash=window.location.hash;
+    //     this.view=view;
+    //     this.initFlag=false;/*是否初始化*/
+    //     if(!this.initFlag){
+    //         this.go(this.hash.slice(1));
+    //         this.initflag=true;
+    //     }
+    //     this._listenHash();
+    // }
+    // Router.prototype.test=function(){
+    //     alert("test");
+    // }
+    //  // var actions={
+    //  //    'router1':"action1",
+    //  //    'router2':"action2",
+    //  //     "test":"test"
+    //  // }
+    //  Router.prototype.go=function(router){
+    //     if(!!this.actions[router]){
+    //         var self=this;
+    //         eval(self.view[self.actions[router]])();
+    //         this.hash=["#",router].join("");
+    //     }
+    //  }
+    //  Router.prototype._listenHash=function(){
+    //     if( ("onhashchange" in window) && ((typeof document.documentMode==="undefined") || document.documentMode==8)) {  
+    //     // 浏览器支持onhashchange事件  ie8开始支持documentmode，其他浏览器都不支持
+    //      window.onhashchange = this.hashChangeHandle.call(this);  // TODO，对应新的hash执行的操作函数  
+    //     }else{  
+    //     // 不支持则用定时器检测的办法  
+    //         setInterval(function() {  
+    //             var ischanged = this.isHashChanged();  // TODO，检测hash值或其中某一段是否更改的函数  
+    //             if(ischanged) {  
+    //                 this.hashChangeHandle();  // TODO，对应新的hash执行的操作函数  
+    //             }  
+    //         }, 150);  
+    //     }  
+    // };
+    // Router.prototype.isHashChanged=function(){
+    //     var newhash=location.hash;
+    //     if(newhash!==this.hash) return true;
+    //     return false;
+    // };
+    // Router.prototype.hashChangeHandle=function(){
+    //     var newHash=window.location.hash.slice(1);
+    //     if(!!this.actions[newHash]){
+    //         this.go(newHash);
+    //     }
+    // }
     return views;
 });
