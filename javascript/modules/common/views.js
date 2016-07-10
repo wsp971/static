@@ -3,13 +3,13 @@
  * 
  * 
  */
-define(["jquery", "underscore", "common/extend"],
+define(["jquery", "underscore","/common/extend"],
 function($, _) {
     var $body = $('body');
     var views = function(options) {
         this.options = options;
-        this.init();
-    }
+        this.init(options);
+    };
     views.prototype = {
         _init: function() {
             this.events = this.events || {};
@@ -17,6 +17,7 @@ function($, _) {
             this.container = this.container || $body;
             this._setAttr();
             this._bindEvents();
+            this._setRegions();
             // this._delegateLink();
             // this._router();/*加上hash路由处理*/
             // 特殊处理
@@ -32,7 +33,7 @@ function($, _) {
             this.query = this.getQSObject(true);
         },
         _setRegions:function(){
-
+            this.region=new regions(this,this.regions);
         },
         /*在页面container中绑定定义事件*/
         _bindEvents: function() {
@@ -124,17 +125,20 @@ function($, _) {
             $.ajax(options);
         },
         _templates: {},
+        /*_template就是 页面的模板  用underscore  _.template(html 模板)*/
         render: function(id, data, container, isAppend, difColor) {
             var self = this;
-            var templates = self._templates;
-            var tpl = templates[id],
-            html;
+            // var templates = self._templates;
+            // var tpl = templates[id], html;
+            var tpl=self._template,html;
             if (!tpl) {
                 tpl = _.template($(id).html());
+
                 templates[id] = tpl;
             }
             html = tpl(data);
             if (container) {
+                container=container instanceof $ ? container:$(container);
                 if (!isAppend) {
                     container.html(html);
                 } else {
@@ -152,33 +156,13 @@ function($, _) {
             }
             return html;
         }
-        // _router:function(){
-        //     this.router=new Router(this.actions,this);
-        // }
-        // _actions:function(){
-        //     var actions=this.actions;
-        //     _.each(actions,function(action,i){
-
-        //     })
-        // }
-        // ,
-        // super: function(method, args) {
-        // var func = this.constructor.prototype[method];
-        // if (func && typeof args === 'object') {
-        // args = args || [];
-        // func.apply(this, args);
-        // } else {
-        // throw new Error('Arguments error in [super].')
-        // }
-        // }
-        
-    }
+    };
     // 扩展
     views.extend = function(props) {
-        var Child = function() {
+        var Child = function(options) {
             var self = this;
             views.prototype._init.call(self);
-            self.init && self.init();
+            self.init && self.init(options);
         };
         var newViews = function() {};
         newViews.prototype = views.prototype;
@@ -281,75 +265,25 @@ function($, _) {
         ($(midDate).length > 0) && (laydate(mid)); 
         ($(endDate).length > 0) && (laydate(end));
     }
+
     // var testRegion={
     //     "body":"#body"
     // }
-    // var regions=function(view,region){
-    //     this.view=view;
-    //     this.region=region;
-    //     var self=this;
-    //     _.each(region,function(value,key){
-    //         self.kye=$(value);
-    //         self.key.show=function(view){
-    //             self.view.render(value);
-    //         }
-    //     });
-    // }
-    // regions.prototype.show(){
-    //     this.view.render();
-    //     id, data, container, isAppend, difColor
-    // }
-    // /*为view添加hash路由变化所做的响应*/
-    // function Router(actions,view){
-    //     this.actions=_.extend({},actions);
-    //     this.hash=window.location.hash;
-    //     this.view=view;
-    //     this.initFlag=false;/*是否初始化*/
-    //     if(!this.initFlag){
-    //         this.go(this.hash.slice(1));
-    //         this.initflag=true;
-    //     }
-    //     this._listenHash();
-    // }
-    // Router.prototype.test=function(){
-    //     alert("test");
-    // }
-    //  // var actions={
-    //  //    'router1':"action1",
-    //  //    'router2':"action2",
-    //  //     "test":"test"
-    //  // }
-    //  Router.prototype.go=function(router){
-    //     if(!!this.actions[router]){
-    //         var self=this;
-    //         eval(self.view[self.actions[router]])();
-    //         this.hash=["#",router].join("");
-    //     }
-    //  }
-    //  Router.prototype._listenHash=function(){
-    //     if( ("onhashchange" in window) && ((typeof document.documentMode==="undefined") || document.documentMode==8)) {  
-    //     // 浏览器支持onhashchange事件  ie8开始支持documentmode，其他浏览器都不支持
-    //      window.onhashchange = this.hashChangeHandle.call(this);  // TODO，对应新的hash执行的操作函数  
-    //     }else{  
-    //     // 不支持则用定时器检测的办法  
-    //         setInterval(function() {  
-    //             var ischanged = this.isHashChanged();  // TODO，检测hash值或其中某一段是否更改的函数  
-    //             if(ischanged) {  
-    //                 this.hashChangeHandle();  // TODO，对应新的hash执行的操作函数  
-    //             }  
-    //         }, 150);  
-    //     }  
-    // };
-    // Router.prototype.isHashChanged=function(){
-    //     var newhash=location.hash;
-    //     if(newhash!==this.hash) return true;
-    //     return false;
-    // };
-    // Router.prototype.hashChangeHandle=function(){
-    //     var newHash=window.location.hash.slice(1);
-    //     if(!!this.actions[newHash]){
-    //         this.go(newHash);
-    //     }
-    // }
+    var regions=function(view,regions){
+        this.view=view||none;
+        this.regions=regions||{};
+        var self=this;
+        _.each(regions,function(value,key){
+            self[key]=$(value);
+            self[key].show=function(childView){
+                // $(value).html(childView.templates);
+                //////////////////////////////
+                // self.view.render(value); //
+                //////////////////////////////
+            self[kye].html(childView);
+                // new childView({container:value})
+            }
+        });
+    }
     return views;
 });
