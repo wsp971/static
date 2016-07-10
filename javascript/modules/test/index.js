@@ -1,8 +1,11 @@
-define(["common/controller","testView"],function(controller,testView){
-      var testController= new controller.extend({
+define(["common","testView"],function(common,testView){
+      var testController= common.controller.extend({
         actions:{
             "test":"test",
             "wsp":"wsp"
+        },
+        init:function(){
+            this.go("wsp");
         },
         wsp:function(){
             // alert("wsp");
@@ -10,7 +13,10 @@ define(["common/controller","testView"],function(controller,testView){
         },
         test:function(){
             // alert("test");
-            new testView();
+            // new testView();
+            // this.go("wsp");
+            // testController.go("wsp");
+            // this.wsp();
         }
     });
     return new testController();
