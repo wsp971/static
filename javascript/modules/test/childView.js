@@ -9,6 +9,7 @@ define(["jquery","underscore","text","common","text!../../../page/test/bodytest1
                 "state":"模板-启用"
             }
             this.render("",data,options.container);
+            this.ajaxtest();
         },
         events:{
             "click #forbid":"forbid"
@@ -17,6 +18,20 @@ define(["jquery","underscore","text","common","text!../../../page/test/bodytest1
             forbid:function(){
                 alert("forbid this user");
             }
+        },
+        ajaxtest:function(){
+           this.request({
+                url:common.api.service.test1,
+                success:function(res){
+                    console.log(res);
+                },
+                error:function(res){
+                    console.log(res);
+                },
+                complete:function(res){
+                    debugger;
+                }
+            });
         }
     })
 });
