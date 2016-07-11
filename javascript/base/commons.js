@@ -77,7 +77,7 @@ define([
         }
         var options = $.extend({}, defaults, options);
         $.ajax({
-            url: window.rootPath + options.url,
+            url: options.url,
             type: options.type,
             async: options.async,
             timeout: options.timeout,
