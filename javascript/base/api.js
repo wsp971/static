@@ -6,7 +6,7 @@ define(["base/url"],function(url){
         prod: false
     };
     /*挡板开关*/
-    var mockflag=false;
+    var mockflag=true;
     var rootPath=""
     !function () {
         if (envConfig.dev) {
@@ -22,7 +22,7 @@ define(["base/url"],function(url){
     var service={};
     if(!!mockflag){
         for(key in url){
-            service[kye]="/data"+url[key];
+            service[key]=rootPath+"/javascript/data/"+key+".json";
         }
     }else{
         for(key in url){
