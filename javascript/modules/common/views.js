@@ -3,7 +3,7 @@
  * 
  * 
  */
-define(["jquery", "underscore","/common/extend"],
+define(["jquery", "underscore"],
 function($, _) {
     var $body = $('body');
     var views = function(options) {
